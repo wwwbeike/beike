@@ -7,14 +7,15 @@
 	<script type="text/javascript" src='js/XUtil/XUtil.js'></script>
 	<script type="text/javascript" src='js/XUtil/src/base.js'></script>
 	<script type="text/javascript" src='js/XUtil/src/waterfall.js'></script>
+	<script type="text/javascript" src='js/Native/headerStyle.js'></script>
 	<link rel='stylesheet' type="text/css" href='css/XUtil.min.css'/>
 	<link rel="stylesheet" type="text/css" href="css/styleBoard.css"/>
-	<link rel="stylesheet" type="text/css" href="css/leftMenu.css"/>
+	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
 </head>
 <body>
 	<div id="page">
 		<div id="header">
-			<div class="wrapper">
+			<div id="headWapper" >
 				<a id="logo" href="#"></a>
 				<div id="menu_bar" >	
 					<div id="left_menu">
@@ -87,7 +88,7 @@
 			</div>
 		</div>
 		<div id="user_page">
-			<div class="wrapper">
+			<div  id="pageWapper" >
 				<div id="user_card">
 					<div id="user_intro">
 						<div id="user_photo">
@@ -148,87 +149,32 @@
 	</div>
 	<script type="text/javascript">
 		var styleBoardNum=4;
-		
-		
-		function loadStyle(url)
-		{
-			var link = document.createElement('link');
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = url;
-			document.getElementsByTagName('head')[0].appendChild(link);
-		}
 	
 		$(document).ready(function(){
 	
 			//根据屏幕分辨率加载不同的layout样式，设置风格板个数
 			if(screen.width>=1600) 
 			{
-				loadStyle("css/layout1600.css");
+				$("#headWapper").addClass("wrapper1600");
+				$("#pageWapper").addClass("wrapper1600");
 				styleBoardNum=6;
 			}
 			else if( screen.width>=1360 )
 			{
-				loadStyle("css/layout1360.css");
+				$("#headWapper").addClass("wrapper1360");
+				$("#pageWapper").addClass("wrapper1360");
 				styleBoardNum=5;
 			}	
 			else 
 			{
-				loadStyle("css/layout1280.css");
+				$("#headWapper").addClass("wrapper1280");
+				$("#pageWapper").addClass("wrapper1280");
 				styleBoardNum=4;
 			}
+			//header风格设置
+			headerStyle();
 			
-			$("#header_main_menu").hide();   //先将层隐藏起来
-			$("#header_user_menu").hide();
-
-			var leftcanHide = false; //标记左菜单栏是否可隐藏层
-			var rightcanHide =false;//标记右菜单栏是否可隐藏
-			function doHide(){   //是否隐藏层中这里处理
-				if(leftcanHide)
-					$("#header_main_menu").hide();
-				if(rightcanHide)
-					$("#header_user_menu").hide();
-			}
-			$("#left_menu_nav").hover(function(){ //鼠标进入
-				$(".nav_icon").css("background","url('image/menu_sprite.svg')-50px 0 no-repeat");
-				$("#header_main_menu").show(); //显示
-				leftcanHide = false; //标记不可隐藏
-			},function(){
-				$(".nav_icon").css("background","url('image/menu_sprite.svg')0 0 no-repeat");	
-				leftcanHide = true; //鼠标移出可隐藏
-				window.clearTimeout(t); //将上次的定时器清除,重新设置
-				var t = window.setTimeout(doHide,500); //在间隔1000毫秒后执行是否隐藏处理
-			}
-			);
-			//主要依靠定时器来将两者关联起来
-			$("#header_main_menu").hover(function(){ //鼠标进入
-				$(".nav_icon").css("background","url('image/menu_sprite.svg')-50px 0 no-repeat");
-				leftcanHide = false;    //不可隐藏
-			},function(){
-			$(".nav_icon").css("background","url('image/menu_sprite.svg')0 0 no-repeat");
-				leftcanHide = true;     //鼠标移出可隐藏
-				window.clearTimeout(t);
-				var t = window.setTimeout(doHide,500);
-			});
-			
-			/*user的hover事件*/
-			$("#right_menu_nav").hover(function(){ //鼠标进入
-				$("#header_user_menu").show(); //显示
-				rightcanHide = false; //标记不可隐藏
-			},function(){
-				rightcanHide = true; //鼠标移出可隐藏
-				window.clearTimeout(t); //将上次的定时器清除,重新设置
-				var t = window.setTimeout(doHide,500); //在间隔1000毫秒后执行是否隐藏处理
-			}
-			);
-			//主要依靠定时器来将两者关联起来
-			$("#header_user_menu").hover(function(){ //鼠标进入
-				leftcanHide = false;    //不可隐藏
-			},function(){
-				leftcanHide = true;     //鼠标移出可隐藏
-				window.clearTimeout(t);
-				var t = window.setTimeout(doHide,500);
-			});
+			//瀑布流绘制
 			var testStyleBoards = [];
 			
 			for (var i = 0; i < 100; i++) {
@@ -280,6 +226,7 @@
 
 			xwf.init();
 		
+		    //风格板事件绑定
 			$("a.link").mouseover(function(){
 				$(this).children(".shadow").show();
 				$(this).children(".btn").click(function(){
