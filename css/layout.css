@@ -47,11 +47,23 @@
 		}
 		
 		/*根据分辨率载入不同的宽度*/
-		.wrapper{
+		.wrapper1280{
 			position: relative;
 			margin: 0 auto;
 			border: 0;
 			width: 992px;
+		}
+		.wrapper1360{
+			position: relative;
+			margin: 0 auto;
+			border: 0;
+			width: 1244px;
+		}
+		.wrapper1600{
+			position: relative;
+			margin: 0 auto;
+			border: 0;
+			width: 1496px;
 		}
 		
 		/* Layout Style */
@@ -99,7 +111,138 @@
 			position:absolute;
 		}
 		
-		
+		/*leftMenu css*/
+		.nav{
+			text-align: center;
+			height: 42px;
+			float: left;
+			position: relative;
+			cursor: pointer;
+		}
+		.nav:hover {
+			background-color:#f7f7f7 ;
+			
+		}
+		.menu_nav{
+			width: 56px;
+			margin-right: 10px;
+			border-left: 1px solid #F5F5F5;
+		}
+		.nav_link{
+			display: block;
+			position: relative;
+			height: 42px;
+			border-right:1px solid #F5F5F5
+		}
+		.nav_icon{
+			width: 16px;
+			height: 16px;
+			display: block;
+			background: url("../image/menu_sprite.svg") 0 0px no-repeat ;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -8px 0 0 -8px;
+		}
+		.arrow{
+			background: url("../image/menu_sprite.svg") 0 -50px no-repeat;
+			width: 8px;
+			height: 8px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+		#header_main_menu {
+			z-index: 1;
+			background: #fff;
+			box-shadow: 0 1px 6px rgba(0,0,0,.2);
+			position: absolute;
+			left: -1px;
+			top: 56px;
+			width: 571px;
+			height:320px;
+			text-align: left;
+			border:1px solid #fff;
+			border-radius: 3px;
+			cursor: default;
+		}
+		.new-header-main-menu{
+			top:48px;
+		}
+		#header_main_menu a{
+			text-decoration:none;
+			cursor:auto;
+			color:#222;
+		}
+		#header_main_menu a:hover{
+			text-decoration:underline;
+		}
+		.left-module {
+			height: 390px;
+			width: 120px;
+			float: left;
+			padding: 30px 20px 0 30px;
+		}
+		.right-module {
+			float: left;
+			padding: 30px 0 0 0;
+			width: 400px;
+			font-size: 14px;
+			border-left: 1px solid #EDEDED;
+			height: 410px;
+		}
+		.main-link {
+			font-size: 16px;
+			display: block;
+			color: #222;
+			padding-left: 34px;
+			padding-bottom: 8px;
+			
+			margin-bottom: 5px;
+			line-height: 24px;
+			height: 24px;
+			position: relative;
+		}
+		.main-link.bold{
+			font-weight:700;
+		}
+		.home-page{
+			background:url("../image/menu_sprite.svg") 0 -300px no-repeat;
+		}
+		.wedding-style{
+			background:url("../image/explore_icon.png")-25px -20px no-repeat;
+		}
+		.videos{
+			background:url("../image/menu_sprite.svg")0 -1440px no-repeat;
+		}
+		.right-module .row-0{
+			width:180px;
+			float:left;
+		}
+		.right-module .row-1{
+			width:150px;
+			float:left;
+		}
+		.group {
+			margin-bottom: 14px;
+			padding-left: 34px;
+			padding-bottom: 1px;
+		}
+		.group a{
+			display:block;
+			margin-bottom:15px;
+		}
+
+		.up-arrow {
+			width: 18px;
+			height: 10px;
+			position: absolute;
+			left: 19px;
+			top: -9px;
+			background: url("../image/menu_arrow.png") 0 0 no-repeat;
+		}
+
 		/*Header 右侧用户头像菜单*/
 		#header_user_menu{
 			z-index:1;
