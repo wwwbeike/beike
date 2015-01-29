@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src='js/XUtil/XUtil.js'></script>
+	<script type="text/javascript" src='js/XUtil/src/base.js'></script>
+	<script type="text/javascript" src='js/XUtil/src/waterfall.js'></script>
+	<link rel='stylesheet' type="text/css" href='css/XUtil.min.css'/>
+	<link rel="stylesheet" type="text/css" href="css/styleBoard.css"/>
+	<link rel="stylesheet" type="text/css" href="css/leftMenu.css"/>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div class="wrapper">
+				<a id="logo" href="#"></a>
+				<div id="menu_bar" >	
+					<div id="left_menu">
+						<div  id="left_menu_nav" class="nav menu_nav">
+							<a href="#" class="nav_link">
+								<div class="nav_icon"></div>
+								<div class="arrow"></div>
+							</a>
+							<div id="header_main_menu" class="new-header-main-menu" style="display:none;">
+								<div class="inner clearfix">
+									<div class="left-module">
+										<a href="http:www.baidu.com" rel="nofollow" class="main-link bold home-page">首页</a>
+										<a href="/all/" rel="nofollow" class="main-link bold wedding-style">婚礼风格</a>
+										<a href="/all/videos/" rel="nofollow" class="main-link bold videos with-line">视频</a>
+									</div>
+									<div class="right-module">
+										<div class="row-0">
+											<div class="group">
+												<a href="/favorite/culture_china//" rel="nofollow">文化中国</a>
+												<a href="/favorite/travel_places/" rel="nofollow">烟雨江南</a>
+												<a href="/favorite/food_drink/" rel="nofollow">汉唐中式</a>
+												<a href="/favorite/diy_crafts/" rel="nofollow">明清中式</a>
+												<a href="/favorite/wedding_events/" rel="nofollow">巴洛克</a>
+												<a href="/favorite/apparel/" rel="nofollow">洛可可</a>
+												<a href="/favorite/collocation/" rel="nofollow">朋克</a>
+												<a href="/favorite/modeling_hair/" rel="nofollow">百老汇</a>
+											</div>
+										</div>
+										<div class="row-1">
+											<div class="group">
+												<a href="/favorite/industrial_design/" rel="nofollow">东南亚</a>
+												<a href="/favorite/illustration/" rel="nofollow">哥特</a>
+												<a href="/favorite/design/" rel="nofollow">现代韩式</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">现代日式</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">美式复古田园</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">英式皇家</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">爱丽丝梦游仙境</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">青春怀旧80后</a>	
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="up-arrow"></div>
+							</div>
+						</div>
+					
+						<form id="search_form" method="get" action="#" class="searching-unit">
+							<input id="query" type="text" size="27" name="search" autocomplete="off" placeholder="搜索你喜欢的" value="">
+							<a href="#" onclick="return false;" class="go"></a>
+						</form>
+					</div>
+					<div id="right_menu">
+						<div id="right_menu_nav" class="nav">
+							<a href="#" class="nav_link">
+								<img width="20" height="20" src="./image/user.png" class="user_photo">
+								<div class="arrow"></div>
+							</a>
+							<div id="header_user_menu">
+								<div class="user_group">
+									<a  href="#" >我的贝壳<i class="mine"></i></a>							
+								</div>
+								<div class="user_group">
+									<a  href="#" >账号设置<i class="settings"></i></a> 
+									<a  href="#" >退出登录<i class="exit"></i></a> 	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="user_page">
+			<div class="wrapper">
+				<div id="user_card">
+					<div id="user_intro">
+						<div id="user_photo">
+							<div class="img">
+								<img width="130" height="130" src="./image/user_photo.jpg" >
+							</div>
+							<div class="counts">
+								<a href="#" class="followers">
+									<div class="num">7</div>
+									<div class="sub">粉丝</div>
+								</a>
+								<a href="#" class="follows">
+									<div class="num">11</div>
+									<div class="sub">关注</div>
+								</a>
+							</div>
+						</div>
+						
+						<div class="head_line">
+							<div class="name">SkyFlame</div>
+						</div>
+						
+						
+						<ul id="intro_unit">
+							<li><i id="intro_location"></i><em>来自北京</em></li>
+							<li><i id="intro_job"></i><em>程序员</em></li>
+						</ul>
+						
+						
+						<div id="about_unit">
+							原谅我一生不羁放纵爱自由
+						</div>
+						
+						<div class="action_buttons">
+							<a href="#" class="btn"><span class="text"> 帐号设置</span></a>
+						</div>
+						
+					</div>
+					<div class="tabs">
+						<a href="#" class="tab active">1画板</a>
+						<a href="#" class="tab ">2采集</a>
+						<a href="#" class="tab ">0喜欢</a>
+						<a href="#" class="tab ">0商品</a>
+						<form id="people_search_item" class="searching-unit" >
+							<input value="" name="q" placeholder="搜索我的采集" autocomplete="off">
+							<a onclick="return false;" class="go"></a>
+						</form>
+					</div>
+				</div>
+				<div id="waterfall">
+					
+				</div>
+				<div id="more">
+				</div>
+			</div>
+		</div>
+		<div id="elevator">
+		</div>
+	</div>
+	<script type="text/javascript">
+		var styleBoardNum=4;
+		
+		function loadStyle(url)
+		{
+			var link = document.createElement('link');
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = url;
+			document.getElementsByTagName('head')[0].appendChild(link);
+		}
+	
+		$(document).ready(function(){
+	
+			//根据屏幕分辨率加载不同的layout样式，设置风格板个数
+			if(screen.width>=1600) 
+			{
+				loadStyle("css/layout1600.css");
+				styleBoardNum=6;
+			}
+			else if( screen.width>=1360 )
+			{
+				loadStyle("css/layout1360.css");
+				styleBoardNum=5;
+			}	
+			else 
+			{
+				loadStyle("css/layout1280.css");
+				styleBoardNum=4;
+			}
+			
+			$("#header_main_menu").hide();   //先将层隐藏起来
+			$("#header_user_menu").hide();
+
+			var leftcanHide = false; //标记左菜单栏是否可隐藏层
+			var rightcanHide =false;//标记右菜单栏是否可隐藏
+			function doHide(){   //是否隐藏层中这里处理
+				if(leftcanHide)
+					$("#header_main_menu").hide();
+				if(rightcanHide)
+					$("#header_user_menu").hide();
+			}
+			$("#left_menu_nav").hover(function(){ //鼠标进入
+				$(".nav_icon").css("background","url('image/menu_sprite.svg')-50px 0 no-repeat");
+				$("#header_main_menu").show(); //显示
+				leftcanHide = false; //标记不可隐藏
+			},function(){
+				$(".nav_icon").css("background","url('image/menu_sprite.svg')0 0 no-repeat");	
+				leftcanHide = true; //鼠标移出可隐藏
+				window.clearTimeout(t); //将上次的定时器清除,重新设置
+				var t = window.setTimeout(doHide,500); //在间隔1000毫秒后执行是否隐藏处理
+			}
+			);
+			//主要依靠定时器来将两者关联起来
+			$("#header_main_menu").hover(function(){ //鼠标进入
+				$(".nav_icon").css("background","url('image/menu_sprite.svg')-50px 0 no-repeat");
+				leftcanHide = false;    //不可隐藏
+			},function(){
+			$(".nav_icon").css("background","url('image/menu_sprite.svg')0 0 no-repeat");
+				leftcanHide = true;     //鼠标移出可隐藏
+				window.clearTimeout(t);
+				var t = window.setTimeout(doHide,500);
+			});
+			
+			/*user的hover事件*/
+			$("#right_menu_nav").hover(function(){ //鼠标进入
+				$("#header_user_menu").show(); //显示
+				rightcanHide = false; //标记不可隐藏
+			},function(){
+				rightcanHide = true; //鼠标移出可隐藏
+				window.clearTimeout(t); //将上次的定时器清除,重新设置
+				var t = window.setTimeout(doHide,500); //在间隔1000毫秒后执行是否隐藏处理
+			}
+			);
+			//主要依靠定时器来将两者关联起来
+			$("#header_user_menu").hover(function(){ //鼠标进入
+				leftcanHide = false;    //不可隐藏
+			},function(){
+				leftcanHide = true;     //鼠标移出可隐藏
+				window.clearTimeout(t);
+				var t = window.setTimeout(doHide,500);
+			});
+			var testStyleBoards = [];
+			
+			for (var i = 0; i < 100; i++) {
+				var model = {
+					index:i,
+					styleBoardName: "科比最帅瞬间",
+					imgCount: 4,
+					coverImg:"image/1.jpg",
+					firstImg:"image/2.jpg",
+					secondImg:"image/3.jpg",
+					thirdImg:"image/4.jpg"
+				}
+				testStyleBoards.push(model);
+			}
+
+			var xwf = XUtil.XWaterfall({
+				src: testStyleBoards,
+				url: '',
+				renderTo: $('#waterfall')[0],
+				renderer: function (model) {
+					var html;
+					if( model.index==0 )
+					{
+						html="<div class='addBoard'><div class='inner'><i></i><span>创建风格板</span></div></div>";
+					}
+					else 
+					{
+						 html = "<div class='styleBoard'><a href='#' class='link'>"+
+						"<img id = 'coverImg' src='"+model.coverImg+"' style='position:absolute;width:216px;height:216px;'>"+
+						"<img id = 'firstImg' src='"+model.firstImg+"' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>"+
+						"<img id = 'secondImg' src='"+model.secondImg+"' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>"+
+						"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>"+
+						"<div class='shadow' ></div><div href='#' class='btn'><span class='text'>设置封面</span></div>"+
+						"<div class='over'><h3 id='styleBoardName'>"+model.styleBoardName+"</h3><div id='imgCount' class='pin-count'>"+model.imgCount+"</div></div></a>"+
+						"<div class='editBoard'><a href='#' class='btn'><strong>编辑</strong></a></div></div>";
+					}
+					return html;
+				}
+			});
+
+			xwf.set({
+				colNum: styleBoardNum,
+				initialSize: 50,
+				colWidth: 252,
+				contentWidth: 252,
+				fetchSize: 20,
+				marginTop: 16
+			});
+
+			xwf.init();
+		
+			$("a.link").mouseover(function(){
+				$(this).children(".shadow").show();
+				$(this).children(".btn").click(function(){
+				}).show();
+			}).mouseout(function(){
+				$(this).children(".shadow").hide();
+				$(this).children(".btn").hide();
+			});
+		});
+	</script>
+</body>
+</html>

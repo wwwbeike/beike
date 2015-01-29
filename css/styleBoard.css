@@ -1,0 +1,184 @@
+		/**
+		* 风格板样式
+		**/
+		.styleBoard
+		{
+			 position: relative;
+			 left:0px;
+			 top:0px;
+			 width: 236px;
+			 padding: 0;
+			 background-color:#FFFFFF;
+		}
+		
+		
+		div.styleBoard .link
+		{
+			display: block;
+			padding:10px 0 0 10px;
+			height: 299px;
+		}
+		div.styleBoard div.shadow
+		{
+			background-color: #000;
+			position: absolute;
+			left: 10px;
+			top:10px;
+			width: 216px;
+			height: 289px;
+			opacity: 0.1;
+			display: none;
+		}
+		.styleBoard div.over
+		{
+			position: absolute;
+			left: 10px;
+			top:10px;
+			width: 216px;
+			height: 289px;
+		}
+		.styleBoard .over h3
+		{
+			padding: 8px 0 0 8px;
+			font-size: 14px;
+			color: #fff;
+		}
+		.styleBoard .pin-count
+		{
+			position: absolute;
+			top:188px;
+			left: 8px;
+			font-size: 12px;
+			color: #fff;
+			padding: 0 5px;
+			background:rgba(0,0,0,.4);
+		}
+		.styleBoard .link .btn
+		{
+			position: absolute;
+			height: 26px;
+			width: 68px;
+			left: 146px;
+			top: 190px;
+			display: block;
+			border-radius: 2px;
+			font-size: 12px;
+			line-height: 28px;
+			background:linear-gradient( #FAFAFA, #F2F2F2);
+			border: 1px solid #D9D9D9;
+			text-decoration: none;
+			text-align: center;
+			color: #444;
+			display: none;
+		}
+		.styleBoard .editBoard
+		{
+			position: relative;
+			text-align: center;
+			width: 216px;
+			padding: 0 10px 11px;
+			background-color:#FFFFFF;
+		}
+		.styleBoard .editBoard a.btn
+		{
+			display: block;
+			border-radius: 2px;
+			font-size: 14px;
+			line-height: 28px;
+			background:linear-gradient( #FAFAFA, #F2F2F2);
+			border: 1px solid #D9D9D9;
+			text-decoration: none;
+			color: #444;
+		}
+		.styleBoard strong
+		{
+			font-weight: 400;
+		}
+		.styleBoard .userBoard
+		{
+			position: relative;
+			width: 216px;
+			padding: 0 10px 11px;
+			background-color:#FFFFFF;
+			font-family: "helvetica neue",arial,sans-serif;
+		}
+		.styleBoard .userBoard a.image
+		{
+			position: absolute;
+			background-color: #fff;
+			text-decoration: none;
+		}
+		.styleBoard .userBoard .userImage
+		{
+			position: relative;
+			top:3px;
+			width: 24px;
+			height: 24px;
+		}
+		.styleBoard .userBoard .userName
+		{
+			position: relative;
+			font-size: 12px;
+			left: 34px;
+			line-height: 24px;
+			text-decoration: none;
+			color: #444;
+		}
+		.styleBoard .userBoard a.userName:hover
+		{
+			text-decoration: underline;
+		}
+		.styleBoard .userBoard a.btn
+		{
+			position: relative;
+			display:inline-block;
+			padding: 0 12px;
+			margin-left: 109px;
+			border-radius: 2px;
+			font-size: 14px;
+			line-height: 28px;
+			background:linear-gradient( #FAFAFA, #F2F2F2);
+			border: 1px solid #D9D9D9;
+			text-decoration: none;
+			color: #444;
+		}
+		/**
+		* 添加板样式
+		**/
+		.addBoard
+		{
+			 position: relative;
+			 //margin:0 0 15px 16px;
+			 float:left;
+			 left:0px;
+			 top:0px;
+			 width: 236px;
+			 height:350px;
+			 background-color:#f6f5f5;
+			 box-shadow:0 1px 3px rgba(0,0,0,.3);
+			 cursor:pointer;
+		}
+		.addBoard:hover
+		{
+			background:#fff;
+		}
+		.addBoard .inner
+		{
+			margin:10px;
+			height:326px;
+			border:2px dashed #dedede;
+		}
+		.addBoard .inner i
+		{
+			display:block;
+			width:48px;
+			height:48px;
+			margin:128px auto 10px;
+			background: url(../image/icon_add_styleBoard.png) 0 0 no-repeat;
+		}
+		.addBoard .inner span
+		{
+			display:block;
+			color:#777;
+			text-align:center;
+		}
