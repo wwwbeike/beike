@@ -247,7 +247,7 @@ XUtil.XWaterfall = function (option) {
             .css('min-height', 0)
             .css('height', 0)
             .css('position', 'relative');
-
+		
         for (i = 0; i < colNum; i++) {
             //列对象，存储了一些基本信息，包括：
             //列中的所有元素，列的位置(targetLeft)，列的index，列的当前高度（随着元素的添加和删除会动态
@@ -382,7 +382,9 @@ XUtil.XWaterfall = function (option) {
         }
 
         for (i = 0; i < initialSize; i++) {
-            pushComponent(src[i]);
+           if(i < src.length){
+        		pushComponent(src[i]);
+        	}
         }
 
         that.minHeight = $(renderTo).height();
