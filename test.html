@@ -11,6 +11,7 @@
 	<link rel='stylesheet' type="text/css" href='css/XUtil.min.css'/>
 	<link rel="stylesheet" type="text/css" href="css/styleBoard.css"/>
 	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="css/collect.css"/>
 </head>
 <body>
 	<div id="page">
@@ -139,7 +140,56 @@
 				</div>
 				<div id="desc_bar"></div>
 				<div id="waterfall">
-				</div>
+					
+					<div class="addCollect">
+						<div class="inner">
+						<i></i>
+						<span>添加采集</span>
+						</div>
+					</div>
+					
+					<div class="collect" >
+						<div class="actions">
+							<a href="#" class="btn left"><span class="text">采集</span></a>
+							<a href="#" class="btn right"><span class="text">编辑</span></a>
+						</div>
+						<a href="#" class="link">
+							<img src="image/1.jpg" style="max-width:236px;" >
+						</a>
+						<p class="description">Phuktal寺庙位于印控克什米尔地区。属印度佛教。修建在400多米高的悬崖峭壁上，很难到达。它已被世界教科文组织列为世界文化遗产。Phuktal，意思是‘天堂寺之间徘徊’。</p>
+						<p class="extra">
+							<span class="repin"><i></i>1</span>
+							<span ><i></i>2</span>
+						</p>
+						<div class="source">
+							<a href="#">zhan.renren.com</a>
+						</div>
+					</div>
+					
+					<div class='styleBoard'>
+						<a href='#' class='link'>
+							<img id = 'coverImg' src='image/1.jpg' style='position:absolute;width:216px;height:216px;'>
+							<img id = 'firstImg' src='image/2.jpg' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>
+							<img id = 'secondImg' src='image/3.jpg' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>
+							<img id = 'thirdImg' src='image/4.jpg' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>
+							<div class='shadow' ></div>
+							<div class='btn setbtn'><span class='text'>设置封面</span></div>
+							<div class='over'>
+								<h3 id='styleBoardName'>我的风格板</h3>
+								<div id='imgCount' class='pin-count'>4</div>
+							</div>
+						</a>
+						<div class='editBoard'>
+							<a href='#' class='btn'>
+							<strong>编辑</strong>
+							</a>
+						</div>
+					</div>
+					
+					<div class='addBoard'>
+						<div class='inner'><i></i><span>创建风格板</span>
+						</div>
+					</div>
 				<div id="more">
 				</div>
 			</div>
@@ -208,7 +258,7 @@
 							"<img id = 'firstImg' src='"+model.firstImg+"' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>"+
 							"<img id = 'secondImg' src='"+model.secondImg+"' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>"+
 							"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>"+
-							"<div class='shadow' ></div><div href='#' class='btn setbtn'><span class='text'>设置封面</span></div>"+
+							"<div class='shadow' ></div><div href='#' class='btn'><span class='text'>设置封面</span></div>"+
 							"<div class='over'><h3 id='styleBoardName'>"+model.styleBoardName+"</h3><div id='imgCount' class='pin-count'>"+model.imgCount+"</div></div></a>"+
 							"<div class='editBoard'><a href='#' class='btn'><strong>编辑</strong></a></div></div>";
 						}
@@ -229,7 +279,56 @@
 			}
 			function renderCollect()
 			{
-				
+				var testCollects = [];
+			
+				for (var i = 0; i < 100; i++) {
+					var model = {
+						index:i,
+						styleBoardName: "科比最帅瞬间",
+						imgCount: 4,
+						coverImg:"image/1.jpg",
+						firstImg:"image/2.jpg",
+						secondImg:"image/3.jpg",
+						thirdImg:"image/4.jpg"
+					}
+					testStyleBoards.push(model);
+				}
+
+				var xwf = XUtil.XWaterfall({
+					src: testStyleBoards,
+					url: '',
+					renderTo: $('#waterfall')[0],
+					renderer: function (model) {
+						var html;
+						if( model.index==0 )
+						{
+							html="<div class='addBoard'><div class='inner'><i></i><span>创建风格板</span></div></div>";
+						}
+						else 
+						{
+							 html = "<div class='styleBoard'><a href='#' class='link'>"+
+							"<img id = 'coverImg' src='"+model.coverImg+"' style='position:absolute;width:216px;height:216px;'>"+
+							"<img id = 'firstImg' src='"+model.firstImg+"' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>"+
+							"<img id = 'secondImg' src='"+model.secondImg+"' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>"+
+							"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>"+
+							"<div class='shadow' ></div><div href='#' class='btn'><span class='text'>设置封面</span></div>"+
+							"<div class='over'><h3 id='styleBoardName'>"+model.styleBoardName+"</h3><div id='imgCount' class='pin-count'>"+model.imgCount+"</div></div></a>"+
+							"<div class='editBoard'><a href='#' class='btn'><strong>编辑</strong></a></div></div>";
+						}
+						return html;
+					}
+				});
+
+				xwf.set({
+					colNum: styleBoardNum,
+					initialSize: 50,
+					colWidth: 252,
+					contentWidth: 252,
+					fetchSize: 20,
+					marginTop: 16
+				});
+
+				xwf.init();
 			}
 			//tabs切换
 			$("#styleBoard_tab").click(function(){
@@ -254,16 +353,6 @@
 				renderFond();
 			});
 			
-		
-		    //风格板事件绑定
-			$("a.link").mouseover(function(){
-				$(this).children(".shadow").show();
-				$(this).children(".btn").click(function(){
-				}).show();
-			}).mouseout(function(){
-				$(this).children(".shadow").hide();
-				$(this).children(".btn").hide();
-			});
 		});
 	</script>
 </body>
