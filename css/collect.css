@@ -1,0 +1,138 @@
+		/**
+		* 添加采集样式
+		**/
+		.addCollect
+		{
+			 position: relative;
+			 left:0px;
+			 top:0px;
+			 width: 236px;
+			 height:130px;
+			 background:rgba(255,255,255,.5);
+			 box-shadow:0 1px 3px rgba(0,0,0,.3);
+			 cursor:pointer;
+			 text-decoration:none;
+		}
+		.addCollect:hover
+		{
+			background:#fff;
+		}
+		.addCollect .inner
+		{
+			height:126px;
+			border:2px dashed #dedede;
+		}
+		.addCollect .inner i
+		{
+			display:block;
+			width:48px;
+			height:48px;
+			margin:28px auto 10px;
+			background: url(../image/icon_add_styleBoard.png) 0 0 no-repeat;
+		}
+		.addCollect .inner span
+		{
+			display:block;
+			color:#777;
+			text-align:center;
+		}
+		/**
+		* 采集样式
+		**/
+		.collect
+		{
+			 position: relative;
+			 width: 236px;
+			 font-size:12px;
+			 background-color:#FFFFFF;
+			 box-shadow:0 1px 3px rgba(0,0,0,.3);
+		}
+		.collect:hover .actions
+		{
+			display:block;
+		}
+		.collect .actions
+		{
+			position:absolute;
+			display:none;
+			left:6px;
+			top:6px;
+			right:6px;
+			z-index:3;
+		}
+		.collect .actions .left
+		{
+			color:#fff;
+			background:#E53E49;
+			border-color:#E53E49;
+			text-shadow:0 -1px 0 rgba(0,0,0,.1);
+			font-weight:thicker ;
+			box-shadow:none;
+		}
+		.collect .actions .right
+		{
+			margin-left:110px;
+		}
+		.collect a.link
+		{
+			cursor:pointer;
+			display: block;
+		}
+		.collect a.link img:hover
+		{
+			opacity:0.9;
+		}
+		.collect .description
+		{
+			display:block;
+			padding:0 16px;
+			margin:10px 0;
+			line-height:1.35em;
+			overflow:hidden;
+			word-wrap:break-word;
+			font-family:"helvetica neue",arial,sans-serif;
+		}
+		.collect .extra
+		{
+			padding:0 15px;
+		}
+		.collect .extra>span
+		{
+			display:inline-block;
+			width:auto;
+			height:12px;
+			line-height:12px;
+			font-size:12px;
+			margin-right:10px;
+		}
+		.collect .extra .repin i
+		{
+			background-position:-30px 0;
+		}
+		.collect .extra>span i
+		{
+			display:inline-block;
+			width:12px;
+			height:12px;
+			margin-right:4px;
+			vertical-align:bottom;
+			background:url(../image/bt_action_icons.svg) 0 0 no-repeat;
+		}
+		.collect .source
+		{
+			padding:0 15px;
+			height:50px;
+			background:#FAFAFA;
+		}
+		.collect .source a
+		{
+			text-decoration:none;
+			font-size:16px;
+			display:inline-block;
+			color: #444;
+			margin-top:15px;
+		}
+		.collect .source a:hover
+		{
+			text-decoration:underline;
+		}

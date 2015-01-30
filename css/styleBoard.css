@@ -18,6 +18,10 @@
 			padding:10px 0 0 10px;
 			height: 299px;
 		}
+		div.styleBoard .link:hover .shadow
+		{
+			display: block;
+		}
 		div.styleBoard div.shadow
 		{
 			background-color: #000;
@@ -53,23 +57,22 @@
 			padding: 0 5px;
 			background:rgba(0,0,0,.4);
 		}
-		.styleBoard .link .btn
+		.styleBoard .link .setbtn
+		{
+			display: none;
+		}
+		div.styleBoard .link:hover .setbtn
 		{
 			position: absolute;
-			height: 26px;
-			width: 68px;
+			height: 24px;
 			left: 146px;
 			top: 190px;
-			display: block;
-			border-radius: 2px;
 			font-size: 12px;
-			line-height: 28px;
-			background:linear-gradient( #FAFAFA, #F2F2F2);
-			border: 1px solid #D9D9D9;
+			line-height: 24px;
 			text-decoration: none;
 			text-align: center;
-			color: #444;
-			display: none;
+			display: block;
+			padding:0 9px;
 		}
 		.styleBoard .editBoard
 		{
@@ -79,7 +82,8 @@
 			padding: 0 10px 11px;
 			background-color:#FFFFFF;
 		}
-		.styleBoard .editBoard a.btn
+		
+		.styleBoard .editBoard  a.btn
 		{
 			display: block;
 			border-radius: 2px;
@@ -89,6 +93,10 @@
 			border: 1px solid #D9D9D9;
 			text-decoration: none;
 			color: #444;
+		}
+		.styleBoard .editBoard  a.btn:hover
+		{
+			background:linear-gradient(#FFF, #F7F7F7);
 		}
 		.styleBoard strong
 		{
