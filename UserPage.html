@@ -181,7 +181,7 @@
 			{
 				var testStyleBoards = [];
 			
-				for (var i = 0; i < 100; i++) {
+				for (var i = 0; i < 10; i++) {
 					var model = {
 						index:i,
 						styleBoardName: "科比最帅瞬间",
@@ -197,6 +197,12 @@
 				var xwf = XUtil.XWaterfall({
 					src: testStyleBoards,
 					url: '',
+					colNum: boardNum,
+					initialSize: 50,
+					colWidth: 252,
+					contentWidth: 252,
+					fetchSize: 20,
+					marginTop: 16,
 					renderTo: $('#boardWaterfall')[0],
 					renderer: function (model) {
 						var html;
@@ -219,15 +225,6 @@
 					}
 				});
 
-				xwf.set({
-					colNum: boardNum,
-					initialSize: 50,
-					colWidth: 252,
-					contentWidth: 252,
-					fetchSize: 20,
-					marginTop: 16
-				});
-
 				xwf.init();
 			}
 			function renderCollect()
@@ -238,7 +235,7 @@
 									"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
 									"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
 									"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
-				for (var i = 0; i < 100; i++) {
+				for (var i = 0; i < 7; i++) {
 					var model = {
 						index:i,
 						imgUrl: imgs[i%4],
@@ -252,6 +249,12 @@
 
 				var xwf = XUtil.XWaterfall({
 					src: testCollects,
+					initialSize: 10,
+					colNum: boardNum,
+					colWidth: 252,
+					contentWidth: 252,
+					fetchSize: 20,
+					marginTop: 16,
 					url: '',
 					renderTo: $('#collectWaterfall')[0],
 					renderer: function (model) {
@@ -271,15 +274,6 @@
 						}
 						return html;
 					}
-				});
-
-				xwf.set({
-					colNum: boardNum,
-					initialSize: 50,
-					colWidth: 252,
-					contentWidth: 252,
-					fetchSize: 20,
-					marginTop: 16
 				});
 
 				xwf.init();
