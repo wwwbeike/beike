@@ -11,6 +11,7 @@
 	<link rel='stylesheet' type="text/css" href='css/XUtil.min.css'/>
 	<link rel="stylesheet" type="text/css" href="css/styleBoard.css"/>
 	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="css/collect.css"/>
 </head>
 <body>
 	<div id="page">
@@ -128,7 +129,7 @@
 						
 					</div>
 					<div class="tabs">
-						<a href="#" id ="styleBoard_tab" class="tab active">1风格板</a>
+						<a href="#" id ="styleBoard_tab" class="tab ">1风格板</a>
 						<a href="#" id ="collect_tab" class="tab ">2采集</a>
 						<a href="#" id ="fond_tab" class="tab ">0喜欢</a>
 						<form id="people_search_item" class="searching-unit" >
@@ -138,7 +139,9 @@
 					</div>
 				</div>
 				<div id="desc_bar"></div>
-				<div id="waterfall">
+				<div id="boardWaterfall" class="waterfall">
+				</div>
+				<div id="collectWaterfall" class="waterfall">
 				</div>
 				<div id="more">
 				</div>
@@ -148,7 +151,7 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		var styleBoardNum=4;
+		var boardNum=4;
 	
 		$(document).ready(function(){
 	
@@ -157,19 +160,19 @@
 			{
 				$("#headWapper").addClass("wrapper1600");
 				$("#pageWapper").addClass("wrapper1600");
-				styleBoardNum=6;
+				boardNum=6;
 			}
 			else if( screen.width>=1360 )
 			{
 				$("#headWapper").addClass("wrapper1360");
 				$("#pageWapper").addClass("wrapper1360");
-				styleBoardNum=5;
+				boardNum=5;
 			}	
 			else 
 			{
 				$("#headWapper").addClass("wrapper1280");
 				$("#pageWapper").addClass("wrapper1280");
-				styleBoardNum=4;
+				boardNum=4;
 			}
 			//header风格设置
 			headerStyle();
@@ -194,7 +197,7 @@
 				var xwf = XUtil.XWaterfall({
 					src: testStyleBoards,
 					url: '',
-					renderTo: $('#waterfall')[0],
+					renderTo: $('#boardWaterfall')[0],
 					renderer: function (model) {
 						var html;
 						if( model.index==0 )
@@ -217,7 +220,7 @@
 				});
 
 				xwf.set({
-					colNum: styleBoardNum,
+					colNum: boardNum,
 					initialSize: 50,
 					colWidth: 252,
 					contentWidth: 252,
@@ -229,21 +232,73 @@
 			}
 			function renderCollect()
 			{
-				
+				var testCollects = [];
+			    var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
+				var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
+									"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
+									"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
+									"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
+				for (var i = 0; i < 100; i++) {
+					var model = {
+						index:i,
+						imgUrl: imgs[i%4],
+						description:descriptions[i%4],
+						repin: Math.floor(Math.random()*10),
+						loved: Math.floor(Math.random()*10),
+						sourceUrl:"http://image.baidu.com/"
+					}
+					testCollects.push(model);
+				}
+
+				var xwf = XUtil.XWaterfall({
+					src: testCollects,
+					url: '',
+					renderTo: $('#collectWaterfall')[0],
+					renderer: function (model) {
+						var html;
+						if( model.index==0 )
+						{
+							html="<div class='addCollect'><div class='inner'><i></i><span>添加采集</span></div></div>";
+						}
+						else 
+						{
+							 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
+						           "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
+			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' style='max-width:236px;' ></a>"+
+						           "<p class='description'>"+model.description+"</p>"+
+						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
+								   "<div class='source'><a href='"+model.sourceUrl+"'>"+model.sourceUrl+"</a></div></div>";
+						}
+						return html;
+					}
+				});
+
+				xwf.set({
+					colNum: boardNum,
+					initialSize: 50,
+					colWidth: 252,
+					contentWidth: 252,
+					fetchSize: 20,
+					marginTop: 16
+				});
+
+				xwf.init();
 			}
 			//tabs切换
 			$("#styleBoard_tab").click(function(){
 				$("#styleBoard_tab").addClass("active");
 				$("#collect_tab").removeClass("active");
 				$("#fond_tab").removeClass("active");
-				$("#waterfall").empty();
+				$("#collectWaterfall").hide();
+				$("#boardWaterfall").show();
 				renderStyleBoard();
 			});
 			$("#collect_tab").click(function(){
 				$("#styleBoard_tab").removeClass("active");
 				$("#collect_tab").addClass("active");
 				$("#fond_tab").removeClass("active");
-				$("#waterfall").empty();
+				$("#boardWaterfall").hide();
+				$("#collectWaterfall").show();
 				renderCollect();
 			});
 			$("#fond_tab").click(function(){
@@ -253,17 +308,7 @@
 				$("#waterfall").empty();
 				renderFond();
 			});
-			
-		
-		    //风格板事件绑定
-			$("a.link").mouseover(function(){
-				$(this).children(".shadow").show();
-				$(this).children(".btn").click(function(){
-				}).show();
-			}).mouseout(function(){
-				$(this).children(".shadow").hide();
-				$(this).children(".btn").hide();
-			});
+			$("#styleBoard_tab").click();
 		});
 	</script>
 </body>
