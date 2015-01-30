@@ -57,11 +57,7 @@
 			padding: 0 5px;
 			background:rgba(0,0,0,.4);
 		}
-		.styleBoard .link .setbtn
-		{
-			display: none;
-		}
-		div.styleBoard .link:hover .setbtn
+		.styleBoard  .setbtn
 		{
 			position: absolute;
 			height: 24px;
@@ -71,8 +67,13 @@
 			line-height: 24px;
 			text-decoration: none;
 			text-align: center;
-			display: block;
+			opacity: 0;
 			padding:0 9px;
+			z-index:3;
+		}
+		.styleBoard  .link:hover .setbtn
+		{
+			opacity: 1;
 		}
 		.styleBoard .editBoard
 		{

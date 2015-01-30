@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Home</title>
+	<title>演示用demo</title>
 	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 	<script type="text/javascript" src='js/XUtil/XUtil.js'></script>
 	<script type="text/javascript" src='js/XUtil/src/base.js'></script>
@@ -167,13 +167,13 @@
 					</div>
 					
 					<div class='styleBoard'>
-						<a href='#' class='link'>
+						<a href='UserPage.html' class='link'>
 							<img id = 'coverImg' src='image/1.jpg' style='position:absolute;width:216px;height:216px;'>
 							<img id = 'firstImg' src='image/2.jpg' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>
 							<img id = 'secondImg' src='image/3.jpg' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>
 							<img id = 'thirdImg' src='image/4.jpg' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>
 							<div class='shadow' ></div>
-							<div class='btn setbtn'><span class='text'>设置封面</span></div>
+							<div href="#" class='btn setbtn'><span class='text'>设置封面</span></div>
 							<div class='over'>
 								<h3 id='styleBoardName'>我的风格板</h3>
 								<div id='imgCount' class='pin-count'>4</div>
@@ -223,136 +223,11 @@
 			}
 			//header风格设置
 			headerStyle();
-			
-			function renderStyleBoard()
-			{
-				var testStyleBoards = [];
-			
-				for (var i = 0; i < 100; i++) {
-					var model = {
-						index:i,
-						styleBoardName: "科比最帅瞬间",
-						imgCount: 4,
-						coverImg:"image/1.jpg",
-						firstImg:"image/2.jpg",
-						secondImg:"image/3.jpg",
-						thirdImg:"image/4.jpg"
-					}
-					testStyleBoards.push(model);
-				}
-
-				var xwf = XUtil.XWaterfall({
-					src: testStyleBoards,
-					url: '',
-					renderTo: $('#waterfall')[0],
-					renderer: function (model) {
-						var html;
-						if( model.index==0 )
-						{
-							html="<div class='addBoard'><div class='inner'><i></i><span>创建风格板</span></div></div>";
-						}
-						else 
-						{
-							 html = "<div class='styleBoard'><a href='#' class='link'>"+
-							"<img id = 'coverImg' src='"+model.coverImg+"' style='position:absolute;width:216px;height:216px;'>"+
-							"<img id = 'firstImg' src='"+model.firstImg+"' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>"+
-							"<img id = 'secondImg' src='"+model.secondImg+"' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>"+
-							"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>"+
-							"<div class='shadow' ></div><div href='#' class='btn'><span class='text'>设置封面</span></div>"+
-							"<div class='over'><h3 id='styleBoardName'>"+model.styleBoardName+"</h3><div id='imgCount' class='pin-count'>"+model.imgCount+"</div></div></a>"+
-							"<div class='editBoard'><a href='#' class='btn'><strong>编辑</strong></a></div></div>";
-						}
-						return html;
-					}
-				});
-
-				xwf.set({
-					colNum: styleBoardNum,
-					initialSize: 50,
-					colWidth: 252,
-					contentWidth: 252,
-					fetchSize: 20,
-					marginTop: 16
-				});
-
-				xwf.init();
-			}
-			function renderCollect()
-			{
-				var testCollects = [];
-			
-				for (var i = 0; i < 100; i++) {
-					var model = {
-						index:i,
-						styleBoardName: "科比最帅瞬间",
-						imgCount: 4,
-						coverImg:"image/1.jpg",
-						firstImg:"image/2.jpg",
-						secondImg:"image/3.jpg",
-						thirdImg:"image/4.jpg"
-					}
-					testStyleBoards.push(model);
-				}
-
-				var xwf = XUtil.XWaterfall({
-					src: testStyleBoards,
-					url: '',
-					renderTo: $('#waterfall')[0],
-					renderer: function (model) {
-						var html;
-						if( model.index==0 )
-						{
-							html="<div class='addBoard'><div class='inner'><i></i><span>创建风格板</span></div></div>";
-						}
-						else 
-						{
-							 html = "<div class='styleBoard'><a href='#' class='link'>"+
-							"<img id = 'coverImg' src='"+model.coverImg+"' style='position:absolute;width:216px;height:216px;'>"+
-							"<img id = 'firstImg' src='"+model.firstImg+"' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>"+
-							"<img id = 'secondImg' src='"+model.secondImg+"' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>"+
-							"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>"+
-							"<div class='shadow' ></div><div href='#' class='btn'><span class='text'>设置封面</span></div>"+
-							"<div class='over'><h3 id='styleBoardName'>"+model.styleBoardName+"</h3><div id='imgCount' class='pin-count'>"+model.imgCount+"</div></div></a>"+
-							"<div class='editBoard'><a href='#' class='btn'><strong>编辑</strong></a></div></div>";
-						}
-						return html;
-					}
-				});
-
-				xwf.set({
-					colNum: styleBoardNum,
-					initialSize: 50,
-					colWidth: 252,
-					contentWidth: 252,
-					fetchSize: 20,
-					marginTop: 16
-				});
-
-				xwf.init();
-			}
-			//tabs切换
-			$("#styleBoard_tab").click(function(){
-				$("#styleBoard_tab").addClass("active");
-				$("#collect_tab").removeClass("active");
-				$("#fond_tab").removeClass("active");
-				$("#waterfall").empty();
-				renderStyleBoard();
+			$("div.styleBoard a.link div.setbtn").click(function(event){
+				alert("hah");
+				//event.stopPropagation();
+				return false;
 			});
-			$("#collect_tab").click(function(){
-				$("#styleBoard_tab").removeClass("active");
-				$("#collect_tab").addClass("active");
-				$("#fond_tab").removeClass("active");
-				$("#waterfall").empty();
-				renderCollect();
-			});
-			$("#fond_tab").click(function(){
-				$("#styleBoard_tab").removeClass("active");
-				$("#collect_tab").removeClass("active");
-				$("#fond_tab").addClass("active");
-				$("#waterfall").empty();
-				renderFond();
-			});
-			
 		});
 	</script>
 </body>
