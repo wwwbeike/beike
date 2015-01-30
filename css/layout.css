@@ -510,8 +510,9 @@
 			padding: 0 20px;
 			color: #777;
 			border-right: 1px solid #EDEDED;
-			display: inline-block;
+			display: block;
 			text-decoration: none;
+			float:left;
 		}
 		
 		#user_card .tabs .active {
@@ -531,7 +532,7 @@
 			margin-top: -14px;
 		}
 		
-		#waterfall{
+		.waterfall{
 			position:relative;
 			height:500px;
 			margin:16px auto 0;
