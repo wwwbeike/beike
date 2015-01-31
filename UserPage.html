@@ -114,14 +114,13 @@
 								<img width="130" height="130" src="./image/user_photo.jpg" >
 							</div>
 							<div class="counts">
-								<a href="#" class="followers">
-									<div class="num">7</div>
-									<div class="sub">粉丝</div>
-								</a>
-								<a href="#" class="follows">
-									<div class="num">11</div>
-									<div class="sub">关注</div>
-								</a>
+								<div class="text">
+									<strong>被转采</strong>
+								</div>
+								<div class="number">
+									<strong>55862</strong>
+									<span>次</span>
+								</div>
 							</div>
 						</div>
 						
@@ -132,7 +131,6 @@
 						
 						<ul id="intro_unit">
 							<li><i id="intro_location"></i><em>来自北京</em></li>
-							<li><i id="intro_job"></i><em>程序员</em></li>
 						</ul>
 						
 						
@@ -155,7 +153,12 @@
 						</form>
 					</div>
 				</div>
-				<div id="desc_bar"></div>
+				<div id="desc_bar">
+					<ul class="collect-board-switcher">
+						<li ><a href="#" >3 采集</a></li>
+						<li class="selected"><a href="#">8 画板</a></li>
+					</ul>
+				</div>
 				<div id="boardWaterfall" class="waterfall">
 				</div>
 				<div id="collectWaterfall" class="waterfall">
@@ -300,6 +303,7 @@
 				$("#styleBoard_tab").addClass("active");
 				$("#collect_tab").removeClass("active");
 				$("#fond_tab").removeClass("active");
+				$("#desc_bar").hide();
 				$("#collectWaterfall").hide();
 				$("#boardWaterfall").show();
 				renderStyleBoard();
@@ -308,6 +312,7 @@
 				$("#styleBoard_tab").removeClass("active");
 				$("#collect_tab").addClass("active");
 				$("#fond_tab").removeClass("active");
+				$("#desc_bar").hide();
 				$("#boardWaterfall").hide();
 				$("#collectWaterfall").show();
 				renderCollect();
@@ -316,8 +321,9 @@
 				$("#styleBoard_tab").removeClass("active");
 				$("#collect_tab").removeClass("active");
 				$("#fond_tab").addClass("active");
-				$("#waterfall").empty();
-				renderFond();
+				$("#boardWaterfall").hide();
+				$("#collectWaterfall").hide();
+				$("#desc_bar").show();
 			});
 			$("#styleBoard_tab").click();
 		});

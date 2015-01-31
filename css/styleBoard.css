@@ -194,14 +194,7 @@
 			position: relative;
 			display:inline-block;
 			padding: 0 12px;
-			margin-left: 109px;
-			border-radius: 2px;
-			font-size: 14px;
-			line-height: 28px;
-			background:linear-gradient( #FAFAFA, #F2F2F2);
-			border: 1px solid #D9D9D9;
-			text-decoration: none;
-			color: #444;
+			margin-left: 96px;
 		}
 		/**
 		* 添加板样式

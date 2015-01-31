@@ -507,7 +507,7 @@
 			position:absolute;
 			left:20px;
 			top:-30px;
-			height:180px;
+			height:140px;
 			width:140px;
 		}
 		
@@ -520,7 +520,33 @@
 		.counts{
 			text-align: center;
 		}
-			
+		.counts .text{
+			background-color:#edece9;
+			height:26px;
+		}
+		.counts .text strong{
+			display:inline-block;
+			color:#444;
+			margin-top:4px;
+			font-size:14px;
+		}
+		.counts .number{
+			background-color:#F0F0F0;
+			height:30px;
+		}
+		.counts .number strong{
+			display:inline-block;
+			margin-top:4px;
+			font-size:22px;
+			font-weight:900;
+			font-family:
+		}
+		.counts .number span{
+			position:absolute;
+			right:19px;
+			margin-top:8px;
+		}
+		
 		.followers {
 			display: block;
 			float: left;
@@ -591,8 +617,45 @@
 			margin-top: -14px;
 		}
 		
+		#desc_bar{
+			position:relative;
+			padding-bottom:18px;
+			margin:18px 0 16px 0;
+			color:#777;
+			border-bottom:1px solid #D9D9D9
+		}
+		.collect-board-switcher
+		{
+			display:inline-block;
+		}
+		.collect-board-switcher li
+		{
+			display:block;
+			background:url("../image/tab_sprite.png") -1px -210px no-repeat;
+			border:1px solid #CCC;
+			font-size:15px;
+			font-weight:400;
+			float:left;
+		}
+		.collect-board-switcher li.selected 
+		{
+			background-position:-1px 290px;
+		}
+		.collect-board-switcher li.selected a
+		{
+			background-position:-113px -22px;
+		}
+		.collect-board-switcher li a{
+			display:block;
+			background:url("../image/tab_sprite.png") -113px 8px no-repeat;
+			line-height:26px;
+			font-size:14px;
+			text-decoration:none;
+			padding:2px 8px 2px 27px;
+		}
 		.waterfall{
 			position:relative;
 			height:500px;
 			margin:16px auto 0;
 		}
+		
