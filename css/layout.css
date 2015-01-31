@@ -15,7 +15,12 @@
 			resize: none;
 			outline: 0;
 		}
-		
+		a{
+			color: #222;
+			text-decoration: none;
+			outline: 0;
+			cursor:auto;
+		}
 		.btn {
 			display: inline-block;
 			line-height: 1;
@@ -113,11 +118,13 @@
 		
 		/*leftMenu css*/
 		.nav{
+			border-left: 1px solid #F5F5F5;
 			text-align: center;
 			height: 42px;
+			width: 42px;
 			float: left;
 			position: relative;
-			cursor: pointer;
+			cursor: pointer;;
 		}
 		.nav:hover {
 			background-color:#f7f7f7 ;
@@ -144,7 +151,7 @@
 			top: 50%;
 			margin: -8px 0 0 -8px;
 		}
-		.arrow{
+		#menu_bar .arrow{
 			background: url("../image/menu_sprite.svg") 0 -50px no-repeat;
 			width: 8px;
 			height: 8px;
@@ -153,7 +160,7 @@
 			bottom: 0;
 		}
 
-		#header_main_menu {
+		#left_menu_nav .menu {
 			z-index: 1;
 			background: #fff;
 			box-shadow: 0 1px 6px rgba(0,0,0,.2);
@@ -166,25 +173,26 @@
 			border:1px solid #fff;
 			border-radius: 3px;
 			cursor: default;
+			display:none;
 		}
 		.new-header-main-menu{
 			top:48px;
 		}
-		#header_main_menu a{
+		#left_menu_nav .menu a{
 			text-decoration:none;
 			cursor:auto;
 			color:#222;
 		}
-		#header_main_menu a:hover{
+		#left_menu_nav .menu a:hover{
 			text-decoration:underline;
 		}
-		.left-module {
+		#left_menu_nav .left_module {
 			height: 390px;
 			width: 120px;
 			float: left;
 			padding: 30px 20px 0 30px;
 		}
-		.right-module {
+		#left_menu_nav .right_module {
 			float: left;
 			padding: 30px 0 0 0;
 			width: 400px;
@@ -192,7 +200,7 @@
 			border-left: 1px solid #EDEDED;
 			height: 410px;
 		}
-		.main-link {
+		#left_menu_nav .left_module .main_link {
 			font-size: 16px;
 			display: block;
 			color: #222;
@@ -204,37 +212,37 @@
 			height: 24px;
 			position: relative;
 		}
-		.main-link.bold{
+		#left_menu_nav .left_module .main-link.bold{
 			font-weight:700;
 		}
-		.home-page{
+		#left_menu_nav .left_module .home_page{
 			background:url("../image/menu_sprite.svg") 0 -300px no-repeat;
 		}
-		.wedding-style{
+		#left_menu_nav .left_module .wedding_style{
 			background:url("../image/explore_icon.png")-25px -20px no-repeat;
 		}
-		.videos{
+		#left_menu_nav .left_module .videos{
 			background:url("../image/menu_sprite.svg")0 -1440px no-repeat;
 		}
-		.right-module .row-0{
+		.right_module .row_0{
 			width:180px;
 			float:left;
 		}
-		.right-module .row-1{
+		.right_module .row_1{
 			width:150px;
 			float:left;
 		}
-		.group {
+		#left_menu_nav .right_module .left_group {
 			margin-bottom: 14px;
 			padding-left: 34px;
 			padding-bottom: 1px;
 		}
-		.group a{
+		#left_menu_nav .right_module .left_group a{
 			display:block;
 			margin-bottom:15px;
 		}
 
-		.up-arrow {
+		#left_menu_nav .menu .up_arrow {
 			width: 18px;
 			height: 10px;
 			position: absolute;
@@ -242,9 +250,74 @@
 			top: -9px;
 			background: url("../image/menu_arrow.png") 0 0 no-repeat;
 		}
-
+		/* 右侧menu公共css*/
+		#right_menu .menu  a:hover{
+			background-color:#f7f7f7 ;
+		}
+		/*添加采集工具栏*/
+		#add_nav .nav_icon{
+			background-position:0 -150px;
+		}
+		#add_nav .menu{
+			position: absolute;
+			top: 56px;
+			left: -74px;
+			background: #fff;
+			width: 190px;
+			text-align: left;
+			box-shadow: 0 1px 4px rgba(0,0,0,.2);
+			font-size: 14px;
+			color: #221919;
+			line-height: 1;
+			display: none;
+		}
+		#add_nav .menu .add_group{
+			position: relative;
+			border-bottom: 1px solid #E1DFDF;
+		}
+		#add_nav .menu .add_group a{
+			display: block;
+			text-align: left;
+			font-weight: 400;
+			position: relative;
+			text-decoration: none;
+			padding: 15px 0 15px 42px;
+		}
+		#add_nav .menu .add_group a i{
+			display: block;
+			position: absolute;
+			left: 20px;
+			top: 15px;
+			width: 12px;
+			height: 12px;
+		}
+		#add_nav .menu .add_group span{
+			display: block;
+			color: #999;
+			font-size: 12px;
+			margin-top: 8px;
+			margin-left: -22px;
+		}
+		#add_nav .menu .upload{
+			background: url(../image/icon_user_menu.svg) 0 -480px no-repeat;
+		}
+		#add_nav .menu .add_board{
+			background: url(../image/icon_user_menu.svg) 0 -520px no-repeat;
+		}
+		#add_nav .menu .goodies{
+			background: url(../image/icon_user_menu.svg) 0 -80px no-repeat;
+		}
+		#add_nav .menu .arrow{
+			width: 18px;
+			height: 10px;
+			position: absolute;
+			left: 50%;
+			top: -9px;
+			background: url(../image/menu_arrow.png) 0 0 no-repeat;
+			margin-left: -9px;
+		}
 		/*Header 右侧用户头像菜单*/
-		#header_user_menu{
+		#user_nav .menu{
 			z-index:1;
 			top: 42px;
 			right: -1px;
@@ -259,20 +332,21 @@
 			color: #221919;
 			line-height: 1;
 			cursor:default;
+			display:none;
 		}
-		.user_photo{
+		#user_nav .user_photo{
 			display: block;
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			margin: -10px 0 0 -10px;
 		}
-		.user_group{
+		#user_nav .user_group{
 			display: block;
 			position: relative;
 			border-bottom: 1px solid #E1DFDF;
 		}
-		#header_user_menu .user_group a{
+		#user_nav .menu .user_group a{
 			display: block;
 			padding: 12px 0 12px 40px;
 			text-align: left;
@@ -280,10 +354,8 @@
 			position: relative;
 			color: #222;
 		}
-		#header_user_menu  a:hover{
-			background-color:#f7f7f7 ;
-		}
-		#header_user_menu .user_group a  i{
+
+		#user_nav .menu .user_group a  i{
 			display: block;
 			position: absolute;
 			left: 16px;
@@ -291,33 +363,16 @@
 			width: 16px;
 			height: 16px;
 			
-		}
-		
-		#header_user_menu a{
-			text-decoration:none;
-			cursor:auto;
-			color:#222;
-		}
-		
-		#header_user_menu  .mine{
+		}		
+		#user_nav .menu .user_group   .mine{
 			background: url(../image/icon_user_menu.svg) 0 0 no-repeat;
 		}
-		#header_user_menu  .settings{
+		#user_nav .menu .user_group  .settings{
 			background: url(../image/icon_user_menu.svg) 0 -160px no-repeat;
 		}
-		#header_user_menu  .exit{
+		#user_nav .menu .user_group .exit{
 			background: url(../image/icon_user_menu.svg) 0 -200px no-repeat;
 		}	
-		.nav{
-			border-left: 1px solid #F5F5F5;
-			text-align: center;
-			height: 42px;
-			width: 42px;
-			float: left;
-			position: relative;
-			cursor: pointer;
-		}
-
 		/* Search Box*/
 		.searching-unit{
 			position: relative;
