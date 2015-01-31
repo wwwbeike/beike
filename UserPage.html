@@ -155,18 +155,23 @@
 				</div>
 				<div id="desc_bar">
 					<ul class="collect-board-switcher">
-						<li ><a href="#" >3 采集</a></li>
-						<li class="selected"><a href="#">8 画板</a></li>
+						<li ><a id="fondCollectBar" href="#" >3 采集</a></li>
+						<li ><a id="fondBoardBar" href="#">8 画板</a></li>
 					</ul>
 				</div>
 				<div id="boardWaterfall" class="waterfall">
 				</div>
 				<div id="collectWaterfall" class="waterfall">
 				</div>
+				<div id="fondBoard" class="waterfall">
+				</div>
+				<div id="fondCollect" class="waterfall">
+				</div>
 				<div id="more">
 				</div>
 			</div>
 		</div>
+		
 		<div id="elevator">
 		</div>
 	</div>
@@ -246,6 +251,8 @@
 				});
 
 				xwf.init();
+				
+				$('#boardWaterfall').append("<div style='clear:both'></div>");
 			}
 			function renderCollect()
 			{
@@ -262,7 +269,9 @@
 						description:descriptions[i%4],
 						repin: Math.floor(Math.random()*10),
 						loved: Math.floor(Math.random()*10),
-						sourceUrl:"http://image.baidu.com/"
+						userImage:imgs[i%4],
+						userName:"吃醋小王子",
+						styleBoardName:"科比那些年"
 					}
 					testCollects.push(model);
 				}
@@ -290,7 +299,9 @@
 			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' style='max-width:236px;' ></a>"+
 						           "<p class='description'>"+model.description+"</p>"+
 						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
-								   "<div class='source'><a href='"+model.sourceUrl+"'>"+model.sourceUrl+"</a></div></div>";
+								   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+
+								   "<div class='text'><div><div class='line'><a href='#' >"+model.userName+"</a>&nbsp;采集到</div>"+
+								   "<div class='line'><a href='#' >"+model.styleBoardName+"</a></div></div></div></div>";
 						}
 						return html;
 					}
@@ -298,6 +309,100 @@
 
 				xwf.init();
 			}
+			
+			function renderFondBoard()
+			{
+				var testFondBoards = [];
+			
+				for (var i = 0; i < 10; i++) {
+					var model = {
+						index:i,
+						styleBoardName: "科比最帅瞬间",
+						imgCount: 4,
+						coverImg:"image/1.jpg",
+						firstImg:"image/2.jpg",
+						secondImg:"image/3.jpg",
+						thirdImg:"image/4.jpg",
+						userImg:"image/1.jpg",
+						userName:"吃醋小王子",
+					}
+					testFondBoards.push(model);
+				}
+
+				var xwf = XUtil.XWaterfall({
+					src: testFondBoards,
+					url: '',
+					colNum: boardNum,
+					initialSize: 50,
+					colWidth: 252,
+					contentWidth: 252,
+					fetchSize: 20,
+					marginTop: 16,
+					renderTo: $('#fondBoard')[0],
+					renderer: function (model) {
+						var html = "<div class='styleBoard'><a href='#' class='link'>"+
+							"<img id = 'coverImg' src='"+model.coverImg+"' style='position:absolute;width:216px;height:216px;'>"+
+							"<img id = 'firstImg' src='"+model.firstImg+"' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>"+
+							"<img id = 'secondImg' src='"+model.secondImg+"' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>"+
+							"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>"+
+							"<div class='over'><h3 id='styleBoardName'>"+model.styleBoardName+"</h3><div id='imgCount' class='pin-count'>"+model.imgCount+"</div></div></a>"+
+							"<div class='userBoard'><a href='#' class='image'><img src='"+model.userImage+"' class='userImage'></a>"+
+							"<a href='#' class='userName'>"+model.userName+"</a><a href='#' class='btn'><strong>关注</strong></a></div>";
+						return html;
+					}
+				});
+
+				xwf.init();
+			}
+			
+			function renderFondCollect()
+			{
+				var testCollects = [];
+			    var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
+				var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
+									"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
+									"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
+									"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
+				for (var i = 0; i < 20; i++) {
+					var model = {
+						index:i,
+						imgUrl: imgs[i%4],
+						description:descriptions[i%4],
+						repin: Math.floor(Math.random()*10),
+						loved: Math.floor(Math.random()*10),
+						userImage:imgs[i%4],
+						userName:"吃醋小王子",
+						styleBoardName:"科比那些年"
+					}
+					testCollects.push(model);
+				}
+
+				var xwf = XUtil.XWaterfall({
+					src: testCollects,
+					initialSize: 50,
+					colNum: boardNum,
+					colWidth: 252,
+					contentWidth: 252,
+					fetchSize: 20,
+					marginTop: 16,
+					url: '',
+					renderTo: $('#fondCollect')[0],
+					renderer: function (model) {
+						var	 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
+						           "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
+			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' style='max-width:236px;' ></a>"+
+						           "<p class='description'>"+model.description+"</p>"+
+						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
+								   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+
+								   "<div class='text'><div><div class='line'><a href='#' >"+model.userName+"</a>&nbsp;采集到</div>"+
+								   "<div class='line'><a href='#' >"+model.styleBoardName+"</a></div></div></div></div>";
+						return html;
+					}
+				});
+
+				xwf.init();
+			}
+			
 			//tabs切换
 			$("#styleBoard_tab").click(function(){
 				$("#styleBoard_tab").addClass("active");
@@ -305,6 +410,8 @@
 				$("#fond_tab").removeClass("active");
 				$("#desc_bar").hide();
 				$("#collectWaterfall").hide();
+				$("#fondBoard").hide();
+				$("#fondCollect").hide();
 				$("#boardWaterfall").show();
 				renderStyleBoard();
 			});
@@ -313,6 +420,8 @@
 				$("#collect_tab").addClass("active");
 				$("#fond_tab").removeClass("active");
 				$("#desc_bar").hide();
+				$("#fondBoard").hide();
+				$("#fondCollect").hide();
 				$("#boardWaterfall").hide();
 				$("#collectWaterfall").show();
 				renderCollect();
@@ -323,7 +432,24 @@
 				$("#fond_tab").addClass("active");
 				$("#boardWaterfall").hide();
 				$("#collectWaterfall").hide();
+				$("#fondBoard").hide();
+				$("#fondCollect").hide();
 				$("#desc_bar").show();
+				$("#fondCollectBar").click();
+			});
+			$("#fondCollectBar").click(function(){
+				$(this).parent().addClass("selected");
+				$("#fondBoardBar").parent().removeClass("selected");
+				$("#fondBoard").hide();
+				$("#fondCollect").show();
+				renderFondCollect();
+			});
+			$("#fondBoardBar").click(function(){
+				$(this).parent().addClass("selected");
+				$("#fondCollectBar").parent().removeClass("selected");
+				$("#fondCollect").hide();
+				$("#fondBoard").show();
+				renderFondBoard();
 			});
 			$("#styleBoard_tab").click();
 		});
