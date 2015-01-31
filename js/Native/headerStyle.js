@@ -30,6 +30,7 @@
 
 function headerHover(){
 
+	//Jquery×Ô¶¨Òå
 	$("#left_menu_nav").hoverDelay({
 		hoverEvent:function(){
 			$("#left_menu_nav .nav_icon").css("background","url('image/menu_sprite.svg')-50px 0 no-repeat");
