@@ -11,6 +11,7 @@ function doHide(){   //是否隐藏层中这里处理
 	if(rightcanHide)
 		$("#header_user_menu").hide();
 }
+function xxx(){}
 function headerStyle()
 {
 	$("#header_main_menu").hide();   //先将层隐藏起来
