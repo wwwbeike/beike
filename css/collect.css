@@ -17,6 +17,18 @@
 		{
 			background:#fff;
 		}
+		.addCollect:hover .inner i
+		{
+			background: url(../image/personal_found_add_streak.png) 0 0 no-repeat;
+		}
+		.addCollect:active .inner i
+		{
+			background: url(../image/personal_found_add_click.png) 0 0 no-repeat;
+		}
+		.addCollect:active .inner 
+		{
+			border:2px dashed #8552a1;
+		}
 		.addCollect .inner
 		{
 			height:126px;
@@ -25,10 +37,10 @@
 		.addCollect .inner i
 		{
 			display:block;
-			width:48px;
-			height:48px;
+			width:60px;
+			height:60px;
 			margin:28px auto 10px;
-			background: url(../image/icon_add_styleBoard.png) 0 0 no-repeat;
+			background: url(../image/personal_found_add.png) 0 0 no-repeat;
 		}
 		.addCollect .inner span
 		{
@@ -95,6 +107,7 @@
 		.collect .extra
 		{
 			padding:0 15px;
+			margin-bottom:15px;
 		}
 		.collect .extra>span
 		{
@@ -133,6 +146,45 @@
 			margin-top:15px;
 		}
 		.collect .source a:hover
+		{
+			text-decoration:underline;
+		}
+		.collect .attribution
+		{
+			color:#999;
+			border-top:1px solid #F2F2F2;
+			background:#FAFAFA;
+			height:67px;
+			padding:0 16px;
+		}
+		.collect .img
+		{
+			width:34px;
+			height:34px;
+			margin:16px 0;
+			display:block;
+			float:left;
+		}
+		.collect .img .user_image
+		{
+			width:34px;
+			height:34px;
+			display:block;
+		}
+		.attribution .text
+		{
+			margin-left:34px;
+			padding:15px 0 0 10px;
+		}
+		.attribution .line
+		{
+			height:18px;
+		}
+		.attribution a
+		{
+			color:#9E7E6B;
+		}
+		.attribution a:hover
 		{
 			text-decoration:underline;
 		}

@@ -75,6 +75,54 @@
 		{
 			opacity: 1;
 		}
+		.styleBoard .loveBoard
+		{
+			position: relative;
+			text-align: center;
+			width: 216px;
+			padding: 0 10px 11px;
+			background-color:#FFFFFF;
+		}
+		.styleBoard .loveBoard  div.btn
+		{
+			display: block;
+			font-size: 14px;
+			font-weight:bolder;
+			background:linear-gradient( #FAFAFA, #F2F2F2);
+			text-decoration: none;
+			color: #444;
+		}
+		.styleBoard .loveBoard  span
+		{
+			position:absolute;
+			left:95px;
+			top:0;
+		}
+		.styleBoard .loveBoard  label
+		{
+			position:absolute;
+			left:115px;
+		}
+		.styleBoard .loveBoard  div.btn .heart
+		{
+			display: inline-block;
+			width:12px;
+			height:12px;
+			margin-top:10px;
+			background:url(../image/action_love.svg) 0 -31px no-repeat;
+		}
+		.styleBoard .loveBoard  div.btn:hover
+		{
+			background: #fff;
+			box-shadow: inset 0 1px 0 white,0 1px 0 rgba(255,255,255,.05);
+			border: 1px solid #CCC;
+			color:#8552a1;
+		}
+		.styleBoard .loveBoard  div.btn:active
+		{
+			background:#d3d7d4;
+			box-shadow:none;
+		}
 		.styleBoard .editBoard
 		{
 			position: relative;
@@ -87,17 +135,21 @@
 		.styleBoard .editBoard  a.btn
 		{
 			display: block;
-			border-radius: 2px;
 			font-size: 14px;
-			line-height: 28px;
 			background:linear-gradient( #FAFAFA, #F2F2F2);
-			border: 1px solid #D9D9D9;
 			text-decoration: none;
 			color: #444;
 		}
 		.styleBoard .editBoard  a.btn:hover
 		{
-			background:linear-gradient(#FFF, #F7F7F7);
+			background: #fff;
+			box-shadow: inset 0 1px 0 white,0 1px 0 rgba(255,255,255,.05);
+			border: 1px solid #CCC;
+		}
+		.styleBoard .editBoard  a.btn:active
+		{
+			background:#d3d7d4;
+			box-shadow:none;
 		}
 		.styleBoard strong
 		{
@@ -171,6 +223,18 @@
 		{
 			background:#fff;
 		}
+		.addBoard:hover .inner i
+		{
+			background: url(../image/personal_found_add_streak.png) 0 0 no-repeat;
+		}
+		.addBoard:active .inner i
+		{
+			background: url(../image/personal_found_add_click.png) 0 0 no-repeat;
+		}
+		.addBoard:active .inner 
+		{
+			border:2px dashed #8552a1;
+		}
 		.addBoard .inner
 		{
 			margin:10px;
@@ -180,10 +244,10 @@
 		.addBoard .inner i
 		{
 			display:block;
-			width:48px;
-			height:48px;
+			width:60px;
+			height:60px;
 			margin:128px auto 10px;
-			background: url(../image/icon_add_styleBoard.png) 0 0 no-repeat;
+			background: url(../image/personal_found_add.png) 0 0 no-repeat;
 		}
 		.addBoard .inner span
 		{
