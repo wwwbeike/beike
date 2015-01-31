@@ -8,6 +8,7 @@
 	<script type="text/javascript" src='js/XUtil/src/base.js'></script>
 	<script type="text/javascript" src='js/XUtil/src/waterfall.js'></script>
 	<script type="text/javascript" src='js/Native/headerStyle.js'></script>
+	<script type="text/javascript" src='js/Native/returnToTop.js'></script>
 	<link rel='stylesheet' type="text/css" href='css/XUtil.min.css'/>
 	<link rel="stylesheet" type="text/css" href="css/styleBoard.css"/>
 	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
@@ -171,9 +172,14 @@
 				</div>
 			</div>
 		</div>
-		
-		<div id="elevator">
+
+		<div class="loading">
+			<img src="./image/personal_loading_end.png" />
 		</div>
+	</div>
+	
+	<div id="elevator_item">
+		<a id="elevator" title="回到顶部"></a>
 	</div>
 	<script type="text/javascript">
 		var boardNum=4;
@@ -201,7 +207,9 @@
 			}
 			//header风格设置
 			headerHover();
-			
+			//scrollTest();
+			/*backtotp*/
+			returnToTop();
 			function renderStyleBoard()
 			{
 				var testStyleBoards = [];

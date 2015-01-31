@@ -7,7 +7,9 @@
 		html{
 			background-color:#edece9;
 		}
-		
+		html body{
+			height:100%;
+		}
 		input, textarea, select {
 			font-family: inherit;
 			font-size: inherit;
@@ -76,8 +78,6 @@
 		}
 		
 		/* Layout Style */
-		#page{
-		}
 		
 		#header{
 			z-index:100;
@@ -414,6 +414,7 @@
 		#user_page{
 			padding-top:100px;
 			margin:0 auto;
+			height:100%;
 		}
 		
 		/* 用户信息面板 */
@@ -655,7 +656,50 @@
 		}
 		.waterfall{
 			position:relative;
-			height:500px;
 			margin:16px auto 0;
 		}
+
+		/*没有更多了~~~*/
+
+		.loading{
+			display: block;
+			margin-bottom: 15px;
+			padding: 15px 0;
+			text-align: center;
+			font-weight: 700;
+			border: double rgba(34,25,25,.14);
+			border-width: 3px 0 0 0;
+		}
+		.loading img {
+			display: inline-block;
+			margin-right: 6px;
+			}
+
+		/*回到顶部css*/
 		
+		#elevator_item{
+			position: fixed;
+			right: 15px;
+			bottom: 10px;
+			z-index: 99992;
+			width: 60px;
+			height: 100px;
+			-webkit-transition: opacity .4s ease-in-out;
+			-moz-transition: opacity .4s ease-in-out;
+			-o-transition: opacity .4s ease-in-out;
+			opacity: 1;
+		}
+		
+		#elevator{
+			display: block;
+			margin-bottom: 10px;
+			width: 60px;
+			height: 50px;
+			border-radius: 2px;
+			background: url(../image/personal_top1.png) center center no-repeat;
+			cursor: pointer;
+			box-shadow: 0 1px 3px rgba(0,0,0,.2);
+		}
+		#elevator:hover{
+			background: url(../image/personal_top2.png) center center no-repeat;
+		}
