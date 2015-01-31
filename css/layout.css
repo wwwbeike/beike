@@ -46,9 +46,13 @@
 		.btn:hover {
 			text-decoration: none;
 			color: #444;
-			background: linear-gradient(#FFF, #F7F7F7);
+			background: #fff;
 			box-shadow: inset 0 1px 0 white,0 1px 0 rgba(255,255,255,.05);
 			border: 1px solid #CCC;
+		}
+		.btn:active{
+			background:#d3d7d4;
+			box-shadow:none;
 		}
 		
 		/*根据分辨率载入不同的宽度*/
