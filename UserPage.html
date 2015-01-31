@@ -25,16 +25,16 @@
 								<div class="nav_icon"></div>
 								<div class="arrow"></div>
 							</a>
-							<div id="header_main_menu" class="new-header-main-menu" style="display:none;">
+							<div  class="menu new-header-main-menu">
 								<div class="inner clearfix">
-									<div class="left-module">
-										<a href="http:www.baidu.com" rel="nofollow" class="main-link bold home-page">首页</a>
-										<a href="/all/" rel="nofollow" class="main-link bold wedding-style">婚礼风格</a>
-										<a href="/all/videos/" rel="nofollow" class="main-link bold videos with-line">视频</a>
+									<div class="left_module">
+										<a href="http:www.baidu.com" rel="nofollow" class="main_link bold home_page">首页</a>
+										<a href="/all/" rel="nofollow" class="main_link bold wedding_style">婚礼风格</a>
+										<a href="/all/videos/" rel="nofollow" class="main_link bold videos ">视频</a>
 									</div>
-									<div class="right-module">
-										<div class="row-0">
-											<div class="group">
+									<div class="right_module">
+										<div class="row_0">
+											<div class="left_group">
 												<a href="/favorite/culture_china//" rel="nofollow">文化中国</a>
 												<a href="/favorite/travel_places/" rel="nofollow">烟雨江南</a>
 												<a href="/favorite/food_drink/" rel="nofollow">汉唐中式</a>
@@ -45,8 +45,8 @@
 												<a href="/favorite/modeling_hair/" rel="nofollow">百老汇</a>
 											</div>
 										</div>
-										<div class="row-1">
-											<div class="group">
+										<div class="row_1">
+											<div class="left_group">
 												<a href="/favorite/industrial_design/" rel="nofollow">东南亚</a>
 												<a href="/favorite/illustration/" rel="nofollow">哥特</a>
 												<a href="/favorite/design/" rel="nofollow">现代韩式</a>
@@ -59,7 +59,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="up-arrow"></div>
+								<div class="up_arrow"></div>
 							</div>
 						</div>
 					
@@ -69,12 +69,29 @@
 						</form>
 					</div>
 					<div id="right_menu">
-						<div id="right_menu_nav" class="nav">
+						<div id="add_nav" class="nav add_nav">
+							<a href="#" class="nav_link" title="添加">
+								<div class="nav_icon"></div>
+							</a>
+							<div class="menu">
+								<div class="add_group">
+									<a href="#">上传图片采集<i class="upload"></i></a>
+								</div>
+								<div class="add_group">
+									<a href="#">添加风格板<i class="add_board"></i></a>
+								</div>
+								<div class="add_group">
+									<a href="#">安装采集工具<i class="goodies"></i><span>从任何页面采集图片和视频</span></a>
+								</div>
+								<div class="arrow"></div>
+							</div>
+						</div>
+						<div id="user_nav" class="nav">
 							<a href="#" class="nav_link">
 								<img width="20" height="20" src="./image/user.png" class="user_photo">
 								<div class="arrow"></div>
 							</a>
-							<div id="header_user_menu">
+							<div class="menu">
 								<div class="user_group">
 									<a  href="#" >我的贝壳<i class="mine"></i></a>							
 								</div>
@@ -175,7 +192,7 @@
 				boardNum=4;
 			}
 			//header风格设置
-			headerStyle();
+			headerHover();
 			
 			function renderStyleBoard()
 			{
