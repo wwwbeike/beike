@@ -130,8 +130,8 @@
 			position: relative;
 			cursor: pointer;;
 		}
-		.nav:hover {
-			background-color:#f7f7f7 ;
+		#menu_bar .nav:hover {
+			background-color:#a21d89 ;
 			
 		}
 		.menu_nav{
@@ -149,11 +149,13 @@
 			width: 16px;
 			height: 16px;
 			display: block;
-			background: url("../image/menu_sprite.svg") 0 0px no-repeat ;
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			margin: -8px 0 0 -8px;
+		}
+		#left_menu .nav_icon{
+			background: url("../image/navigation_icon1.png") center center  no-repeat ;
 		}
 		#menu_bar .arrow{
 			background: url("../image/menu_sprite.svg") 0 -50px no-repeat;
@@ -171,8 +173,7 @@
 			position: absolute;
 			left: -1px;
 			top: 56px;
-			width: 571px;
-			height:320px;
+			width: 580px;
 			text-align: left;
 			border:1px solid #fff;
 			border-radius: 3px;
@@ -189,20 +190,15 @@
 		}
 		#left_menu_nav .menu a:hover{
 			text-decoration:underline;
+			
+		}
+		#left_menu_nav .inner a:hover{
+			color:#a21d89;
 		}
 		#left_menu_nav .left_module {
-			height: 390px;
 			width: 120px;
 			float: left;
 			padding: 30px 20px 0 30px;
-		}
-		#left_menu_nav .right_module {
-			float: left;
-			padding: 30px 0 0 0;
-			width: 400px;
-			font-size: 14px;
-			border-left: 1px solid #EDEDED;
-			height: 410px;
 		}
 		#left_menu_nav .left_module .main_link {
 			font-size: 16px;
@@ -210,42 +206,122 @@
 			color: #222;
 			padding-left: 34px;
 			padding-bottom: 8px;
-			
-			margin-bottom: 5px;
-			line-height: 24px;
-			height: 24px;
+			margin-bottom: 8px;
+			line-height: 25px;
+			height: 30px;
 			position: relative;
 		}
 		#left_menu_nav .left_module .main-link.bold{
 			font-weight:700;
 		}
-		#left_menu_nav .left_module .home_page{
-			background:url("../image/menu_sprite.svg") 0 -300px no-repeat;
+		#left_menu_nav .left_module .latest_collect{
+			background:url("../image/menu_icon1.png") 0 0 no-repeat;
+		}
+		#left_menu_nav .left_module .latest_collect:hover{
+			background:url("../image/menu_icon1_1.png") 0 0 no-repeat;
+			text-decoration:none;
 		}
 		#left_menu_nav .left_module .wedding_style{
-			background:url("../image/explore_icon.png")-25px -20px no-repeat;
+			background:url("../image/menu_icon2.png") 0 0 no-repeat;
+		}
+		#left_menu_nav .left_module .wedding_style:hover{
+			background:url("../image/menu_icon2_2.png") 0 0 no-repeat;
+			text-decoration:none;
 		}
 		#left_menu_nav .left_module .videos{
-			background:url("../image/menu_sprite.svg")0 -1440px no-repeat;
+			background:url("../image/menu_icon3.png") 0 0 no-repeat;
+		}
+		#left_menu_nav .left_module .videos:hover{
+			background:url("../image/menu_icon3_3.png") 0 0 no-repeat;
+			text-decoration:none;
+		}
+		#left_menu_nav .left_module .wedding_classify{
+			background:url("../image/menu_icon4.png") 0 0 no-repeat;
+		}
+				#left_menu_nav .left_module .wedding_classify:hover{
+			background:url("../image/menu_icon4_4.png") 0 0 no-repeat;
+			text-decoration:none;
+		}
+		#left_menu_nav .left_module .activities{
+			background:url("../image/menu_icon4.png") 0 0 no-repeat;
+		}
+		#left_menu_nav .left_module .activities:hover{
+			background:url("../image/menu_icon4_4.png") 0 0 no-repeat;
+			text-decoration:none;
+		}
+		#left_menu_nav .left_module .with_line{
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid #EDEDED;
+		}
+		
+		#left_menu_nav .right_module {
+			float: left;
+			padding: 30px 0 0 0;
+			width:400px;
+			font-size: 14px;
+			border-left: 1px solid #EDEDED;
 		}
 		.right_module .row_0{
-			width:180px;
+			width:130px;
 			float:left;
 		}
 		.right_module .row_1{
-			width:150px;
+			width:140px;
 			float:left;
 		}
-		#left_menu_nav .right_module .left_group {
-			margin-bottom: 14px;
+		.right_module .row_2{
+			width:130px;
+			float:left;
+		}
+		#left_menu_nav .right_module .module_group {
+			margin-bottom: 20px;
 			padding-left: 34px;
 			padding-bottom: 1px;
 		}
-		#left_menu_nav .right_module .left_group a{
+		#left_menu_nav .right_module .module_group a{
 			display:block;
-			margin-bottom:15px;
+			margin-bottom:20px;
+			font-size:14px;
 		}
-
+		.clearfix{
+			clear:both;
+		}
+		#left_menu_nav .menu .bottom_bar{
+			height: 50px;
+			line-height: 45px;
+			border-top: 1px solid #EDEDED;
+			background: url("../image/menu_tool.png") 0 0 repeat-x;
+			position: relative;
+			padding-left: 10px;
+		}
+		#left_menu_nav .bottom_bar a{
+			color:#fff;
+			font-size:14px;
+			padding-left:24px;
+		}
+		#left_menu_nav .bottom_bar .tool_icon{
+			background: url("../image/menu_tool_icon1.png") 0 0 no-repeat;
+		}
+		#left_menu_nav .bottom_bar .menu_tool_links{
+			position: absolute;
+			height: 50px;
+			right: 10px;
+			bottom: 0;
+			text-align:center;
+		}
+		#left_menu_nav .bottom_bar .about_us{
+			background: url("../image/menu_tool_icon2.png") 0 0 no-repeat;
+		}
+		#left_menu_nav .bottom_bar .join_us{
+			background: url("../image/menu_tool_icon3.png") 0 0 no-repeat;
+		}
+		#left_menu_nav .bottom_bar .feedback{
+			background: url("../image/menu_tool_icon4.png") 0 0 no-repeat;
+		}
+		#left_menu_nav .bottom_bar .friendly_link{
+			background: url("../image/menu_tool_icon5.png") 0 0 no-repeat;
+		}
 		#left_menu_nav .menu .up_arrow {
 			width: 18px;
 			height: 10px;
@@ -255,12 +331,13 @@
 			background: url("../image/menu_arrow.png") 0 0 no-repeat;
 		}
 		/* 右侧menu公共css*/
-		#right_menu .menu  a:hover{
-			background-color:#f7f7f7 ;
+		#right_menu .menu a:hover{
+			background-color:#f7f7f7;
+			color:#a21d89 ;
 		}
 		/*添加采集工具栏*/
 		#add_nav .nav_icon{
-			background-position:0 -150px;
+			background: url("../image/navigation_icon2.png") center center no-repeat ;
 		}
 		#add_nav .menu{
 			position: absolute;
@@ -320,6 +397,107 @@
 			background: url(../image/menu_arrow.png) 0 0 no-repeat;
 			margin-left: -9px;
 		}
+		/*消息通知栏*/
+		#message_nav .nav_icon{
+			background: url("../image/navigation_icon3.png") center center no-repeat ;
+		}
+		#message_nav .num{
+			padding: 0 3px;
+			line-height: 14px;
+			position: absolute;
+			border-radius: 2px;
+			background: #c60000;
+			color: #fff;
+			top: 6px;
+			right: 6px;
+			font-size: 10px;
+		}
+		#message_nav .hidden{
+			display: none!important;
+			visibility: hidden;
+		}
+		#message_popup{
+			width: 391px;
+			min-height:350px;
+			position: absolute;
+			right: -44px;
+			top: 54px;
+			cursor: default;
+			background: #fff;
+			box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 1px 3px rgba(0,0,0,.2);
+			font-size: 14px;
+			display:none;
+		}
+		#message_popup .bar{
+			height: 38px;
+			line-height: 38px;
+			border-bottom: 1px solid #ededed;
+		}
+ 		#message_popup .left{
+			border-right: 1px solid #ededed;
+		}
+		#message_popup .bar div:hover{
+			color:#a21d89;
+		}
+		#message_popup.right{
+			
+		}
+		#message_popup .barTitle{
+			float: left;
+			width: 195px;
+			color: #444;
+			background-color: #fafafa;
+			cursor: pointer;
+		}
+		#message_popup .click{
+			background-color:#fff;
+		}
+		#message_popup .box{
+			height: 292px;
+			overflow-y: auto;
+			background: #fff;
+			position: relative;
+		}
+		#message_popup .box .empty{
+			font-size: 16px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 200px;
+			height: 50px;
+			line-height: 50px;
+			margin: -25px 0 0 -100px;
+			color: #999;
+		}
+		#message_popup .box .item{
+			font-size: 16px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 200px;
+			height: 50px;
+			line-height: 50px;
+			margin: -25px 0 0 -100px;
+			color: #999;
+		}
+		#message_popup .show_all{
+			height: 38px;
+			line-height: 38px;
+			color: #999;
+			background: #FAFAFA;
+			display: block;
+		}
+		#message_popup .show_all:hover{
+			text-decoration:underline;
+		}
+		#message_popup .triangle{
+			position: absolute;
+			width: 20px;
+			height: 10px;
+			right: 55px;
+			top: -10px;
+			background: url(../image/menu_arrow.png) 0 0 no-repeat;
+		}
 		/*Header 右侧用户头像菜单*/
 		#user_nav .menu{
 			z-index:1;
@@ -356,7 +534,6 @@
 			text-align: left;
 			font-weight: 400;
 			position: relative;
-			color: #222;
 		}
 
 		#user_nav .menu .user_group a  i{
