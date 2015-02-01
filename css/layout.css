@@ -472,7 +472,8 @@
 		}
 		
 		#intro_unit  li i#intro_location {
-			background-position: 0 -60px;
+			//background-position: 0 -60px;
+			background:url(../image/personal_map.png) no-repeat;
 		}
 		
 		#intro_unit  li i#intro_job {
@@ -481,6 +482,7 @@
 		
 		#intro_unit  li em {
 			font-style: normal;
+			color:#b456a2;
 		}
 		
 		#about_unit{

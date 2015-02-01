@@ -116,7 +116,7 @@
 			background: #fff;
 			box-shadow: inset 0 1px 0 white,0 1px 0 rgba(255,255,255,.05);
 			border: 1px solid #CCC;
-			color:#8552a1;
+			color:#b456a2;
 		}
 		.styleBoard .loveBoard  div.btn:active
 		{
@@ -220,13 +220,21 @@
 		{
 			background: url(../image/personal_found_add_streak.png) 0 0 no-repeat;
 		}
+		.addBoard:hover .inner span
+		{
+			color:#000;
+		}
 		.addBoard:active .inner i
 		{
 			background: url(../image/personal_found_add_click.png) 0 0 no-repeat;
 		}
+		.addBoard:active .inner span
+		{
+			color:#b456a2;
+		}
 		.addBoard:active .inner 
 		{
-			border:2px dashed #8552a1;
+			border:2px dashed #b456a2;
 		}
 		.addBoard .inner
 		{
