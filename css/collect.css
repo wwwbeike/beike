@@ -21,13 +21,21 @@
 		{
 			background: url(../image/personal_found_add_streak.png) 0 0 no-repeat;
 		}
+		.addCollect:hover .inner span
+		{
+			color:#000;
+		}
 		.addCollect:active .inner i
 		{
 			background: url(../image/personal_found_add_click.png) 0 0 no-repeat;
 		}
+		.addCollect:active .inner span
+		{
+			color:#b456a2;
+		}
 		.addCollect:active .inner 
 		{
-			border:2px dashed #8552a1;
+			border:2px dashed #b456a2;
 		}
 		.addCollect .inner
 		{
@@ -85,6 +93,7 @@
 		{
 			margin-left:110px;
 		}
+		
 		.collect a.link
 		{
 			cursor:pointer;

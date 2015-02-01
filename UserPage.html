@@ -131,7 +131,7 @@
 						
 						
 						<ul id="intro_unit">
-							<li><i id="intro_location"></i><em>来自北京</em></li>
+							<li><i id="intro_location"></i><em>来自&nbsp;北京市</em></li>
 						</ul>
 						
 						
@@ -352,9 +352,9 @@
 							"<img id = 'coverImg' src='"+model.coverImg+"' style='position:absolute;width:216px;height:216px;'>"+
 							"<img id = 'firstImg' src='"+model.firstImg+"' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>"+
 							"<img id = 'secondImg' src='"+model.secondImg+"' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>"+
-							"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>"+
+							"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'><div class='shadow' ></div>"+
 							"<div class='over'><h3 id='styleBoardName'>"+model.styleBoardName+"</h3><div id='imgCount' class='pin-count'>"+model.imgCount+"</div></div></a>"+
-							"<div class='userBoard'><a href='#' class='image'><img src='"+model.userImage+"' class='userImage'></a>"+
+							"<div class='userBoard'><a href='#' class='image'><img src='"+model.userImg+"' class='userImage'></a>"+
 							"<a href='#' class='userName'>"+model.userName+"</a><a href='#' class='btn'><strong>关注</strong></a></div>";
 						return html;
 					}
@@ -397,7 +397,7 @@
 					renderTo: $('#fondCollect')[0],
 					renderer: function (model) {
 						var	 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
-						           "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
+						           "<a href='#' class='btn right fond'><span class='text'>喜欢</span></a></div>"+
 			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' style='max-width:236px;' ></a>"+
 						           "<p class='description'>"+model.description+"</p>"+
 						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
