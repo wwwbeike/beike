@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styleBoard.css"/>
 	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
 	<link rel="stylesheet" type="text/css" href="css/collect.css"/>
+	<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
 </head>
 <body>
 	<div id="page">
@@ -264,6 +265,32 @@
 		<div id="elevator">
 		</div>
 	</div>
+</div>
+
+<div id="dialog_boxes">
+	<div id="dialog-overlay" ></div>
+	<div id="createBoard" class="dialog-box ">
+		<div class="box-title">创建风格板</div>
+		<div class="box-inner">
+			<div class="box-item">
+				<label>风格板标题</label>
+				<input id="newBoardName" name="newBoardName" class="clear_input">
+			</div>
+			<div class="box-item">
+				<label>风格板分类</label>
+				<select id="newBoardKind" name="newBoardKind"  class="clear_select">
+					<option value="旅游">旅游</option>
+					<option value="运动">运动</option>
+				</select>
+			</div>
+			<div id="createNewBoard" class="btn">
+				<strong>创建风格板</strong>
+			</div>
+		</div>
+		<div class="close-btn" ><i></i></div>
+	</div>
+</div>
+
 	<script type="text/javascript">
 		var styleBoardNum=4;
 	
@@ -288,12 +315,19 @@
 				$("#pageWapper").addClass("wrapper1280");
 				styleBoardNum=4;
 			}
-			//header风格设置
-			headerStyle();
 			$("div.styleBoard a.link div.setbtn").click(function(event){
 				alert("hah");
 				//event.stopPropagation();
 				return false;
+			});
+			
+			$("div.addBoard").click(function(){
+				$("#dialog-overlay").show();
+				$("#createBoard").show();
+				$("#createBoard div.close-btn").click(function(){
+					$("#dialog-overlay").hide();
+					$("#createBoard").hide();
+				});
 			});
 		});
 	</script>

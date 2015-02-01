@@ -1,0 +1,126 @@
+#dialog_boxes
+{
+	position:relative;
+	z-index:99999;
+}
+#dialog-overlay
+{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,.3);
+	display:none;
+}
+.dialog-box
+{
+	background:#fff;
+	width:580px;
+	position:fixed;
+	left:50%;
+	top:50%;
+	box-shadow:0 2px 5px rgba(0,0,0,.3);
+	border-radius:1px;
+	margin:-220px 0 0 -290px;
+	display:none;
+}
+.dialog-box .box-title
+{
+	height:50px;
+	line-height:50px;
+	font-size:18px;
+	border-bottom:1px solid #EDEDED;
+	position:relative;
+	padding-left:30px;
+}
+.dialog-box .close-btn
+{
+	position:absolute;
+	right:0;
+	top:0;
+	width:50px;
+	height:50px;
+	cursor:pointer;
+}
+.dialog-box .close-btn i
+{
+	width:20px;
+	height:20px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-10px 0 0 -10px;
+	background:url(../image/msg_close.png) 0 0 no-repeat;
+}
+.dialog-box .close-btn i:hover
+{
+	background-position:0 -30px;
+}
+.dialog-box .box-inner
+{
+	position:relative;
+	padding:20px 30px;
+}
+.dialog-box .box-item
+{
+	padding: 15px 0;
+	border-bottom:1px solid rgba(34,25,25,.1);
+}
+.dialog-box .box-item label
+{
+	display:inline-block;
+	line-height:1.4em;
+	font-size:18px;
+	width:120px;
+	padding-top:7px;
+	color:#8c7e7e;
+}
+.dialog-box .box-item .clear_input
+{
+	display:inline-block;
+	padding:0 10px;
+	height:36px;
+	font-size:16px;
+	line-height:1;
+	color:#777;
+	background:#FCFCFC;
+	border:1px solid #CCC;
+	border-radius:3px;
+	width:350px;
+	box-shadow:inset 0 1px 2px rgba(0,0,0,.05);
+}
+.dialog-box .box-item .clear_select
+{
+	display:inline-block;
+	padding:0 10px;
+	height:36px;
+	font-size:16px;
+	line-height:1;
+	color:#777;
+	background:#FCFCFC;
+	border:1px solid #CCC;
+	border-radius:3px;
+	width:372px;
+	box-shadow:inset 0 1px 2px rgba(0,0,0,.05);
+}
+.dialog-box .box-item .clear_select option
+{
+	background-color:#fff;
+	height:50px;
+	font-size:56px;
+	line-height:1;
+}
+.dialog-box #createNewBoard
+{
+	margin-top:20px;
+	margin-left:128px;
+	height:35px;
+}
+.dialog-box #createNewBoard strong
+{
+	font-size:18px;
+	line-height:36px;
+	font-weight:400;
+	padding-bottom:5px;
+}
