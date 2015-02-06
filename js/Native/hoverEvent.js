@@ -1,5 +1,5 @@
 /*
-* headerHover¿ØÖÆ
+* HoverEvent¿ØÖÆ
 */
 
 (function($){
@@ -71,6 +71,21 @@ function headerHover(){
 		},
 		outEvent:function(){
 			$("#user_nav .menu").hide();
+		}
+	});
+}
+
+function styleBoardPageHover()
+{
+	$("div.more").hoverDelay({
+		hoverDuring:0,
+		hoverEvent:function(){
+			$("div.more #menu").show();
+			$("div.more .triangle").show();
+		},
+		outEvent:function(){
+			$("div.more #menu").hide();
+			$("div.more .triangle").hide();
 		}
 	});
 }
