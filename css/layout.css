@@ -593,6 +593,230 @@
 			margin:0 auto;
 			height:100%;
 		}
+		/*风格板信息面板*/
+		#styleBoard_card
+		{
+			height:122px;
+			background-color:white;
+			box-shadow: 0 0 4px rgba(0,0,0,.2);
+		}
+		#styleBoard_card .inner
+		{
+			padding:20px 20px 15px;
+		}
+		#styleBoard_card .inner .head_line
+		{
+			margin-bottom:20px;
+		}
+		#styleBoard_card .inner .brown_link
+		{
+			color:#9E7E6B;
+			text-decoration:none;
+		}
+		#styleBoard_card .inner .brown_link:hover
+		{
+			color:#9A0000;
+			text-decoration:underline;
+			border-left:
+		}
+		#styleBoard_card .board_name
+		{
+			line-height:0;
+			font-size:20px;
+			font-weight:700;
+			color:#444;
+			text-shadow:none;
+			display:inline-block;
+		}
+		#styleBoard_card .board_category
+		{
+			display:inline-block;
+			padding-left:15px;
+			margin-left:15px;
+			border-left:1px solid #DDD;
+			color:#999;
+		}
+		#styleBoard_card .action_buttons
+		{
+			position:absolute;
+			top:20px;
+			right:20px;
+		}
+		#styleBoard_card .share_unit
+		{
+			display:inline-block;
+			text-align:right;
+			width:180px;
+		}
+		#styleBoard_card .share_btns
+		{
+			height:28px;
+			width:119px;
+			background:#FAFAFA;
+			border:1px solid #EDEDED;
+			text-align:left;
+			display:inline-block;
+			vertical-align:middle;
+			margin-left:10px;
+			cursor:pointer;
+		}
+		#styleBoard_card .share_btn
+		{
+			height:28px;
+			width:30px;
+			display:block;
+			float:left;
+			background:url('../image/share_icon.svg') 6px 4px no-repeat;
+		}
+		#styleBoard_card .share_btn:hover
+		{
+			background-position:-34px 4px;
+		}
+		#styleBoard_card .share_btns .qzone
+		{
+			background-position:6px -36px;
+		}
+		#styleBoard_card .share_btns .qzone:hover
+		{
+			background-position:-34px -36px;
+		}
+		#styleBoard_card .share_btns .weixin
+		{
+			background-position:6px -276px;
+		}
+		#styleBoard_card .share_btns .weixin:hover
+		{
+			background-position:-34px -276px;
+		}
+		#styleBoard_card .more
+		{
+			height:28px;
+			width:29px;
+			display:block;
+			float:left;
+			cursor:pointer;
+			background:url('../image/share_icon.svg') -101px 9px no-repeat;
+		}
+		#styleBoard_card .triangle
+		{
+			position: absolute;
+			width: 20px;
+			height: 10px;
+			right: 7px;
+			top: 31px;
+			background: url(../image/arrow_with_shadow.png) 0 0 no-repeat;
+			display:none;
+		}
+		
+		#styleBoard_card #menu
+		{
+			position:absolute;
+			right:-22px;
+			top:42px;
+			background:#fff;
+			box-shadow:0 1px 4px rgba(0,0,0,.2);
+			width:150px;
+			text-align:left;
+			display:none;
+			z-index:1;
+		}
+		#styleBoard_card #menu a
+		{
+			display:block;
+			height:40px;
+			line-height:40px;
+			padding-left:40px;
+			position:relative;
+		}
+		#styleBoard_card #menu a:hover
+		{
+			background-color:#edece9;
+		}
+		#styleBoard_card #menu a i
+		{
+			position:absolute;
+			left:11px;
+			top:11px;
+			width:18px;
+			height:18px;
+			background:url('../image/share_icon.svg') 0 -80px no-repeat;
+		}
+		#styleBoard_card #menu a:hover i
+		{
+			background-position:-40px -80px;
+		}
+		#styleBoard_card #menu a.qq i
+		{
+			background-position:0 -160px;
+		}
+		#styleBoard_card #menu a.qq:hover i
+		{
+			background-position:-40px -160px;
+		}
+		#styleBoard_card #menu a.douban i
+		{
+			background-position:0 -200px;
+		}
+		#styleBoard_card #menu a.douban:hover i
+		{
+			background-position:-40px -200px;
+		}
+		#styleBoard_card #menu a.renren i
+		{
+			background-position:0 -240px;
+		}
+		#styleBoard_card #menu a.renren:hover i
+		{
+			background-position:-40px -240px;
+		}
+		#styleBoard_card .bar
+		{
+			background:#fafafa;
+			border-top:1px solid #EDEDED;
+			height:50px;
+			position:relative;
+		}
+		#styleBoard_card .bar .user_unit
+		{
+			display:block;
+			background:#FFF;
+			height:30px;
+			line-height:30px;
+			text-decoration:none;
+			position:absolute;
+			left:20px;
+			top:10px;
+			color:#444;
+			padding-left:30px;
+		}
+		#styleBoard_card .bar .user_unit:hover .name
+		{
+			color:#9A0000;
+		}
+		#styleBoard_card .bar .user_unit img
+		{
+			width:30px;
+			height:30px;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		#styleBoard_card .bar .user_unit .name
+		{
+			padding:0 10px;
+		}
+		#styleBoard_card .tabs
+		{
+			position:absolute;
+			right:0;
+			top:0;
+			border-top:none;
+		}
+		#styleBoard_card .tabs .tab
+		{
+			border-left:1px solid #EDEDED;
+			border-right:none;
+		}
 		
 		/* 用户信息面板 */
 		#user_card{
@@ -768,7 +992,7 @@
 			position: relative;
 		}
 		
-		#user_card .tabs .tab {
+	   .tabs .tab {
 			font-size: 14px;
 			height: 48px;
 			line-height: 48px;
@@ -780,13 +1004,13 @@
 			float:left;
 		}
 		
-		#user_card .tabs .active {
+		.tabs .active {
 			background: #fff;
 			color: #444;
 			font-weight: 700;
 		}
 		
-		#user_card .tabs .tab:hover {
+	    .tabs .tab:hover {
 			color: #9A0000;
 		}
 		
