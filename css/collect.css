@@ -145,6 +145,7 @@
 			padding:0 15px;
 			height:50px;
 			background:#FAFAFA;
+			display:block;
 		}
 		.collect .source a
 		{
