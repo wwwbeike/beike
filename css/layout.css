@@ -642,7 +642,25 @@
 			top:20px;
 			right:20px;
 		}
-		#styleBoard_card .share_unit
+		#styleBoard_card .action_buttons #deleteBtn
+		{
+			background:#E53E49;
+			border:1px solid #C90000;
+		}
+		#styleBoard_card .action_buttons #deleteBtn:hover
+		{
+			box-shadow:none;
+			opacity:0.9;
+		}
+		#styleBoard_card .action_buttons #deleteBtn:active
+		{
+			opacity:1;
+		}
+		#styleBoard_card .action_buttons #deleteBtn .text
+		{
+			color:white;
+		}
+		#styleBoard_card #share_unit
 		{
 			display:inline-block;
 			text-align:right;
