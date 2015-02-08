@@ -31,9 +31,9 @@ XUtil.XWaterfall = function (option) {
 
 	//私有成员及方法
 	//  保存当前显示元素之前被移除元素的缓冲
-	var preBuffer = [],
+	var preCache = [],
 	//  保存当前显示元素之后被移除元素的缓冲
-		afterBuffer = [],
+		afterCache = [],
 	//  保存全部已加载元素的数组
 		all = [],
 	//  保存所有列信息的数组
@@ -47,7 +47,7 @@ XUtil.XWaterfall = function (option) {
 	//  是否可以继续fetch
 		fetchEnable = true;
 
-	//推入一个新的component（并非从afterBuffer中读取）
+	//推入一个新的component（并非从afterCache中读取）
 	var pushComponent = function (component) {
 		var i, col;
 		var targetCol = columns[0],
@@ -129,16 +129,13 @@ XUtil.XWaterfall = function (option) {
 			for (i = currentLen; i < currentLen + fetchSize; i++) {
 				if (i < src.length) {
 					targetCol = pushComponent(src[i]);
-					preBuffer.push(targetCol.shift());
+					preCache.push(targetCol.shift());
 				}
 				else {
 					arguments.callee();
 					break;
 				}
 			}
-
-			log('XWaterfall: fetch done.');
-			log('XWaterfall: current visible component size:' + $('.XWaterfall-component').length);
 		}
 		else {
 			//从服务器请求新元素
@@ -154,22 +151,22 @@ XUtil.XWaterfall = function (option) {
 				})
 					.done(function (data) {
 						if (data.message === 'success') {
-							
-							if(data.src.length===fetchSize){
-								
+
+							if (data.src.length === fetchSize) {
+
 								data.src.forEach(function (com) {
 									var targetCol = pushComponent(com);
-									preBuffer.push(targetCol.shift());
+									preCache.push(targetCol.shift());
 								});
-								
+
 								//fetch成功后，允许新的fetch操作
 								fetchEnable = true;
 
 								fetchCallback('success', renderTo, data.src.length);
 							}
-							else{
+							else {
 								log('XWaterfall: fetch failed, data.src.length is not equal to fetchsize.');
-								fetchEnable=false;
+								fetchEnable = false;
 							}
 						}
 						else if (data.message === 'all loaded') {
@@ -212,30 +209,24 @@ XUtil.XWaterfall = function (option) {
 		var component, targetColIndex, targetCol;
 
 		if (position === 'top') {
-			component = preBuffer.pop();
+			component = preCache.pop();
 			if (component) {
 				targetColIndex = component.col;
 				targetCol = columns[targetColIndex];
 				targetCol.prepend(component);
 
-				afterBuffer.push(targetCol.pop());
+				afterCache.push(targetCol.pop());
 			}
-
-			log('XWaterfall: reAttachTop done.');
-			log('XWaterfall: current visible component size:' + $('.XWaterfall-component').length);
 		}
 		else if (position === 'bottom') {
-			component = afterBuffer.pop();
+			component = afterCache.pop();
 
 			if (component) {
 				targetColIndex = component.col;
 				targetCol = columns[targetColIndex];
 				targetCol.append(component, 'old');
-				preBuffer.push(targetCol.shift());
+				preCache.push(targetCol.shift());
 			}
-
-			log('XWaterfall: reAttachBottom done.');
-			log('XWaterfall: current visible component size:' + $('.XWaterfall-component').length);
 		}
 
 		setUpperHeight();
@@ -251,8 +242,8 @@ XUtil.XWaterfall = function (option) {
 		var i, col;
 
 		all = [];
-		preBuffer = [];
-		afterBuffer = [];
+		preCache = [];
+		afterCache = [];
 		columns = [];
 		upperHeight = 0;
 		bottomHeight = 0;
@@ -271,6 +262,7 @@ XUtil.XWaterfall = function (option) {
 			//变化），以及列中第一个元素的top(currentTop)
 			//提供四个方法：append(在列末尾添加新元素),prepend（在列的头部添加新元素），
 			//pop（从列的末尾推出一个元素），shift（从列头推出一个元素）
+			
 			col = {
 				index: i,
 				targetLeft: colWidth * i,
@@ -299,9 +291,7 @@ XUtil.XWaterfall = function (option) {
 						//用户必须自定义renderer方法来根据原始数据定制自己元素的dom字符串（并非dom元素，否则会带来巨大的性能问题）
 						//默认返回原始数据本身
 						domHtml = renderer(com);
-						domNode = $("<div class='XWaterfall-component'>");
-						domNode.append(domHtml);
-
+						domNode = $("<div class='XWaterfall-component'>" + domHtml + "</div>");
 						domNode
 							.css('width', contentWidth)
 							.attr('id', id)
@@ -328,19 +318,17 @@ XUtil.XWaterfall = function (option) {
 						}
 					}
 					else {
+						//这里采取这种形式是为了提高性能
+						domHtml = "<div style='left:" + com.left
+							+ "px;top:" + com.top
+							+ "px;width:" + contentWidth
+							+ "px;height:" + com.height
+							+ "px;' id='" + com.id
+							+ "' class='XWaterfall-component'>"
+							+ renderer(com.model)
+							+ "</div>";
 
-						domNode = $("<div class='XWaterfall-component'>");
-						domNode.append(renderer(com.model));
-
-						domNode
-							.css('left', com.left)
-							.css('top', com.top)
-							.attr('id', com.id)
-							.css('width', contentWidth);
-
-						domNode.addClass('XWaterfall-component');
-
-						$(renderTo).append(domNode);
+						$(renderTo).append(domHtml);
 
 						self.components.push(com);
 
@@ -353,21 +341,18 @@ XUtil.XWaterfall = function (option) {
 					}
 				},
 				prepend: function (component) {
-					var self = this;
+					self = this;
+					//这里采取这种形式是为了提高性能
+					domHtml = "<div style='left:" + component.left
+						+ "px;top:" + component.top
+						+ "px;width:" + contentWidth
+						+ "px;height:" + component.height
+						+ "px;' id='" + component.id
+						+ "' class='XWaterfall-component'>"
+						+ renderer(component.model)
+						+ "</div>";
 
-					var domHtml = renderer(component.model);
-					var domNode = $("<div class='XWaterfall-component'>").append(domHtml);
-
-					domNode
-						.css('left', component.left)
-						.css('top', component.top)
-						.css('width', contentWidth)
-						.css('height', component.height)
-						.attr('id', component.id);
-
-					domNode.addClass('XWaterfall-component');
-
-					$(renderTo).append(domNode);
+					$(renderTo).append(domHtml);
 
 					self.components.unshift(component);
 
@@ -401,9 +386,10 @@ XUtil.XWaterfall = function (option) {
 		for (i = 0; i < initialSize; i++) {
 			if (i < src.length) {
 				pushComponent(src[i]);
+				//alert(i);
 			}
 		}
-		
+
 		setMaxHeight();
 		$(renderTo).css('height', maxHeight);
 
@@ -433,7 +419,7 @@ XUtil.XWaterfall = function (option) {
 			var isGoingDown = (scrollTop - preScrollTop > 0);
 
 			if (isGoingDown) {
-				if (afterBuffer.length === 0) {
+				if (afterCache.length === 0) {
 					if (fetchEnable && fetchFactor < 100) {
 						that.fetch();
 					}
@@ -445,7 +431,7 @@ XUtil.XWaterfall = function (option) {
 						}
 						else {
 							while (bottomHeight < $(document).scrollTop() + $(window).height() &&
-								afterBuffer.length > 0) {
+								afterCache.length > 0) {
 
 								that.reAttach('bottom');
 							}
@@ -454,13 +440,13 @@ XUtil.XWaterfall = function (option) {
 				}
 			}
 			else {
-				if (upFactor < 100 && preBuffer.length > 0) {
+				if (upFactor < 100 && preCache.length > 0) {
 					if (upFactor >= 0) {
 						that.reAttach('top');
 					}
 					else {
 						while (upperHeight > $(document).scrollTop() &&
-							preBuffer.length > 0) {
+							preCache.length > 0) {
 
 							that.reAttach('top');
 						}

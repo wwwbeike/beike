@@ -237,56 +237,12 @@
 	</div>
 	<script type="text/javascript">
 		var boardNum=4;
-	
-		$(document).ready(function(){
-	
-	
-			/*
-			*header栏消息接收里Tab切换
-			*/
-			$("#mentions").click(function(){
-				$(".box_mentions").removeClass("hidden");
-				$(".box_activities").addClass("hidden");
-				$("#mentions").addClass("click");
-				$("#activities").removeClass("click");
-				$(".show_all").html("查看所有消息>>");
 		
-			});
-			$("#activities").click(function(){
-				$(".box_activities").removeClass("hidden");
-				$(".box_mentions").addClass("hidden");
-				$("#activities").addClass("click");
-				$("#mentions").removeClass("click");
-				$(".show_all").html("查看所有动态>>");
-			});
-			//根据屏幕分辨率加载不同的layout样式，设置风格板个数
-			if(screen.width>=1600) 
-			{
-				$("#headWapper").addClass("wrapper1600");
-				$("#pageWapper").addClass("wrapper1600");
-				boardNum=6;
-			}
-			else if( screen.width>=1360 )
-			{
-				$("#headWapper").addClass("wrapper1360");
-				$("#pageWapper").addClass("wrapper1360");
-				boardNum=5;
-			}	
-			else 
-			{
-				$("#headWapper").addClass("wrapper1280");
-				$("#pageWapper").addClass("wrapper1280");
-				boardNum=4;
-			}
-			//header风格设置
-			headerHover();
-			/*backtotp*/
-			returnToTop();
-			function renderStyleBoard()
+		function renderStyleBoard()
 			{
 				var testStyleBoards = [];
 			
-				for (var i = 0; i < 10; i++) {
+				for (var i = 0; i < 20; i++) {
 					var model = {
 						index:i,
 						styleBoardName: "科比最帅瞬间",
@@ -342,10 +298,11 @@
 									"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
 									"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
 									"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
-				for (var i = 0; i < 7; i++) {
+				for (var i = 0; i < 20; i++) {
 					var model = {
 						index:i,
 						imgUrl: imgs[i%4],
+						height: 350,
 						description:descriptions[i%4],
 						repin: Math.floor(Math.random()*10),
 						loved: Math.floor(Math.random()*10),
@@ -358,7 +315,7 @@
 
 				var xwf = XUtil.XWaterfall({
 					src: testCollects,
-					initialSize: 10,
+					initialSize: 50,
 					colNum: boardNum,
 					colWidth: 252,
 					contentWidth: 252,
@@ -376,7 +333,7 @@
 						{
 							 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
 						           "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
-			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' style='max-width:236px;' ></a>"+
+			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"' ></a>"+
 						           "<p class='description'>"+model.description+"</p>"+
 						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
 								   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+
@@ -447,6 +404,7 @@
 					var model = {
 						index:i,
 						imgUrl: imgs[i%4],
+						height: 350,
 						description:descriptions[i%4],
 						repin: Math.floor(Math.random()*10),
 						loved: Math.floor(Math.random()*10),
@@ -470,7 +428,7 @@
 					renderer: function (model) {
 						var	 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
 						           "<a href='#' class='btn right fond'><span class='text'>喜欢</span></a></div>"+
-			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' style='max-width:236px;' ></a>"+
+			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"' ></a>"+
 						           "<p class='description'>"+model.description+"</p>"+
 						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
 								   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+
@@ -483,6 +441,51 @@
 				xwf.init();
 			}
 
+		$(document).ready(function(){
+	
+	
+			/*
+			*header栏消息接收里Tab切换
+			*/
+			$("#mentions").click(function(){
+				$(".box_mentions").removeClass("hidden");
+				$(".box_activities").addClass("hidden");
+				$("#mentions").addClass("click");
+				$("#activities").removeClass("click");
+				$(".show_all").html("查看所有消息>>");
+		
+			});
+			$("#activities").click(function(){
+				$(".box_activities").removeClass("hidden");
+				$(".box_mentions").addClass("hidden");
+				$("#activities").addClass("click");
+				$("#mentions").removeClass("click");
+				$(".show_all").html("查看所有动态>>");
+			});
+			//根据屏幕分辨率加载不同的layout样式，设置风格板个数
+			if(screen.width>=1600) 
+			{
+				$("#headWapper").addClass("wrapper1600");
+				$("#pageWapper").addClass("wrapper1600");
+				boardNum=6;
+			}
+			else if( screen.width>=1360 )
+			{
+				$("#headWapper").addClass("wrapper1360");
+				$("#pageWapper").addClass("wrapper1360");
+				boardNum=5;
+			}	
+			else 
+			{
+				$("#headWapper").addClass("wrapper1280");
+				$("#pageWapper").addClass("wrapper1280");
+				boardNum=4;
+			}
+			//header风格设置
+			headerHover();
+			/*backtotp*/
+			returnToTop();
+			
 			//tabs切换
 			$("#styleBoard_tab").click(function(){
 				$("#styleBoard_tab").addClass("active");
@@ -505,6 +508,7 @@
 				$("#boardWaterfall").hide();
 				$("#collectWaterfall").show();
 				renderCollect();
+				
 			});
 			$("#fond_tab").click(function(){
 				$("#styleBoard_tab").removeClass("active");
@@ -531,7 +535,7 @@
 				$("#fondBoard").show();
 				renderFondBoard();
 			});
-			$("#styleBoard_tab").click();
+			$("#collect_tab").click();
 			
 			// 添加风格板
 			$("div.addBoard").click(function(){

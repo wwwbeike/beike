@@ -10,7 +10,6 @@
 	<script type="text/javascript"  charset="UTF-8" src='js/Native/hoverEvent.js'></script>
 	<script type="text/javascript" src='js/Native/returnToTop.js'></script>
 	<link rel='stylesheet' type="text/css" href='css/XUtil.min.css'/>
-	<link rel="stylesheet" type="text/css" href="css/styleBoard.css"/>
 	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
 	<link rel="stylesheet" type="text/css" href="css/collect.css"/>
 	<link rel="stylesheet" type="text/css" href="css/followBoard.css"/>
@@ -236,6 +235,59 @@
 	<script type="text/javascript">
 		var boardNum=4;
 	
+		function showCollects()
+		{
+				var testCollects = [];
+			    var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
+				var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
+									"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
+									"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
+									"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
+				for (var i = 0; i < 20; i++) {
+					var model = {
+						index:i,
+						imgUrl: imgs[i%4],
+						height: 350,
+						description:descriptions[i%4],
+						repin: Math.floor(Math.random()*10),
+						loved: Math.floor(Math.random()*10),
+						source:"http://www.baidu.com"
+					}
+					testCollects.push(model);
+				}
+
+				var xwf = XUtil.XWaterfall({
+					src: testCollects,
+					initialSize: 50,
+					colNum: boardNum,
+					colWidth: 252,
+					contentWidth: 252,
+					fetchSize: 20,
+					marginTop: 16,
+					url: '',
+					renderTo: $('#collects')[0],
+					renderer: function (model) {
+						var html;
+						if( model.index==0 )
+						{
+							html="<div class='addCollect'><div class='inner'><i></i><span>添加采集</span></div></div>";
+						}
+						else 
+						{
+							 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
+						           "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
+			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"'></a>"+
+						           "<p class='description'>"+model.description+"</p>"+
+						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
+								   "<div class='source'><a href='"+model.source+"'>"+model.source+"</a></div>";
+						}
+						return html;
+					}
+				});
+
+				xwf.init();
+		}
+		
 		$(document).ready(function(){
 	
 	
@@ -282,58 +334,6 @@
 			/*backtotp*/
 			returnToTop();
 			
-			function showCollects()
-			{
-				var testCollects = [];
-			    var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
-				var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
-									"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
-									"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
-									"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
-				for (var i = 0; i < 20; i++) {
-					var model = {
-						index:i,
-						imgUrl: imgs[i%4],
-						description:descriptions[i%4],
-						repin: Math.floor(Math.random()*10),
-						loved: Math.floor(Math.random()*10),
-						source:"http://www.baidu.com"
-					}
-					testCollects.push(model);
-				}
-
-				var xwf = XUtil.XWaterfall({
-					src: testCollects,
-					initialSize: 50,
-					colNum: boardNum,
-					colWidth: 252,
-					contentWidth: 252,
-					fetchSize: 20,
-					marginTop: 16,
-					url: '',
-					renderTo: $('#collects')[0],
-					renderer: function (model) {
-						var html;
-						if( model.index==0 )
-						{
-							html="<div class='addCollect'><div class='inner'><i></i><span>添加采集</span></div></div>";
-						}
-						else 
-						{
-							 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
-						           "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
-			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' style='max-width:236px;' ></a>"+
-						           "<p class='description'>"+model.description+"</p>"+
-						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
-								   "<div class='source'><a href='"+model.source+"'>"+model.source+"</a></div>";
-						}
-						return html;
-					}
-				});
-
-				xwf.init();
-			}
-
 			//tabs切换
 			$("#collect_tab").click(function(){
 				$("#collect_tab").addClass("active");
@@ -350,6 +350,7 @@
 				showFollowers();
 			});
 			$("#collect_tab").click();
+			
 		});
 	</script>
 </body>

@@ -99,6 +99,10 @@
 			cursor:pointer;
 			display: block;
 		}
+		.collect a.link img
+		{
+			width:236px;
+		}
 		.collect a.link img:hover
 		{
 			opacity:0.9;
