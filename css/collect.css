@@ -67,11 +67,6 @@
 			 background-color:#FFFFFF;
 			 box-shadow:0 1px 3px rgba(0,0,0,.3);
 		}
-		/*
-		.collect:hover .actions
-		{
-			display:block;
-		}*/
 		.collect .actions
 		{
 			position:absolute;

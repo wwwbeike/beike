@@ -362,11 +362,10 @@
 			$("div.collect").hover(function(){ $(this).find("div.collect_overlay").show();},function(){
 					$(this).find(".collect_overlay").hide();
 				});*/
-			$("body").delegate("div.collect","hover",function(){
+			$("body").delegate("div.collect","mouseover",function(){
 					$(this).find(".collect_overlay").show();
-				},function(){
-					$(this).find(".collect_overlay").hide();
 				});
+				
 		});
 	</script>
 </body>
