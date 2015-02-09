@@ -235,6 +235,38 @@
 	<script type="text/javascript">
 		var boardNum=4;
 	
+		function showActions()
+		{
+			$("#collects").delegate("div.collect img","mouseover",function(){
+					$(this).css('opacity','0.8');
+					$(this).parents(".collect").find(".actions").show();
+				});
+			$("#collects").delegate("div.collect img","mouseout",function(){
+					$(this).css('opacity','1.0');
+					$(this).parents(".collect").find(".actions").hide();
+			    });
+		}
+		
+		function showSelect()
+		{
+			$("#collects").delegate("div.collect[ischeck=no]","mouseover",function(){
+					$(this).find(".collect_overlay").show();
+				});
+				$("#collects").delegate("div.collect[ischeck=no]","mouseout",function(){
+					$(this).find(".collect_overlay").hide();
+				});
+		}
+		
+		function removeSelect()
+		{
+			$("#collects").undelegate("div.collect","mouseover",function(){
+					$(this).find(".collect_overlay").show();
+				});
+				$("#collects").undelegate("div.collect","mouseout",function(){
+					$(this).find(".collect_overlay").hide();
+				});
+		}
+		
 		function showCollects()
 		{
 			var testCollects = [];
@@ -274,9 +306,10 @@
 					}
 					else 
 					{
-						 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
+						 html ="<div class='collect' ischeck='no'><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
 							   "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
-							   "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"'></a>"+
+							   "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"'>"+
+							   "<div class='collect_overlay' ><i class='btn_select'></i></div></a>"+
 							   "<p class='description'>"+model.description+"</p>"+
 							   "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
 							   "<div class='source'><a href='"+model.source+"'>"+model.source+"</a></div>";
@@ -370,10 +403,11 @@
 				$("#pageWapper").addClass("wrapper1280");
 				boardNum=4;
 			}
-			//header风格设置
+			
+			//风格设置
 			headerHover();
 			styleBoardPageHover();
-			/*backtotp*/
+			showActions();
 			returnToTop();
 			
 			//tabs切换
@@ -393,6 +427,7 @@
 			});
 			$("#collect_tab").click();
 			
+				
 			// 批量管理采集
 			$("#batchManageBtn").click(function(){
 				$("#editBoardBtn").hide();
@@ -401,14 +436,32 @@
 				$("#finishBtn").show();
 				$("#deleteBtn").show();
 				$("#moveBtn").show();
+				$("#collects").undelegate();
+				showSelect();
+				$("#collects").delegate("div.collect","click",function(){
+					var state = $(this).attr("ischeck");
+					if(state=='no')
+					{
+						$(this).attr("ischeck","yes");
+						$(this).find("div.collect_overlay i").css('background-position','0 -40px');
+					}
+					else 
+					{
+						$(this).attr("ischeck","no");
+						$(this).find("div.collect_overlay i").css('background-position','0 0');
+					}
+				});
 			});
 			$("#finishBtn").click(function(){
+				$("div.collect_overlay").hide();
 				$(this).hide();
 				$("#deleteBtn").hide();
 				$("#moveBtn").hide();
 				$("#editBoardBtn").show();
 				$("#batchManageBtn").show();
 				$("#share_unit").show();
+				$("#collects").undelegate();
+				showActions();	
 			});
 		});
 	</script>

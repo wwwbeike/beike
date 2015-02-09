@@ -173,6 +173,7 @@
 						</div>
 						<a href='#' class='link'>
 							<img src='image/2.jpg' >
+							<div class='collect_overlay' ischeck='no'><i class='btn_select'></i></div>
 						</a>
 						<p class='description'>Phuktal寺庙位于印控克什米尔地区。属印度佛教。修建在400多米高的悬崖峭壁上，很难到达。它已被世界教科文组织列为世界文化遗产。Phuktal，意思是‘天堂寺之间徘徊’。</p>
 						<p class='extra'>
@@ -357,6 +358,14 @@
 					$("#createBoard").hide();
 				});
 			});
+			/*
+			$("div.collect").hover(function(){ $(this).find("div.collect_overlay").show();},function(){
+					$(this).find(".collect_overlay").hide();
+				});*/
+			$("body").delegate("div.collect","mouseover",function(){
+					$(this).find(".collect_overlay").show();
+				});
+				
 		});
 	</script>
 </body>
