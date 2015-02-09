@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
 </head>
 <body>
-	<div id="page">
+	<div id="page" >
 		<div id="header">
 			<div id="headWapper" >
 				<a id="logo" href="#"></a>
@@ -225,11 +225,10 @@
 				</div>
 				<div id="more">
 				</div>
+				<div class="loading">
+					<img src="./image/personal_loading_end.png" />
+				</div>
 			</div>
-		</div>
-
-		<div class="loading">
-			<img src="./image/personal_loading_end.png" />
 		</div>
 	</div>
 	
@@ -304,7 +303,7 @@
 							"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>"+
 							"<div class='shadow' ></div><div href='#' class='btn setbtn'><span class='text'>设置封面</span></div>"+
 							"<div class='over'><h3 id='styleBoardName'>"+model.styleBoardName+"</h3><div id='imgCount' class='pin-count'>"+model.imgCount+"</div></div></a>"+
-							"<div class='editBoard'><a href='#' class='btn'><strong>编辑</strong></a></div></div>";
+							"<div class='editBoard'><a href='./editStyleBoard.html' class='btn'><strong>编辑</strong></a></div></div>";
 						}
 						return html;
 					}
@@ -358,6 +357,8 @@
 							 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
 						           "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
 			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"' ></a>"+
+						           "<a href='./editCollect.html' class='btn right'><span class='text'>编辑</span></a></div>"+
+			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' style='max-width:236px;' ></a>"+
 						           "<p class='description'>"+model.description+"</p>"+
 						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
 								   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+

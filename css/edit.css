@@ -1,0 +1,143 @@
+		/* 编辑风格板和采集的css */
+		.editwfx{
+			position:relative;
+			width:940px;
+			margin:0 auto;
+			padding-top:50px;
+		}
+		.Form{
+			display:block;
+			margin-top:0;
+		}
+		.static_form{
+			margin:36px auto;
+			font-size:13px;
+		}
+		.static_form h3{
+			padding: 0 0 18px;
+			font-size: 24px;
+			line-height: 1.1em;
+			font-weight: 700;
+			color: #524d4d;
+			text-shadow: 0 1px rgba(255,255,255,.9);
+			border-bottom: 3px double rgba(34,25,25,.1);
+		}
+		.Form li{
+			display: block;
+			margin-bottom: 18px;
+			font-size: 21px;
+			font-weight: 300;
+		}
+		.static_form li{
+			clear: both;
+			margin: 0;
+			padding: 15px 0;
+			color: #8c7e7e;
+			text-shadow: 0 1px rgba(255,255,255,.9);
+			border-top: 1px solid rgba(255,255,255,.7);
+			border-bottom: 1px solid rgba(34,25,25,.1);
+			float: left;
+			width: 100%;
+		}
+		.static_form li:last-child {
+			border-bottom: 3px double rgba(34,25,25,.1);
+		}
+		.static_form label{
+			display: inline-block;
+			line-height: 1.4em;
+			font-size: 18px;
+			float: left;
+			width: 120px;
+			padding-top: 7px;
+			vertical-align: top;
+		}
+		.static_form .right{
+			float:left;
+		}
+		.clear_input{
+			display: inline-block;
+			padding: 0 10px;
+			height: 36px;
+			font-size: 16px;
+			line-height: 1;
+			color: #777;
+			background: #FCFCFC;
+			border: 1px solid #CCC;
+			border-radius: 3px;
+			min-width:375px;
+			box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+			-webkit-transition: color .2s linear,border-color .3s linear;
+		}
+		.static_form .clear_select{
+			display:inline-block;
+			padding:0 10px;
+			height:36px;
+			font-size:16px;
+			line-height:1;
+			color:#777;
+			background:#FCFCFC;
+			border:1px solid #CCC;
+			border-radius:3px;
+			width:395px;
+			box-shadow:inset 0 1px 2px rgba(0,0,0,.05);
+		}
+		.static_form .clear_select option{
+			background-color:#fff;
+			height:50px;
+			font-size:56px;
+			line-height:1;
+		}
+		.Form textarea{
+			min-height:90px;
+		}
+		.btn_del{
+			font-size: 18px;
+			padding: 0 15px;
+			border-radius: 3px;
+			height: 36px;
+			line-height: 36px;
+		}
+		.static_form .btn{
+			margin-right:10px;
+		}
+		.btn strong{
+			font-weight:400;
+		}
+		.static_form .submit{
+			position: relative;
+			padding-top: 24px;
+			padding-left: 120px;
+			border-top: 1px solid rgba(255,255,255,.7);
+			float: left;
+			margin-bottom: 20px;
+		}
+		.static_form .submit:hover{
+			filter:alpha(opacity=80); 
+			-moz-opacity:0.8; 
+			opacity:0.8;
+		}
+		.editpage_submit{
+			font-size: 24px;
+			padding: 0 18px;
+			height: 46px;
+			line-height: 46px;
+			border-radius: 4px;
+		}
+		.btn_color{
+			background: #a21d89;
+			box-shadow: inset 0 1px 0 rgba(255,255,255,.08),0 1px 0 rgba(255,255,255,.3);
+			text-shadow: 0 -1px 0 rgba(0,0,0,.1);
+			color: #fff;
+			border: 1px solid #C90000;
+		}
+		/* 编辑采集的时候右边图片显示的css */
+		#edit_collect_img{
+			float: right;
+			position: static;
+			margin-top: 85px;
+			width: 236px;
+		}
+		#collectEdit{
+			float:left;
+			width:614px;
+		}
