@@ -237,7 +237,7 @@
 		<a id="elevator" title="回到顶部"></a>
 	</div>
 	<div id="dialog_boxes">
-	<div id="dialog-overlay" ></div>
+		<div id="dialog-overlay" ></div>
 		<div id="createBoard" class="dialog-box ">
 			<div class="box-title">创建风格板</div>
 			<div class="box-inner">
@@ -293,7 +293,7 @@
 						var html;
 						if( model.index==0 )
 						{
-							html="<div class='addBoard'><div class='inner'><i></i><span>创建风格板</span></div></div>";
+							html="<div id='addBoard' class='addBoard'><div id='inner' class='inner'><i id='i' ></i><span id='span' >创建风格板</span></div></div>";
 						}
 						else 
 						{
@@ -562,7 +562,8 @@
 			$("#collect_tab").click();
 			
 			// 添加风格板
-			$("div.addBoard").click(function(){
+			
+			$("#boardWaterfall").delegate("div.addBoard","click",function(){
 				$("#dialog-overlay").show();
 				$("#createBoard").show();
 				$("#createBoard div.close-btn").click(function(){
