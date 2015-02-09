@@ -276,7 +276,8 @@
 					{
 						 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
 							   "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
-							   "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"'></a>"+
+							   "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"'>"+
+							   "<div class='collect_overlay' ischeck='no'><i class='btn_select'></i></div></a>"+
 							   "<p class='description'>"+model.description+"</p>"+
 							   "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
 							   "<div class='source'><a href='"+model.source+"'>"+model.source+"</a></div>";
@@ -393,6 +394,7 @@
 			});
 			$("#collect_tab").click();
 			
+				
 			// 批量管理采集
 			$("#batchManageBtn").click(function(){
 				$("#editBoardBtn").hide();
@@ -401,6 +403,12 @@
 				$("#finishBtn").show();
 				$("#deleteBtn").show();
 				$("#moveBtn").show();
+				
+				$("#collects").delegate("div.collect","hover",function(){
+					$(this).find(".collect_overlay").show();
+				},function(){
+					$(this).find(".collect_overlay").hide();
+				});
 			});
 			$("#finishBtn").click(function(){
 				$(this).hide();
