@@ -3,17 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home</title>
-	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
-	<script type="text/javascript" src='js/XUtil/XUtil.js'></script>
-	<script type="text/javascript" src='js/XUtil/src/base.js'></script>
-	<script type="text/javascript" src='js/XUtil/src/waterfall.js'></script>
-	<script type="text/javascript"  charset="UTF-8" src='js/Native/hoverEvent.js'></script>
-	<script type="text/javascript" src='js/Native/returnToTop.js'></script>
-	<link rel='stylesheet' type="text/css" href='css/XUtil.min.css'/>
-	<link rel="stylesheet" type="text/css" href="css/styleBoard.css"/>
-	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
-	<link rel="stylesheet" type="text/css" href="css/collect.css"/>
-	<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	
+	<script type="text/javascript" src='../js/XUtil/XUtil.js'></script>
+	<script type="text/javascript" src='../js/XUtil/base.js'></script>
+	<script type="text/javascript" src='../js/XUtil/waterfall.js'></script>
+	<link rel='stylesheet' type="text/css" href='../js/XUtil/XUtil.min.css'/>
+	
+	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
+	<script type="text/javascript" src='../js/Native/returnToTop.js'></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/styleBoard.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/collect.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/dialog.css"/>
 </head>
 <body>
 	<div id="page" >
@@ -144,7 +147,7 @@
 						</div>
 						<div id="user_nav" class="nav">
 							<a href="#" class="nav_link">
-								<img width="20" height="20" src="./image/user.png" class="user_photo">
+								<img width="20" height="20" src="../image/user.png" class="user_photo">
 								<div class="arrow"></div>
 							</a>
 							<div class="menu">
@@ -167,7 +170,7 @@
 					<div id="user_intro">
 						<div id="user_photo">
 							<div class="img">
-								<img width="130" height="130" src="./image/user_photo.jpg" >
+								<img width="130" height="130" src="../image/user_photo.jpg" >
 							</div>
 							<div class="counts">
 								<div class="text">
@@ -226,7 +229,7 @@
 				<div id="more">
 				</div>
 				<div class="loading">
-					<img src="./image/personal_loading_end.png" />
+					<img src="../image/personal_loading_end.png" />
 				</div>
 			</div>
 		</div>
@@ -270,10 +273,10 @@
 						index:i,
 						styleBoardName: "科比最帅瞬间",
 						imgCount: 4,
-						coverImg:"image/1.jpg",
-						firstImg:"image/2.jpg",
-						secondImg:"image/3.jpg",
-						thirdImg:"image/4.jpg"
+						coverImg:"../image/1.jpg",
+						firstImg:"../image/2.jpg",
+						secondImg:"../image/3.jpg",
+						thirdImg:"../image/4.jpg"
 					}
 					testStyleBoards.push(model);
 				}
@@ -316,7 +319,7 @@
 			function renderCollect()
 			{
 				var testCollects = [];
-			    var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
+			    var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
 				var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
 									"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
 									"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
@@ -381,11 +384,11 @@
 						index:i,
 						styleBoardName: "科比最帅瞬间",
 						imgCount: 4,
-						coverImg:"image/1.jpg",
-						firstImg:"image/2.jpg",
-						secondImg:"image/3.jpg",
-						thirdImg:"image/4.jpg",
-						userImg:"image/1.jpg",
+						coverImg:"../image/1.jpg",
+						firstImg:"../image/2.jpg",
+						secondImg:"../image/3.jpg",
+						thirdImg:"../image/4.jpg",
+						userImg:"../image/1.jpg",
 						userName:"吃醋小王子",
 					}
 					testFondBoards.push(model);
@@ -420,7 +423,7 @@
 			function renderFondCollect()
 			{
 				var testCollects = [];
-			    var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
+			    var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
 				var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
 									"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
 									"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",

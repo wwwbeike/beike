@@ -1,18 +1,9 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
-	<script type="text/javascript" src="dropzone/dropzone_huaban.js"></script>
-	<link rel="stylesheet" href="dropzone/basic.css" >
-	<link rel="stylesheet" href="dropzone/dropzone.css">
-	<style type="text/css">
-	
-		
-		body{
-			background-color:#edece9;
+		/* 页面Dialog盒子的样式 */
+		.dialog-boxes {
+			position: relative;
+			z-index: 99999;
 		}
+		
 		
 		.dialog-overlay {
 			position: fixed;
@@ -23,10 +14,6 @@
 			background: rgba(0,0,0,.3);
 		}
 	
-		.dialog-boxes {
-			position: relative;
-			z-index: 99999;
-		}
 		
 		.dialog-box {
 			background: #fff;
@@ -69,7 +56,7 @@
 			left: 50%;
 			top: 50%;
 			margin: -10px 0 0 -10px;
-			background: url(./image/msg_close.png) 0 0 no-repeat;
+			background: url(../image/msg_close.png) 0 0 no-repeat;
 		}
 		
 		.dialog-box .close-btn i:hover
@@ -160,6 +147,7 @@
 			text-decoration: none;
 		}
 		
+		/*
 		.btn {
 			display: inline-block;
 			line-height: 1;
@@ -188,87 +176,4 @@
 			border-radius: 3px;
 			height: 36px;
 			line-height: 36px;
-		}
-		
-	</style>
-</head>
-<body>
-	<a href="#" id="abtn">CCCCC</a>
-	<div class="dialog-boxes">
-		<div class="dialog-overlay" style="display: none;"></div>
-		<div id="image_upload" data-name="upload" class="dialog-box" style="display: none;">
-			
-			<div class="box-title">上传采集</div>
-			
-			<div class="box-inner">
-			
-				<div class="upload-area">
-					<div class="normal">
-						<a href="#" onclick="return false;" class="upload-btn btn btn18">
-							<span class="text"> 上传采集</span>
-						</a>
-						<div style="margin-top: 25px" class="note">
-							也可以拖拽图片到该区域，完成上传
-						</div>
-						<div style="margin: 10px 0 25px" class="sub">
-							支持单张 10m 以内图片上传
-						</div>
-						<div style="margin-top: 20px; font-size: 12px" class="sub">
-							[提示]请严格遵守保密法律法规，严禁在互联网上存储、处理、传输、发布涉密信息
-						</div>
-					</div>
-					
-					<div style="display: none" class="draging">
-						<div class="note">释放鼠标以上传</div>
-					</div>
-					
-					<div style="display: none" class="uploading">
-						<div class="animate">上传中...</div>
-					</div>
-					
-					<div class="dropzone dz-clickable">
-						<div class="dz-default dz-message">
-							<span>拖动文件到这里上传</span>
-						</div>
-					</div>
-				
-				</div>
-				
-				<div class="links">
-					<div class="part">
-						<a target="_blank" href="#" class="brown-link">安装采集工具</a>
-						<div class="description">一键采集互联网上的任意图片</div>
-					</div>
-					<div class="part">
-						<a href="#" class="brown-link">在站内逛逛</a>
-						<div class="description">点击采集按钮，一键转采喜欢的图片</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="close-btn">
-				<i></i>
-			</div>
-		
-		</div>
-	</div>
-	<script type="text/javascript">
-		// jQuery
-		$("div.dropzone").dropzone({ url: "#" });
-	
-		
-		$("#abtn").click(function(){
-			$(".dialog-boxes>div").css("display", "block");
-			
-		});
-		
-		$("div.close-btn").click(function(){
-			$(".dialog-boxes>div").css("display", "none");
-		});
-		
-		$("div.dialog-overlay").click(function(){
-			$(".dialog-boxes>div").css("display", "none");
-		});
-	</script>
-</body>
-</html>
+		}*/

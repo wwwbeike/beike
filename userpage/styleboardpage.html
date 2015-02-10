@@ -3,16 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>StyleBoard</title>
-	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
-	<script type="text/javascript" src='js/XUtil/XUtil.js'></script>
-	<script type="text/javascript" src='js/XUtil/src/base.js'></script>
-	<script type="text/javascript" src='js/XUtil/src/waterfall.js'></script>
-	<script type="text/javascript"  charset="UTF-8" src='js/Native/hoverEvent.js'></script>
-	<script type="text/javascript" src='js/Native/returnToTop.js'></script>
-	<link rel='stylesheet' type="text/css" href='css/XUtil.min.css'/>
-	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
-	<link rel="stylesheet" type="text/css" href="css/collect.css"/>
-	<link rel="stylesheet" type="text/css" href="css/followBoard.css"/>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	
+	<script type="text/javascript" src='../js/XUtil/XUtil.js'></script>
+	<script type="text/javascript" src='../js/XUtil/base.js'></script>
+	<script type="text/javascript" src='../js/XUtil/waterfall.js'></script>
+	<link rel='stylesheet' type="text/css" href='../js/XUtil/XUtil.min.css'/>
+	
+	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
+	<script type="text/javascript" src='../js/Native/returnToTop.js'></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/collect.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/followBoard.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/dialog_boxes.css"/>
+	
+	<script type="text/javascript" src="../js/dropzone/dropzone_huaban.js"></script>
+	<link rel="stylesheet" href="../js/dropzone/basic.css" >
+	<link rel="stylesheet" href="../js/dropzone/dropzone.css">
+	
+	
 </head>
 <body>
 	<div id="page">
@@ -143,7 +153,7 @@
 						</div>
 						<div id="user_nav" class="nav">
 							<a href="#" class="nav_link">
-								<img width="20" height="20" src="./image/user.png" class="user_photo">
+								<img width="20" height="20" src="../image/user.png" class="user_photo">
 								<div class="arrow"></div>
 							</a>
 							<div class="menu">
@@ -205,7 +215,7 @@
 					</div>
 					<div class="bar">
 						<a href="#" class="user_unit">
-							<img src="image/1.jpg">
+							<img src="../image/1.jpg">
 							<span class="name">名门冰夜</span>
 						</a>
 						<div class="tabs">
@@ -225,14 +235,74 @@
 		</div>
 
 		<div class="loading">
-			<img src="./image/personal_loading_end.png" />
+			<img src="../image/personal_loading_end.png" />
 		</div>
 	</div>
 	
 	<div id="elevator_item">
 		<a id="elevator" title="回到顶部"></a>
 	</div>
+	
+	<div class="dialog-boxes">
+		<div class="dialog-overlay" style="display: none;"></div>
+		<div id="image_upload" data-name="upload" class="dialog-box" style="display: none;">
+			
+			<div class="box-title">上传采集</div>
+			
+			<div class="box-inner">
+			
+				<div class="upload-area">
+					<div class="normal">
+						<a href="#" onclick="return false;" class="upload-btn btn btn18">
+							<span class="text"> 上传采集</span>
+						</a>
+						<div style="margin-top: 25px" class="note">
+							也可以拖拽图片到该区域，完成上传
+						</div>
+						<div style="margin: 10px 0 25px" class="sub">
+							支持单张 10m 以内图片上传
+						</div>
+						<div style="margin-top: 20px; font-size: 12px" class="sub">
+							[提示]请严格遵守保密法律法规，严禁在互联网上存储、处理、传输、发布涉密信息
+						</div>
+					</div>
+					
+					<div style="display: none" class="draging">
+						<div class="note">释放鼠标以上传</div>
+					</div>
+					
+					<div style="display: none" class="uploading">
+						<div class="animate">上传中...</div>
+					</div>
+					
+					<div class="dropzone dz-clickable">
+						<div class="dz-default dz-message">
+							<span>拖动文件到这里上传</span>
+						</div>
+					</div>
+				
+				</div>
+				
+				<div class="links">
+					<div class="part">
+						<a target="_blank" href="#" class="brown-link">安装采集工具</a>
+						<div class="description">一键采集互联网上的任意图片</div>
+					</div>
+					<div class="part">
+						<a href="#" class="brown-link">在站内逛逛</a>
+						<div class="description">点击采集按钮，一键转采喜欢的图片</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="close-btn">
+				<i></i>
+			</div>
+		
+		</div>
+	</div>
 	<script type="text/javascript">
+				
 		var boardNum=4;
 	
 		function showActions()
@@ -270,7 +340,7 @@
 		function showCollects()
 		{
 			var testCollects = [];
-			var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
+			var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
 			var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
 								"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
 								"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
@@ -324,7 +394,7 @@
 		function showFollowers()
 		{
 			var testFollowers = [];
-			var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
+			var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
 			for (var i = 0; i < 20; i++) {
 				var model = {
 					followName: "吃醋小王子",
@@ -462,6 +532,22 @@
 				$("#share_unit").show();
 				$("#collects").undelegate();
 				showActions();	
+			});
+			
+			// dropzone
+			$("div.dropzone").dropzone({ url: "#" });
+		
+			// 添加采集
+			$("div.addCollect").click(function(){
+				$(".dialog-boxes>div").css("display", "block");
+			});
+			
+			$("div.close-btn").click(function(){
+				$(".dialog-boxes>div").css("display", "none");
+			});
+			
+			$("div.dialog-overlay").click(function(){
+				$(".dialog-boxes>div").css("display", "none");
 			});
 		});
 	</script>
