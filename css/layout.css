@@ -161,10 +161,10 @@
 			margin: -8px 0 0 -8px;
 		}
 		#left_menu .nav_icon{
-			background: url("../image/navigation_icon1.png") center center  no-repeat ;
+			background: url(../image/navigation_icon1.png) center center  no-repeat ;
 		}
 		#menu_bar .arrow{
-			background: url("../image/menu_sprite.svg") 0 -50px no-repeat;
+			background: url(../image/menu_sprite.svg) 0 -50px no-repeat;
 			width: 8px;
 			height: 8px;
 			position: absolute;
@@ -221,38 +221,38 @@
 			font-weight:700;
 		}
 		#left_menu_nav .left_module .latest_collect{
-			background:url("../image/menu_icon1.png") 0 0 no-repeat;
+			background:url(../image/menu_icon1.png) 0 0 no-repeat;
 		}
 		#left_menu_nav .left_module .latest_collect:hover{
-			background:url("../image/menu_icon1_1.png") 0 0 no-repeat;
+			background:url(../image/menu_icon1_1.png) 0 0 no-repeat;
 			text-decoration:none;
 		}
 		#left_menu_nav .left_module .wedding_style{
-			background:url("../image/menu_icon2.png") 0 0 no-repeat;
+			background:url(../image/menu_icon2.png) 0 0 no-repeat;
 		}
 		#left_menu_nav .left_module .wedding_style:hover{
-			background:url("../image/menu_icon2_2.png") 0 0 no-repeat;
+			background:url(../image/menu_icon2_2.png) 0 0 no-repeat;
 			text-decoration:none;
 		}
 		#left_menu_nav .left_module .videos{
-			background:url("../image/menu_icon3.png") 0 0 no-repeat;
+			background:url(../image/menu_icon3.png) 0 0 no-repeat;
 		}
 		#left_menu_nav .left_module .videos:hover{
-			background:url("../image/menu_icon3_3.png") 0 0 no-repeat;
+			background:url(../image/menu_icon3_3.png) 0 0 no-repeat;
 			text-decoration:none;
 		}
 		#left_menu_nav .left_module .wedding_classify{
-			background:url("../image/menu_icon4.png") 0 0 no-repeat;
+			background:url(../image/menu_icon4.png) 0 0 no-repeat;
 		}
 				#left_menu_nav .left_module .wedding_classify:hover{
-			background:url("../image/menu_icon4_4.png") 0 0 no-repeat;
+			background:url(../image/menu_icon4_4.png) 0 0 no-repeat;
 			text-decoration:none;
 		}
 		#left_menu_nav .left_module .activities{
-			background:url("../image/menu_icon4.png") 0 0 no-repeat;
+			background:url(../image/menu_icon4.png) 0 0 no-repeat;
 		}
 		#left_menu_nav .left_module .activities:hover{
-			background:url("../image/menu_icon4_4.png") 0 0 no-repeat;
+			background:url(../image/menu_icon4_4.png) 0 0 no-repeat;
 			text-decoration:none;
 		}
 		#left_menu_nav .left_module .with_line{
@@ -297,7 +297,7 @@
 			height: 50px;
 			line-height: 45px;
 			border-top: 1px solid #EDEDED;
-			background: url("../image/menu_tool.png") 0 0 repeat-x;
+			background: url(../image/menu_tool.png) 0 0 repeat-x;
 			position: relative;
 			padding-left: 10px;
 		}
@@ -307,7 +307,7 @@
 			padding-left:24px;
 		}
 		#left_menu_nav .bottom_bar .tool_icon{
-			background: url("../image/menu_tool_icon1.png") 0 0 no-repeat;
+			background: url(../image/menu_tool_icon1.png) 0 0 no-repeat;
 		}
 		#left_menu_nav .bottom_bar .menu_tool_links{
 			position: absolute;
@@ -317,16 +317,16 @@
 			text-align:center;
 		}
 		#left_menu_nav .bottom_bar .about_us{
-			background: url("../image/menu_tool_icon2.png") 0 0 no-repeat;
+			background: url(../image/menu_tool_icon2.png) 0 0 no-repeat;
 		}
 		#left_menu_nav .bottom_bar .join_us{
-			background: url("../image/menu_tool_icon3.png") 0 0 no-repeat;
+			background: url(../image/menu_tool_icon3.png) 0 0 no-repeat;
 		}
 		#left_menu_nav .bottom_bar .feedback{
-			background: url("../image/menu_tool_icon4.png") 0 0 no-repeat;
+			background: url(../image/menu_tool_icon4.png) 0 0 no-repeat;
 		}
 		#left_menu_nav .bottom_bar .friendly_link{
-			background: url("../image/menu_tool_icon5.png") 0 0 no-repeat;
+			background: url(../image/menu_tool_icon5.png) 0 0 no-repeat;
 		}
 		#left_menu_nav .menu .up_arrow {
 			width: 18px;
@@ -334,7 +334,7 @@
 			position: absolute;
 			left: 19px;
 			top: -9px;
-			background: url("../image/menu_arrow.png") 0 0 no-repeat;
+			background: url(../image/menu_arrow.png) 0 0 no-repeat;
 		}
 		/* 右侧menu公共css*/
 		#right_menu .menu a:hover{
@@ -343,7 +343,7 @@
 		}
 		/*添加采集工具栏*/
 		#add_nav .nav_icon{
-			background: url("../image/navigation_icon2.png") center center no-repeat ;
+			background: url(../image/navigation_icon2.png) center center no-repeat ;
 		}
 		#add_nav .menu{
 			position: absolute;
@@ -405,7 +405,7 @@
 		}
 		/*消息通知栏*/
 		#message_nav .nav_icon{
-			background: url("../image/navigation_icon3.png") center center no-repeat ;
+			background: url(../image/navigation_icon3.png) center center no-repeat ;
 		}
 		#message_nav .num{
 			padding: 0 3px;
@@ -690,7 +690,7 @@
 			width:30px;
 			display:block;
 			float:left;
-			background:url('../image/share_icon.svg') 6px 4px no-repeat;
+			background:url(../image/share_icon.svg) 6px 4px no-repeat;
 		}
 		#styleBoard_card .share_btn:hover
 		{
@@ -719,7 +719,7 @@
 			display:block;
 			float:left;
 			cursor:pointer;
-			background:url('../image/share_icon.svg') -101px 9px no-repeat;
+			background:url(../image/share_icon.svg) -101px 9px no-repeat;
 		}
 		#styleBoard_card .triangle
 		{
@@ -763,7 +763,7 @@
 			top:11px;
 			width:18px;
 			height:18px;
-			background:url('../image/share_icon.svg') 0 -80px no-repeat;
+			background:url(../image/share_icon.svg) 0 -80px no-repeat;
 		}
 		#styleBoard_card #menu a:hover i
 		{
@@ -1059,7 +1059,7 @@
 		.collect-board-switcher li
 		{
 			display:block;
-			background:url("../image/tab_sprite.png") -1px -210px no-repeat;
+			background:url(../image/tab_sprite.png) -1px -210px no-repeat;
 			border:1px solid #CCC;
 			font-size:15px;
 			font-weight:400;
@@ -1075,7 +1075,7 @@
 		}
 		.collect-board-switcher li a{
 			display:block;
-			background:url("../image/tab_sprite.png") -113px 8px no-repeat;
+			background:url(../image/tab_sprite.png) -113px 8px no-repeat;
 			line-height:26px;
 			font-size:14px;
 			text-decoration:none;

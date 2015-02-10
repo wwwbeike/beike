@@ -3,20 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>StyleBoard</title>
-	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
-	<script type="text/javascript" src='js/XUtil/XUtil.js'></script>
-	<script type="text/javascript" src='js/XUtil/src/base.js'></script>
-	<script type="text/javascript" src='js/XUtil/src/waterfall.js'></script>
-	<script type="text/javascript"  charset="UTF-8" src='js/Native/hoverEvent.js'></script>
-	<script type="text/javascript" src='js/Native/returnToTop.js'></script>
-	<link rel='stylesheet' type="text/css" href='css/XUtil.min.css'/>
-	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
-	<link rel="stylesheet" type="text/css" href="css/collect.css"/>
-	<link rel="stylesheet" type="text/css" href="css/followBoard.css"/>
-	<script type="text/javascript" src="dropzone/dropzone_huaban.js"></script>
-	<link rel="stylesheet" href="dropzone/basic.css" >
-	<link rel="stylesheet" href="dropzone/dropzone.css">
-	<link rel="stylesheet" type="text/css" href="css/dialog_boxes.css"/>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	
+	<script type="text/javascript" src='../js/XUtil/XUtil.js'></script>
+	<script type="text/javascript" src='../js/XUtil/base.js'></script>
+	<script type="text/javascript" src='../js/XUtil/waterfall.js'></script>
+	<link rel='stylesheet' type="text/css" href='../js/XUtil/XUtil.min.css'/>
+	
+	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
+	<script type="text/javascript" src='../js/Native/returnToTop.js'></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/collect.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/followBoard.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/dialog_boxes.css"/>
+	
+	<script type="text/javascript" src="../js/dropzone/dropzone_huaban.js"></script>
+	<link rel="stylesheet" href="../js/dropzone/basic.css" >
+	<link rel="stylesheet" href="../js/dropzone/dropzone.css">
+	
+	
 </head>
 <body>
 	<div id="page">
@@ -147,7 +153,7 @@
 						</div>
 						<div id="user_nav" class="nav">
 							<a href="#" class="nav_link">
-								<img width="20" height="20" src="./image/user.png" class="user_photo">
+								<img width="20" height="20" src="../image/user.png" class="user_photo">
 								<div class="arrow"></div>
 							</a>
 							<div class="menu">
@@ -209,7 +215,7 @@
 					</div>
 					<div class="bar">
 						<a href="#" class="user_unit">
-							<img src="image/1.jpg">
+							<img src="../image/1.jpg">
 							<span class="name">名门冰夜</span>
 						</a>
 						<div class="tabs">
@@ -229,7 +235,7 @@
 		</div>
 
 		<div class="loading">
-			<img src="./image/personal_loading_end.png" />
+			<img src="../image/personal_loading_end.png" />
 		</div>
 	</div>
 	
@@ -334,7 +340,7 @@
 		function showCollects()
 		{
 			var testCollects = [];
-			var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
+			var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
 			var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
 								"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
 								"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
@@ -388,7 +394,7 @@
 		function showFollowers()
 		{
 			var testFollowers = [];
-			var imgs=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpg",];
+			var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
 			for (var i = 0; i < 20; i++) {
 				var model = {
 					followName: "吃醋小王子",
