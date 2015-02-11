@@ -13,8 +13,10 @@
 	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
 	<script type="text/javascript" src='../js/Native/returnToTop.js'></script>
 	
-	<link rel="stylesheet" type="text/css" href="../css/styleBoard.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+	
+	<link rel="stylesheet" type="text/css" href="../css/styleBoard.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/collect.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/dialog.css"/>
 </head>
@@ -239,7 +241,7 @@
 		<a id="elevator" title="回到顶部"></a>
 	</div>
 	<div id="dialog_boxes">
-		<div id="dialog-overlay" ></div>
+		<div class="dialog-overlay" ></div>
 		<div id="createBoard" class="dialog-box ">
 			<div class="box-title">创建风格板</div>
 			<div class="box-inner">
@@ -568,10 +570,10 @@
 			// 添加风格板
 			
 			$("#boardWaterfall").delegate("div.addBoard","click",function(){
-				$("#dialog-overlay").show();
+				$(".dialog-overlay").show();
 				$("#createBoard").show();
 				$("#createBoard div.close-btn").click(function(){
-					$("#dialog-overlay").hide();
+					$(".dialog-overlay").hide();
 					$("#createBoard").hide();
 				});
 			});

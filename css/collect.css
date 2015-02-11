@@ -1,221 +1,222 @@
-		/**
-		* 添加采集样式
-		**/
-		.addCollect
-		{
-			 position: relative;
-			 left:0px;
-			 top:0px;
-			 width: 236px;
-			 height:130px;
-			 background:rgba(255,255,255,.5);
-			 box-shadow:0 1px 3px rgba(0,0,0,.3);
-			 cursor:pointer;
-			 text-decoration:none;
-		}
-		.addCollect:hover
-		{
-			background:#fff;
-		}
-		.addCollect:hover .inner i
-		{
-			background: url(../image/personal_found_add_streak.png) 0 0 no-repeat;
-		}
-		.addCollect:hover .inner span
-		{
-			color:#000;
-		}
-		.addCollect:active .inner i
-		{
-			background: url(../image/personal_found_add_click.png) 0 0 no-repeat;
-		}
-		.addCollect:active .inner span
-		{
-			color:#b456a2;
-		}
-		.addCollect:active .inner 
-		{
-			border:2px dashed #b456a2;
-		}
-		.addCollect .inner
-		{
-			height:126px;
-			border:2px dashed #dedede;
-		}
-		.addCollect .inner i
-		{
-			display:block;
-			width:60px;
-			height:60px;
-			margin:28px auto 10px;
-			background: url(../image/personal_found_add.png) 0 0 no-repeat;
-		}
-		.addCollect .inner span
-		{
-			display:block;
-			color:#777;
-			text-align:center;
-		}
-		/**
-		* 采集样式
-		**/
-		.collect
-		{
-			 position: relative;
-			 width: 236px;
-			 font-size:12px;
-			 background-color:#FFFFFF;
-			 box-shadow:0 1px 3px rgba(0,0,0,.3);
-		}
-		.collect .actions
-		{
-			position:absolute;
-			display:none;
-			left:6px;
-			top:6px;
-			right:6px;
-			z-index:3;
-		}
-		.collect .actions .left
-		{
-			color:#fff;
-			background:#E53E49;
-			border-color:#E53E49;
-			text-shadow:0 -1px 0 rgba(0,0,0,.1);
-			font-weight:thicker ;
-			box-shadow:none;
-		}
-		.collect .actions .right
-		{
-			margin-left:110px;
-		}
-		
-		.collect a.link
-		{
-			cursor:pointer;
-			display: block;
-		}
-		.collect a.link .collect_overlay
-		{
-			display:none;
-			position:absolute;
-			width:100%;
-			height:100%;
-			left:0;
-			top:0;
-			background-color:rgba(255,255,255,.4);
-			cursor:pointer;
-		}
-		.collect a.link .collect_overlay .btn_select
-		{
-			position:absolute;
-			top:5px;
-			right:5px;
-			width:34px;
-			height:34px;
-			background:url(../image/icon_collect_select.svg) 0 0 no-repeat;
-		}
-		.collect a.link img
-		{
-			width:236px;
-		}
-		/*
-		.collect a.link img:hover
-		{
-			opacity:0.9;
-		}*/
-		.collect .description
-		{
-			display:block;
-			padding:0 16px;
-			margin:10px 0;
-			line-height:1.35em;
-			overflow:hidden;
-			word-wrap:break-word;
-			font-family:"helvetica neue",arial,sans-serif;
-		}
-		.collect .extra
-		{
-			padding:0 15px;
-			margin-bottom:15px;
-		}
-		.collect .extra>span
-		{
-			display:inline-block;
-			width:auto;
-			height:12px;
-			line-height:12px;
-			font-size:12px;
-			margin-right:10px;
-		}
-		.collect .extra .repin i
-		{
-			background-position:-30px 0;
-		}
-		.collect .extra>span i
-		{
-			display:inline-block;
-			width:12px;
-			height:12px;
-			margin-right:4px;
-			vertical-align:bottom;
-			background:url(../image/bt_action_icons.svg) 0 0 no-repeat;
-		}
-		.collect .source
-		{
-			padding:0 15px;
-			height:50px;
-			background:#FAFAFA;
-			display:block;
-		}
-		.collect .source a
-		{
-			text-decoration:none;
-			font-size:16px;
-			display:inline-block;
-			color: #444;
-			margin-top:15px;
-		}
-		.collect .source a:hover
-		{
-			text-decoration:underline;
-		}
-		.collect .attribution
-		{
-			color:#999;
-			border-top:1px solid #F2F2F2;
-			background:#FAFAFA;
-			height:67px;
-			padding:0 16px;
-		}
-		.collect .img
-		{
-			width:34px;
-			height:34px;
-			margin:16px 0;
-			display:block;
-			float:left;
-		}
-		.collect .img .user_image
-		{
-			width:34px;
-			height:34px;
-			display:block;
-		}
-		.attribution .text
-		{
-			margin-left:34px;
-			padding:15px 0 0 10px;
-		}
-		.attribution .line
-		{
-			height:18px;
-		}
-		.attribution a
-		{
-			color:#9E7E6B;
-		}
-		.attribution a:hover
-		{
-			text-decoration:underline;
-		}
+@CHARSET "UTF-8";	
+/**
+* 添加采集样式
+**/
+.addCollect
+{
+	 position: relative;
+	 left:0px;
+	 top:0px;
+	 width: 236px;
+	 height:130px;
+	 background:rgba(255,255,255,.5);
+	 box-shadow:0 1px 3px rgba(0,0,0,.3);
+	 cursor:pointer;
+	 text-decoration:none;
+}
+.addCollect:hover
+{
+	background:#fff;
+}
+.addCollect:hover .inner i
+{
+	background: url(../image/personal_found_add_streak.png) 0 0 no-repeat;
+}
+.addCollect:hover .inner span
+{
+	color:#000;
+}
+.addCollect:active .inner i
+{
+	background: url(../image/personal_found_add_click.png) 0 0 no-repeat;
+}
+.addCollect:active .inner span
+{
+	color:#b456a2;
+}
+.addCollect:active .inner 
+{
+	border:2px dashed #b456a2;
+}
+.addCollect .inner
+{
+	height:126px;
+	border:2px dashed #dedede;
+}
+.addCollect .inner i
+{
+	display:block;
+	width:60px;
+	height:60px;
+	margin:28px auto 10px;
+	background: url(../image/personal_found_add.png) 0 0 no-repeat;
+}
+.addCollect .inner span
+{
+	display:block;
+	color:#777;
+	text-align:center;
+}
+/**
+* 采集样式
+**/
+.collect
+{
+	 position: relative;
+	 width: 236px;
+	 font-size:12px;
+	 background-color:#FFFFFF;
+	 box-shadow:0 1px 3px rgba(0,0,0,.3);
+}
+.collect .actions
+{
+	position:absolute;
+	display:none;
+	left:6px;
+	top:6px;
+	right:6px;
+	z-index:3;
+}
+.collect .actions .left
+{
+	color:#fff;
+	background:#E53E49;
+	border-color:#E53E49;
+	text-shadow:0 -1px 0 rgba(0,0,0,.1);
+	font-weight:thicker ;
+	box-shadow:none;
+}
+.collect .actions .right
+{
+	margin-left:110px;
+}
+
+.collect a.link
+{
+	cursor:pointer;
+	display: block;
+}
+.collect a.link .collect_overlay
+{
+	display:none;
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background-color:rgba(255,255,255,.4);
+	cursor:pointer;
+}
+.collect a.link .collect_overlay .btn_select
+{
+	position:absolute;
+	top:5px;
+	right:5px;
+	width:34px;
+	height:34px;
+	background:url(../image/icon_collect_select.svg) 0 0 no-repeat;
+}
+.collect a.link img
+{
+	width:236px;
+}
+/*
+.collect a.link img:hover
+{
+	opacity:0.9;
+}*/
+.collect .description
+{
+	display:block;
+	padding:0 16px;
+	margin:10px 0;
+	line-height:1.35em;
+	overflow:hidden;
+	word-wrap:break-word;
+	font-family:"helvetica neue",arial,sans-serif;
+}
+.collect .extra
+{
+	padding:0 15px;
+	margin-bottom:15px;
+}
+.collect .extra>span
+{
+	display:inline-block;
+	width:auto;
+	height:12px;
+	line-height:12px;
+	font-size:12px;
+	margin-right:10px;
+}
+.collect .extra .repin i
+{
+	background-position:-30px 0;
+}
+.collect .extra>span i
+{
+	display:inline-block;
+	width:12px;
+	height:12px;
+	margin-right:4px;
+	vertical-align:bottom;
+	background:url(../image/bt_action_icons.svg) 0 0 no-repeat;
+}
+.collect .source
+{
+	padding:0 15px;
+	height:50px;
+	background:#FAFAFA;
+	display:block;
+}
+.collect .source a
+{
+	text-decoration:none;
+	font-size:16px;
+	display:inline-block;
+	color: #444;
+	margin-top:15px;
+}
+.collect .source a:hover
+{
+	text-decoration:underline;
+}
+.collect .attribution
+{
+	color:#999;
+	border-top:1px solid #F2F2F2;
+	background:#FAFAFA;
+	height:67px;
+	padding:0 16px;
+}
+.collect .img
+{
+	width:34px;
+	height:34px;
+	margin:16px 0;
+	display:block;
+	float:left;
+}
+.collect .img .user_image
+{
+	width:34px;
+	height:34px;
+	display:block;
+}
+.attribution .text
+{
+	margin-left:34px;
+	padding:15px 0 0 10px;
+}
+.attribution .line
+{
+	height:18px;
+}
+.attribution a
+{
+	color:#9E7E6B;
+}
+.attribution a:hover
+{
+	text-decoration:underline;
+}

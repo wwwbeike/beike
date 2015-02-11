@@ -1,9 +1,12 @@
+@CHARSET "UTF-8";
+/* 页面Dialog盒子的样式 */
 #dialog_boxes
 {
 	position:relative;
 	z-index:99999;
 }
-#dialog-overlay
+
+.dialog-overlay
 {
 	position:fixed;
 	top:0;
@@ -13,6 +16,7 @@
 	background:rgba(0,0,0,.3);
 	display:none;
 }
+
 .dialog-box
 {
 	background:#fff;
@@ -25,6 +29,7 @@
 	margin:-220px 0 0 -290px;
 	display:none;
 }
+
 .dialog-box .box-title
 {
 	height:50px;
@@ -123,4 +128,88 @@
 	line-height:36px;
 	font-weight:400;
 	padding-bottom:5px;
+}
+
+/*Upload*/
+#image_upload {
+	height: 380px;
+	margin-top: -190px;
+}
+
+#image_upload .upload-area {
+	border: 2px dashed #EDEDED;
+	height: 206px;
+	text-align: center;
+	position: relative;
+	margin-top: 10px;
+}
+
+#image_upload .upload-area .normal {
+	margin-top: 40px;
+}
+
+
+
+#image_upload .upload-area .draging {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	line-height: 40px;
+	height: 40px;
+	margin-top: -20px;
+}
+
+#image_upload .upload-area .note {
+	font-size: 16px;
+}
+
+#image_upload .upload-area .normal .sub {
+	color: #999;
+	line-height: 18px;
+}
+
+#image_upload .upload-area .uploading {
+	width: 60px;
+	padding-top: 75px;
+	margin-top: 50px;
+	color: #999;
+	font-size: 16px;
+	margin: 60px auto 0;
+}
+
+#image_upload .upload-area .dropzone {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: .0001;
+	background: #fff;
+}
+
+#image_upload .links .part {
+	width: 50%;
+	float: left;
+	text-align: center;
+	padding: 20px 0;
+}
+
+#image_upload .links .part .description {
+	margin-top: 10px;
+	color: #999;
+}
+
+#image_upload .links .part a {
+	font-size: 16px;
+}
+
+a:hover {
+	color: #9A0000;
+	text-decoration: underline;
+}
+
+.brown-link {
+	color: #9E7E6B;
+	text-decoration: none;
 }
