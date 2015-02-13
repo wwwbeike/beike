@@ -306,7 +306,22 @@
 	<script type="text/javascript">
 				
 		var boardNum=4;
-	
+		var waterfall="collects";
+		
+		function refreshPage()
+		{
+			if(waterfall=="collects")
+			{
+				$("#collects").empty();
+				showCollects();
+			}			
+			else
+			{
+				$("#followers").empty();
+				showFollowers();
+			}		
+		}
+		
 		function showActions()
 		{
 			$("#collects").delegate("div.collect img","mouseover",function(){
@@ -475,6 +490,49 @@
 				$("#pageWapper").addClass("wrapper1280");
 				boardNum=4;
 			}
+			window.onresize = function()
+			{
+				var flag=false;
+				if(window.innerWidth>=1600)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1600");
+					$("#pageWapper").addClass("wrapper1600");
+					if(boardNum!=6)
+					{
+						boardNum=6;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+				else if(window.innerWidth>=1360)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1360");
+					$("#pageWapper").addClass("wrapper1360");
+					if(boardNum!=5)
+					{
+						boardNum=5;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+				else 
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1280");
+					$("#pageWapper").addClass("wrapper1280");
+					if(boardNum!=4)
+					{
+						boardNum=4;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+			}
 			
 			//风格设置
 			headerHover();
@@ -489,6 +547,7 @@
 				$("#followers").hide();
 				$("#collects").show();
 				showCollects();
+				waterfall="collects";
 			});
 			$("#follow_tab").click(function(){
 				$("#follow_tab").addClass("active");
@@ -496,6 +555,7 @@
 				$("#collects").hide();
 				$("#followers").show();
 				showFollowers();
+				waterfall="followers";
 			});
 			$("#collect_tab").click();
 			

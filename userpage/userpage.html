@@ -265,7 +265,31 @@
 	</div>
 	<script type="text/javascript">
 		var boardNum=4;
+		var waterfall="styleBoard";
 		
+		function refreshPage()
+		{
+			if(waterfall=="styleBoard")
+			{
+				$("#boardWaterfall").empty();
+				renderStyleBoard();
+			}			
+			else if(waterfall=="collect")
+			{
+				$("#collectWaterfall").empty();
+				renderCollect();
+			}		
+			else if(waterfall=="fondCollect")
+			{
+				$("#fondCollect").empty();
+				renderFondCollect();
+			}		
+			else 
+			{
+				$("#fondBoard").empty();
+				renderFondBoard();
+			}		
+		}
 		function renderStyleBoard()
 			{
 				var testStyleBoards = [];
@@ -362,13 +386,11 @@
 							 html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
 						           "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
 			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"' ></a>"+
-						           "<a href='./editCollect.html' class='btn right'><span class='text'>编辑</span></a></div>"+
-			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' style='max-width:236px;' ></a>"+
 						           "<p class='description'>"+model.description+"</p>"+
 						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
 								   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+
 								   "<div class='text'><div><div class='line'><a href='#' >"+model.userName+"</a>&nbsp;采集到</div>"+
-								   "<div class='line'><a href='#' >"+model.styleBoardName+"</a></div></div></div></div>";
+								   "<div class='line'><a href='#' >"+model.styleBoardName+"</a></div></div></div></div></div>";
 						}
 						return html;
 					}
@@ -511,6 +533,49 @@
 				$("#pageWapper").addClass("wrapper1280");
 				boardNum=4;
 			}
+			window.onresize = function()
+			{
+				var flag=false;
+				if(window.innerWidth>=1600)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1600");
+					$("#pageWapper").addClass("wrapper1600");
+					if(boardNum!=6)
+					{
+						boardNum=6;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+				else if(window.innerWidth>=1360)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1360");
+					$("#pageWapper").addClass("wrapper1360");
+					if(boardNum!=5)
+					{
+						boardNum=5;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+				else 
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1280");
+					$("#pageWapper").addClass("wrapper1280");
+					if(boardNum!=4)
+					{
+						boardNum=4;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+			}
 			//header风格设置
 			headerHover();
 			/*backtotp*/
@@ -527,6 +592,7 @@
 				$("#fondCollect").hide();
 				$("#boardWaterfall").show();
 				renderStyleBoard();
+				waterfall="styleBoard";
 			});
 			$("#collect_tab").click(function(){
 				$("#styleBoard_tab").removeClass("active");
@@ -538,7 +604,7 @@
 				$("#boardWaterfall").hide();
 				$("#collectWaterfall").show();
 				renderCollect();
-				
+				waterfall="collect";
 			});
 			$("#fond_tab").click(function(){
 				$("#styleBoard_tab").removeClass("active");
@@ -557,6 +623,7 @@
 				$("#fondBoard").hide();
 				$("#fondCollect").show();
 				renderFondCollect();
+				waterfall="fondCollect";
 			});
 			$("#fondBoardBar").click(function(){
 				$(this).parent().addClass("selected");
@@ -564,8 +631,9 @@
 				$("#fondCollect").hide();
 				$("#fondBoard").show();
 				renderFondBoard();
+				waterfall="fondBoard";
 			});
-			$("#collect_tab").click();
+			$("#styleBoard_tab").click();
 			
 			// 添加风格板
 			
