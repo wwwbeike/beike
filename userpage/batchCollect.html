@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>采集到贝壳</title>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	
+	<script type="text/javascript" src='../js/XUtil/XUtil.js'></script>
+	<script type="text/javascript" src='../js/XUtil/base.js'></script>
+	<script type="text/javascript" src='../js/XUtil/waterfall.js'></script>
+	<link rel='stylesheet' type="text/css" href='../js/XUtil/XUtil.min.css'/>
+	
+	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
+	<script type="text/javascript" src='../js/Native/returnToTop.js'></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/batchCollect.css"/>
+</head>
+<body>
+	<div id="page" >
+		<div id="collectHeader">
+			<div  id="headWapper" >
+				<a id="collectLogo" href="http://beike.com" target="_blank"></a>
+				<div class="batchInfo" style="display:none">已选择 <b id="selected">1</b> 张<span>（最多 <i>10</i> 张）</span></div>
+				<div class="batchButtons" style="display:none">
+					<div id="operConfirm" class="btn confirmBtn">批量采集</div>
+					<div id="operCancel" class="btn">取消</div>
+				</div>
+			</div>
+		</div>
+		<div id="user_page">
+			<div  id="pageWapper" >
+				<div id="waterfall" class="waterfall">
+				</div>
+				<div class="loading">
+					<img src="../image/personal_loading_end.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="elevator_item">
+		<a id="elevator" title="回到顶部"></a>
+	</div>
+	<script type="text/javascript">
+		var boardNum=4;
+		var selected=0;
+		
+		function refreshPage()
+		{
+			$("#waterfall").empty();
+			renderCollects();
+		}
+		
+		function showSelect()
+		{
+			$("#waterfall").delegate("div.batchCell[ischeck=no]","mouseover",function(){
+					$(this).find(".batchImgOver").show();
+			});
+			$("#waterfall").delegate("div.batchCell[ischeck=no]","mouseout",function(){
+					$(this).find(".batchImgOver").hide();
+			});
+		}
+		
+		function renderCollects()
+		{
+			var testCollects = [];
+			var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
+			for (var i = 0; i < 40; i++) {
+				var model = {
+					imgUrl: imgs[i%4],
+					height: 350,
+					imgWidth: 236,
+					imgHeight:350
+				}
+				testCollects.push(model);
+			}
+
+			var xwf = XUtil.XWaterfall({
+				src: testCollects,
+				initialSize: 50,
+				colNum: boardNum,
+				colWidth: 252,
+				contentWidth: 252,
+				fetchSize: 20,
+				marginTop: 16,
+				url: '',
+				renderTo: $('#waterfall')[0],
+				renderer: function (model) {
+					var html = "<div class='batchCell' ischeck='no'><div class='batchImgHolder'>"+
+							   "<img src='"+model.imgUrl+"' height='"+model.height+"'>"+
+							   "<div class='batchImgOver'><div class='btn collect'>采集</div><div class='selectBtn'></div>"+
+						       "</div></div><div class='imgSize'>"+model.imgWidth+" x "+model.imgHeight+"</div>"+
+					           "<textarea class='imgDescription' style='height: 36px;'>暂无</textarea></div>";
+					return html;
+				}
+			});
+
+			xwf.init();
+		}
+			
+		$(document).ready(function(){
+	
+			if(screen.width>=1600) 
+			{
+				$("#headWapper").addClass("wrapper1600");
+				$("#pageWapper").addClass("wrapper1600");
+				boardNum=6;
+			}
+			else if( screen.width>=1360 )
+			{
+				$("#headWapper").addClass("wrapper1360");
+				$("#pageWapper").addClass("wrapper1360");
+				boardNum=5;
+			}	
+			else 
+			{
+				$("#headWapper").addClass("wrapper1280");
+				$("#pageWapper").addClass("wrapper1280");
+				boardNum=4;
+			}
+			window.onresize = function()
+			{
+				var flag=false;
+				if(window.innerWidth>=1600)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1600");
+					$("#pageWapper").addClass("wrapper1600");
+					if(boardNum!=6)
+					{
+						boardNum=6;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+				else if(window.innerWidth>=1360)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1360");
+					$("#pageWapper").addClass("wrapper1360");
+					if(boardNum!=5)
+					{
+						boardNum=5;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+				else 
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1280");
+					$("#pageWapper").addClass("wrapper1280");
+					if(boardNum!=4)
+					{
+						boardNum=4;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+			}
+			headerHover();
+			/*backtotp*/
+			returnToTop();
+			renderCollects();
+			showSelect();
+			
+			$("#waterfall").delegate("div.selectBtn","click",function(){
+					var parent = $(this).parents(".batchCell");
+					var state = parent.attr("ischeck");
+					if(state=='no')
+					{
+						if(selected>=10) alert("您最多只能选取十张图片！");
+						else 
+						{
+							parent.attr("ischeck","yes");
+							$(this).css('background-position','0 -40px');
+							selected++;
+						}
+					}
+					else 
+					{
+						parent.attr("ischeck","no");
+						$(this).css('background-position','0 0');
+						selected--;
+					}
+					$("#selected").html(selected);
+					$("div.batchInfo").show();
+					$("div.batchButtons").show();
+			});
+			$("#operCancel").click(function(){
+				$("div.batchInfo").hide();
+				$("div.batchButtons").hide();
+				selected=0;
+				$("div.selectBtn").css('background-position','0 0');
+				$("div.batchCell").attr('ischeck','no');
+				$("div.batchImgOver").hide();
+			});
+			$("#operConfirm").click(function(){
+				
+			});
+		});
+	</script>
+</body>
+</html>
