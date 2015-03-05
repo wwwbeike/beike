@@ -30,6 +30,16 @@
 			width:100%;
 			box-shadow: 0 0 4px rgba(0,0,0,.2);
 		}
+		
+		#collectHeader{
+			height: 50px;
+			background: white;
+			box-shadow: 0 0 4px rgba(0,0,0,.2);
+			width: 100%;
+			left: 0;
+			top: 0;
+			position: absolute;
+		}
 
 		#menu_bar{
 		
@@ -49,6 +59,16 @@
 			background: url(../image/logo.png) 0 0 no-repeat;
 		}
 		
+		#collectLogo
+		{
+			display: block;
+			position: absolute;
+			top: 12px;
+			width:74px;
+			height:24px;
+			background: url(../image/logo.png) 0 0 no-repeat;
+		}
+		
 		#left_menu{
 			height:42px;
 			left:0px;
@@ -62,7 +82,54 @@
 			bottom:0px;
 			position:absolute;
 		}
-		
+		/*batchCollect*/
+		.batchInfo
+		{
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-size: 16px;
+			color: #999;
+			font-weight: bold;
+		}
+		.batchInfo b
+		{
+			font-weight:bolder;
+		}
+		.batchInfo i
+		{
+			font-style:normal;
+		}
+		.batchButtons
+		{
+			position: absolute;
+			top: 10px;
+			left: 0;
+			//display: none;
+		}
+		.batchButtons .confirmBtn
+		{
+			background: #D53939;
+			color: white;
+			border:none;
+		}
+		/*
+		.closeBtn
+		{
+			width: 60px;
+			height: 50px;
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background: url(../image/btn_close.png) 20px 14px no-repeat;
+			cursor: pointer;
+		}
+		.closeBtn:hover
+		{
+			background: url(../image/btn_close.png) 20px -26px no-repeat;
+		}*/
 		/*leftMenu css*/
 		.nav{
 			border-left: 1px solid #F5F5F5;
