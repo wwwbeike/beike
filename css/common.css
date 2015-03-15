@@ -82,6 +82,28 @@ strong{
 	line-height: 36px;
 }
 
+.rbtn
+{
+	background: #E53E49;
+	background: linear-gradient( #E53E49, #D43636);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.08),0 1px 0 rgba(255,255,255,.3);
+	text-shadow: 0 -1px 0 rgba(0,0,0,.1);
+	color: #fff;
+	border: 1px solid #C90000;
+}
+
+.rbtn:hover
+{
+	background: linear-gradient( #F45D68, #E54646);
+	color: #fff;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.08),0 1px 0 rgba(255,255,255,.1);
+	border: 1px solid #C90000;
+}
+
+.rbtn:active{
+	background: linear-gradient( #E53E49, #D43636);
+}
+
 /* Search Box*/
 .searching-unit{
 	position: relative;

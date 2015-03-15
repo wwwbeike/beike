@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html style="background:#fff;">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>采集到贝壳</title>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/dialog.css"/>
+	<link rel="stylesheet" charset="UTF-8" type="text/css" href="../css/layout.css"/>
+</head>
+<body >
+	<div id="page" style="display:block;">
+	   <div id="bookmarklet_multiple">
+		<select id="BoardList"  class="clear_select">
+			<option value="旅游">旅游</option>
+			<option value="运动">运动</option>
+		</select>
+		<div id="status_bar" class="status_bar" style="display: none;" >采集完成</div>
+		<div class="collects_units">
+			 <div class="unit" style="background-image: url(http://img0.bdstatic.com/img/image/shouye/xinshouye/tiantan.jpg);">
+				  <img src="http://img0.bdstatic.com/img/image/shouye/xinshouye/tiantan.jpg" />
+				  <div class="cancel"></div>
+				  <a target="_blank" class="indicator" href="#" style="display:none;"><i></i><span>采集成功</span></a>
+			</div>
+		</div>
+		<div class="bottom_part">
+			<a href="#" id="confirmBtn" class=" btn btn18 rbtn">
+				<span class="text"> 采下来</span>
+			</a>
+		</div>
+		<div id="info_part" class="info_part" style="display: none" >
+		 <span>采集成功</span>
+		 <div class="right">
+		  <a target="_blank" class="go_board brown-link">查看风格板</a>
+		  <a class="close_window brown-link">关闭窗口</a>
+		 </div>
+		</div>
+	   </div>
+	</div>
+</body>
+<script type="text/javascript">
+	var images =["http://img3.imgtn.bdimg.com/it/u=1651716458,986898901&fm=21&gp=0.jpg",
+				 "http://img5.imgtn.bdimg.com/it/u=1684934290,679560361&fm=21&gp=0.jpg",
+				 "http://img3.imgtn.bdimg.com/it/u=3353401597,2796578730&fm=21&gp=0.jpg"];
+	$(document).ready(function(){
+		$("#confirmBtn").click(function(){
+			$("#BoardList").hide();
+			$("div.bottom_part").hide();
+			$("#info_part").show();
+			$("#status_bar").show();
+		});
+		
+		for( var i=0;i<images.length;i++ )
+		{
+			$("div.collects_units").
+		}
+		
+	});
+</script>
+</html>
