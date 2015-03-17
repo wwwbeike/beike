@@ -238,11 +238,12 @@ a:hover {
 	background: #e8e8e8;
 	float: left;
 	margin: 0 10px 10px 0;
-	overflow: hidden;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
 	position: relative;
+}
+.collects_units .unit img
+{
+	width:80px;
+	height:80px;
 }
 .collects_units .unit .cancel
 {
