@@ -38,20 +38,53 @@
 	var images =["../image/1.jpg",
 				 "../image/2.jpg",
 				 "../image/3.jpg"];
+	//事件绑定
+	function setPageEvent()
+	{
+		$("div.collects_units").delegate("div.unit","mouseover",function(){
+			$(this).find("div.cancel").show();		
+		});
+		$("div.collects_units").delegate("div.unit","mouseout",function(){
+			$(this).find("div.cancel").hide();	
+		});
+		$("div.collects_units").delegate("div.cancel","mouseover",function(){
+			$(this).css("background-position","0 -40px");		
+		});
+		$("div.collects_units").delegate("div.cancel","mouseout",function(){
+			$(this).css("background-position","0 0");		
+		});
+		$("div.collects_units").delegate("div.cancel","click",function(){
+			$(this).parent(".unit").remove();
+		});
+	}
+	
 	$(document).ready(function(){
+		
 		$("#confirmBtn").click(function(){
-			$("#BoardList").hide();
-			$("div.bottom_part").hide();
-			$("#info_part").show();
-			$("#status_bar").show();
+			var styleBoardName = $("#BoardList").val();
+			var collects = [];
+			$("div.unit").each(function(){
+				var url = $(this).find("img").attr("src");
+				collects.push(url);
+			});
+			$.post("",collects,function(){
+				$("#BoardList").hide();
+				$("div.bottom_part").hide();
+				$("#info_part").show();
+				$("#status_bar").show();
+				$("div.cancel").hide();
+				$("a.indicator").show();
+			});
 		});
 		
 		for( var i=0;i<images.length;i++ )
 		{
 			$("div.collects_units").append("<div class='unit'>"+
-				  "<img src='"+images[i]+"' /><div class='cancel'></div>"+
+				  "<img src='"+images[i]+"' /><div class='cancel' style='display:none;'></div>"+
 				  "<a target='_blank' class='indicator' href='#' style='display:none;'><i></i><span>采集成功</span></a></div>");
 		}
+		
+		setPageEvent();
 	});
 </script>
 </html>

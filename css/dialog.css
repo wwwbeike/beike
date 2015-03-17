@@ -253,7 +253,6 @@ a:hover {
 	right: 0;
 	top: 0;
 	background: url(../image/cancel.png) 0 0 no-repeat;
-	visibility: hidden;
 	cursor: pointer;
 	-webkit-transition: opacity .2s linear;
 	transition: opacity .2s linear;

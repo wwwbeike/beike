@@ -1,0 +1,78 @@
+.batchCell
+{
+	width: 236px;
+	position: relative;
+	background: white;
+	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+	transition: left .3s ease-in-out, top .3s linear;
+}
+.batchImgHolder
+{
+	overflow: hidden;
+	position: relative;
+}
+.batchImgHolder img
+{
+	width: 236px;
+	display: block;
+}
+.batchImgOver
+{
+	position:absolute;
+	width:236px;
+	height:100%;
+	top:0;
+	display:none;
+}
+.batchImgOver .collect
+{
+	width: 60px;
+	height: 34px;
+	padding: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -18px 0 0 -31px;
+	line-height: 34px;
+	box-shadow: 0 0 0 2px rgba(255,255,255,.2);
+	font-size: 16px;
+	font-weight:200;
+}
+.batchImgOver .selectBtn
+{
+	width: 34px;
+	height: 34px;
+	background: url(../image/icon_collect_select.svg) 0 0 no-repeat;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	border:none;
+}
+.imgSize
+{
+	margin: 8px 16px;
+	font-size: 12px;
+	color: #999;
+}
+.imgDescription
+{
+	display: block;
+	width: 202px;
+	margin: 0 6px 6px;
+	padding: 6px 10px;
+	border: 0;
+	resize: none;
+	outline: 0;
+	border: 1px solid transparent;
+	line-height: 18px;
+	font-size: 13px;
+	overflow: hidden;
+	word-wrap: break-word;
+	background: url(../image/icon_edit.png) 500px center no-repeat;
+}
+.batchCell:hover .imgDescription
+{
+	background-color: #fff9e0;
+	background-position: right top;
+}
