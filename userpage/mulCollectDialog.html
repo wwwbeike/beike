@@ -17,11 +17,6 @@
 		</select>
 		<div id="status_bar" class="status_bar" style="display: none;" >采集完成</div>
 		<div class="collects_units">
-			 <div class="unit" style="background-image: url(http://img0.bdstatic.com/img/image/shouye/xinshouye/tiantan.jpg);">
-				  <img src="http://img0.bdstatic.com/img/image/shouye/xinshouye/tiantan.jpg" />
-				  <div class="cancel"></div>
-				  <a target="_blank" class="indicator" href="#" style="display:none;"><i></i><span>采集成功</span></a>
-			</div>
 		</div>
 		<div class="bottom_part">
 			<a href="#" id="confirmBtn" class=" btn btn18 rbtn">
@@ -39,9 +34,10 @@
 	</div>
 </body>
 <script type="text/javascript">
-	var images =["http://img3.imgtn.bdimg.com/it/u=1651716458,986898901&fm=21&gp=0.jpg",
-				 "http://img5.imgtn.bdimg.com/it/u=1684934290,679560361&fm=21&gp=0.jpg",
-				 "http://img3.imgtn.bdimg.com/it/u=3353401597,2796578730&fm=21&gp=0.jpg"];
+	
+	var images =["../image/1.jpg",
+				 "../image/2.jpg",
+				 "../image/3.jpg"];
 	$(document).ready(function(){
 		$("#confirmBtn").click(function(){
 			$("#BoardList").hide();
@@ -52,9 +48,10 @@
 		
 		for( var i=0;i<images.length;i++ )
 		{
-			$("div.collects_units").
+			$("div.collects_units").append("<div class='unit'>"+
+				  "<img src='"+images[i]+"' /><div class='cancel'></div>"+
+				  "<a target='_blank' class='indicator' href='#' style='display:none;'><i></i><span>采集成功</span></a></div>");
 		}
-		
 	});
 </script>
 </html>
