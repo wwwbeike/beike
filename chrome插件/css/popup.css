@@ -1,0 +1,85 @@
+	   body 
+	    {
+        font-family: "helvetica neue",arial,sans-serif;
+        -webkit-user-select: none;
+        margin: 10px;
+      }
+      a {
+        color: #221919;
+        text-decoration: none;
+        outline: none;
+      }
+      a:hover {
+        color: #9A0000;
+        text-decoration: underline;
+      }
+      .button {
+        width: auto;
+        height: 22px;
+        font-size: 13px;
+        padding: 0 5px;
+        margin: 0;
+        line-height: 22px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 2px;
+      }
+      .button:hover {
+        background-color: #FAFAFA;
+        outline: 1px solid #EBEBEB;
+      }
+      .button:active {
+        background-color: #F0F0F0;
+        outline-color: #D9D9D9;
+      }
+      .button.disabled,
+      .button.disabled:hover {
+        color: #999;
+        outline: none;
+        background-color: #FFF;
+        opacity: 0.8;
+        cursor: default !important;
+      }
+      .popup .button {
+        text-align: left;
+        width: auto;
+        margin-bottom: 8px;
+      }
+      .button img {
+        position: relative;
+        margin: 0 5px 0 0;
+        top: 2px;
+      }
+      .button label {
+        display: block;
+        padding-left: 15px;
+        text-indent: -15px;
+      }
+
+      header {
+        position: relative;
+      }
+      #ext_name {
+        height: 24px;
+        line-height: 24px;
+        padding-left: 22px;
+        font-size: 16px;
+        background: url(../image/logo_16.png) no-repeat left center;
+      }
+
+      #menu {
+        width: 200px;
+        margin-top: 10px;
+      }
+      #menu ul {
+        list-style: none;
+        padding: 0;
+        font-size: 0;
+      }
+      #menu li {
+        font-size: 13px;
+      }
+      #menu li .title {
+        padding-left: 22px;
+        display: inline-block;
+      }

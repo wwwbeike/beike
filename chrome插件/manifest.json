@@ -1,0 +1,30 @@
+{
+   "name": "贝壳采集工具",
+   "version": "1.0",
+   "manifest_version": 2,
+   "description": "用户可使用这个采集工具将任何网站上的图片采集到自己的贝壳风格板中",
+   "permissions": ["activeTab", "tabs", "contextMenus", "downloads", "http://*/*", "https://*/*" ],
+   "background": {
+      "scripts": ["js/background.js" ]
+   },
+   "content_scripts": [ 
+     {
+      "js": [ "js/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+     } 
+   ],
+   "icons": {
+	   "16": "image/logo_16.png",
+       "48": "image/logo_48.png",
+       "128": "image/logo_128.png"
+   },
+   "browser_action" : {
+		"default_icon": {
+            "19": "image/logo_19.png",
+            "38": "image/logo_38.png"
+        },
+		 "default_title" : "贝壳采集工具",
+		 "default_popup" : "popup.html"
+   }
+}
