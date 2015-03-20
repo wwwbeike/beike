@@ -169,7 +169,7 @@
 			<div class="pin_view">
 				<div class="pin_view_wrapper">
 					<div class="main_part">
-						<div class="piece">
+						<div class="image_piece piece">
 							<div class="tool_bar">
 								<a href="#" class="repin_btn btn rbtn"><span class="text">转采</span></a>
 								<a href="#" class="edit_btn btn"><span class="text">编辑</span></a>
@@ -183,7 +183,44 @@
 											<a title="微博" target="_blank" href="" class="share_btn weibo"></a> 											
 										</div>
 									</div>
+									<a href="#" title="查看原图" class="zoomin btn_with_icon btn"><i class="class"></i></a>
 								</div>
+							</div>
+							<div class="main_image">
+								<div class="image_holder">
+									<a href="/go/?pin_id=318669725" target="_blank" rel="nofollow"><img alt="耐克：耐克科比战火T恤插画 - 插画 -..." src="http://img.hb.aicdn.com/4fd5253cb38668a79e7967381be7233fe005adbf185dc-xdz2aF_fw658">
+									</a>
+								</div>
+							</div>
+							<div class="tool_bar_bottom">
+								<a href="#" class="repin_btn btn_with_icon btn"><i class="class"></i><span class="text"> 采集 <span class="num"></span></span></a>
+								<a href="#" class="like_btn btn_with_icon btn"><i class="class"></i><span class="text"> 喜欢 <span class="num"></span></span></a>
+								<a href="#" class="comment_btn btn_with_icon btn"><i class="class"></i><span class="text"> 评论 <span class="num"></span></span></a>
+								<div class="rpart">
+									<a title="举报这张采集" href="#" class="report_btn btn_with_icon btn"><i class="class"></i></a>
+									<a href="#" rel="nofollow" target="_blank" class="source btn_with_icon btn"><i class="class"></i><span class="text"> 查看来源 ad518.com</span></a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="info_piece piece">
+							<div class="info">
+								<a href="#" title="stwcloudy" ref="nofollow" class="img x"><img src="http://img.hb.aicdn.com/23a58517fb73f86bca85937f069724486b3e00a44caa-GMc99I_sq75sf" class="avt"></a>
+								<div class="main">
+									<a href="/y7alhdskjs/" rel="nofollow">stwcloudy</a>
+									<span class="space">从</span>
+									<a href="/ad518/" rel="nofollow">AD518</a>
+								</div>
+								<div class="sub">转采于
+									<span class="ts-words space">2015-01-30 10:18:47</span>
+								</div>
+							</div>
+							<div class="description">耐克：耐克科比战火T恤插画 - 插画 - 图酷 - AD518.com</div>
+							<div class="comments"></div>
+							<div id="pin_view_add_comment"  class="clearfix">
+								<a href="/y7alhdskjs/" title="stwcloudy" class="img x"><img src="http://img.hb.aicdn.com/23a58517fb73f86bca85937f069724486b3e00a44caa-GMc99I_sq75sf" class="avatar"></a>
+								<textarea name="caption" placeholder="添加评论或把采集@给好友" class="clear_input"></textarea>
+								<a href="#"  class="post disabled btn btn14"><span class="text"> 添加评论</span></a>
 							</div>
 						</div>
 					</div>
@@ -275,6 +312,9 @@
 		}
 		//header风格设置
 		headerHover();
+		/*单图页面中某些标签的hover事件*/
+		aLinkHover();
+		
 		/*backtotp*/
 		returnToTop();
 	});

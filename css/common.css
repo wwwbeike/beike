@@ -28,7 +28,14 @@ a{
 	outline: 0;
 	cursor:auto;
 }
-
+a.img {
+  display: block;
+  background-color: #fff;
+}
+a.img img {
+  display: block;
+  margin: 0 auto;
+}
 element .style{
 	display:block;
 }
@@ -74,6 +81,20 @@ strong{
 	text-align: center;
 }
 
+.btn i{
+	  display: inline-block;
+	  width: 12px;
+	  height: 14px;
+	  background: url(../image/action_icons12.png) -20px 0 no-repeat;
+	  vertical-align: middle;
+	  margin-right: 2px;
+}
+.btn i:last-child {
+  margin: 0 -2px;
+}
+i {
+	font-style:italic;
+}
 .btn18 {
 	font-size: 18px;
 	padding: 0 15px;

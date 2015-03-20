@@ -911,7 +911,7 @@
 			width:140px;
 		}
 		
-		.img{
+		#user_photo .img{
 			width:130px;
 			height:130px;
 			margin:5px auto;
@@ -961,23 +961,15 @@
 			height: 37px;
 			text-decoration: none;
 		}
-		
-		.num:hover{
-			color: #9A0000;
-		}
-		
-		.num {
+		.nav_link .num {
 			font-size: 15px;
 			font-weight: 700;
 			color: #444;
 			line-height: 1;
 			margin-bottom: 5px;
 		}
-		
-		.sub {
-			font-size: 11px;
-			line-height: 1;
-			color: #999;
+		.nav_link .num:hover{
+			color: #9A0000;
 		}
 		
 		/* 用户介绍菜单部分*/
