@@ -1,0 +1,257 @@
+#pin_view_layer{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(229,229,229,.95);
+	z-index: 99994;
+	overflow: auto;
+	padding-top: 40px;
+}
+.pin_view{
+	width: 992px;
+	margin: 0 auto;
+}
+.pin_view .pin_view_wrapper{
+	width: 992px;
+	margin: 0 auto;
+	position: relative
+}
+.pin_view .main_part{
+	width: 698px;
+	float: left;
+}
+/*tool-bar*/
+.pin_view .tool_bar {
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+.pin_view .piece{
+	background: #fff;
+	padding: 16px 20px;
+	box-shadow: 0 1px 3px rgba(34,25,25,.4);
+	margin-bottom: 16px;
+}
+.pin_view .tool_bar .btn{
+	margin-right:10px;
+}
+.pin_view .tool_bar .share_part{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.beike_share_unit{
+	width: 180px;
+	height: 30px;
+	line-height: 30px;
+	text-align: right;
+	position: relative;
+}
+.pin_view .tool_bar .beike_share_unit {
+  position: absolute;
+  right: 50px;
+  top: 0;
+}
+.beike_share_unit .share_btns{
+	height: 28px;
+	width: 106px;
+	background: #FAFAFA;
+	border: 1px solid #EDEDED;
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.beike_share_unit .share_btns .share_btn{
+	height: 28px;
+	width: 30px;
+	display: inline-block;
+	position: relative;
+	background: url('../image/share_icon.svg') 6px 4px no-repeat;
+}
+.beike_share_unit .share_btns .share_btn:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 16px;
+	right: 0;
+	top: 6px;
+	background: #EDEDED;
+}
+.beike_share_unit .share_btns .weixin{
+	background-position:6px -276px;
+}
+.beike_share_unit .share_btns .weixin:hover{
+	background-position:-34px -276px;
+}
+.beike_share_unit .share_btns .qzone{
+	background-position:6px -36px;
+}
+.beike_share_unit .share_btns .qzone:hover{
+	background-position:-34px -36px;
+}
+.beike_share_unit .share_btns .weibo{
+	background-position:6px 4px;
+}
+.beike_share_unit .share_btns .weibo:hover{
+	background-position:-34px 4px;
+}
+.pin_view .tool_bar .share_part .btn{
+	margin-right:0;
+}
+.btn_with_icon{
+	padding:0 10px;
+}
+.pin_view  .tool_bar .zoomin i{
+	background: url(../image/pin_view/zoom_in.svg) -2px -2px no-repeat;
+	width: 16px;
+	height: 18px;
+}
+/*main-image*/
+.pin_view .main_image {
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	background: url(../image/img_bg_2.png) 0 0 repeat;
+}
+.pin_view .main_image img {
+	display: block;
+	margin: 0 auto;
+}
+
+/*tool_bar_bottom*/
+
+.pin_view .tool_bar_bottom{
+	position: relative;
+	margin-top: 16px;
+}
+.pin_view .tool_bar_bottom .btn{
+	background: #FAFAFA;
+	border: 1px solid #EDEDED;
+	margin-right: 10px;
+}
+.pin_view .tool_bar_bottom .repin_btn i{
+	background: url(../image/bt_action_icons.svg) -30px 0 no-repeat;
+}
+.pin_view .tool_bar_bottom .like_btn i{
+	background: url(../image/bt_action_icons.svg) 0 0 no-repeat;
+}
+.pin_view .tool_bar_bottom .comment_btn i{
+	background: url(../image/bt_action_icons.svg) -60px 0 no-repeat;
+}
+.pin_view .tool_bar_bottom .btn .num {
+	color: #999;
+}
+.pin_view .tool_bar_bottom .rpart{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.pin_view .tool_bar_bottom .report_btn i {
+	background: url(../image/report_icon.svg) 0 -20px no-repeat;
+	width: 16px;
+	height: 16px;
+}
+.pin_view .tool_bar_bottom .rpart .btn:last-child {
+	margin-right: 0;
+}
+.pin_view .tool_bar_bottom .source i {
+	background: url(../image/pin_view/website.svg) 0 0 no-repeat;
+}
+
+/*info_piece*/
+.pin_view .info_piece{
+	padding-bottom:0;
+}
+.pin_view .info_piece .info {
+	margin-bottom: 15px;
+	position: relative;
+}
+.pin_view .info_piece .info .img{
+	width:50px;
+	height:50px;
+}
+.pin_view .info_piece .info .img img{
+	width:50px;
+	height:50px;
+}
+.pin_view .info_piece .info  .main{
+	position: absolute;
+	top: 0;
+	left: 60px;
+	font-size: 20px;
+}
+.pin_view .info_piece .info  .main span{
+	color: #8c7e7e;
+}
+.pin_view .info_piece .info .space{
+	padding: 0 5px;
+}
+
+.pin_view .info_piece .info .sub{
+	position: absolute;
+	top: 32px;
+	left: 60px;
+	color: #999;
+}
+.pin_view .info_piece .description{
+	line-height: 1.2;
+	color: #444;
+	background-color: #FAFAFA;
+	padding: 15px;
+	margin-bottom: 20px;
+	word-wrap: break-word;
+}
+.pin_view .info_piece .comments{
+	border-top: 1px solid #F5F2F2;
+}
+#pin_view_add_comment{
+	margin: 0 -20px;
+	padding: 14px 20px 14px 80px;
+	border-bottom: 1px solid #EDEDED;
+	position: relative;
+}
+#pin_view_add_comment .img{
+	position: absolute;
+	left: 20px;
+	top: 14px;
+}
+#pin_view_add_comment .img img {
+  width: 50px;
+  height: 50px;
+}
+#pin_view_add_comment textarea{
+	width: 576px;
+	height: 39px;
+	min-height: 39px;
+	resize: vertical;
+	margin-bottom: 10px;
+	display: block;
+}
+.clear_input{
+	height: auto;
+	min-height: 78px;
+	line-height: 1.5;
+	padding: 5px 10px;
+}
+#pin_view_add_comment .post {
+  float: right;
+  display:none;
+}
+
+#pin_view_add_comment .disabled {
+  background: #F2F2F2;
+  border: 1px solid #D9D9D9;
+  box-shadow: none;
+  color: #BBB;
+  text-shadow: none;
+  cursor: default;
+}
+.clearfix :before ,.clearfix:after{
+	content: "";
+	display: table
+}
