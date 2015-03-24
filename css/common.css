@@ -12,6 +12,9 @@ html{
 
 html body{
 	height:100%;
+	font-family: "helvetica neue",arial,sans-serif;
+    font-size: 14px;
+    color: #444;
 }
 
 input, textarea, select {

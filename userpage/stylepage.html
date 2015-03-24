@@ -1,0 +1,596 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>风格页</title>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	
+	<script type="text/javascript" src='../js/XUtil/XUtil.js'></script>
+	<script type="text/javascript" src='../js/XUtil/base.js'></script>
+	<script type="text/javascript" src='../js/XUtil/waterfall.js'></script>
+	<link rel='stylesheet' type="text/css" href='../js/XUtil/XUtil.min.css'/>
+	
+	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
+	<script type="text/javascript" src='../js/Native/returnToTop.js'></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+	
+	<link rel="stylesheet" type="text/css" href="../css/styleBoard.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/collect.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/dialog.css"/>
+</head>
+<body>
+	<div id="page" >
+		<div id="header">
+			<div id="headWapper" >
+				<a id="logo" href="#"></a>
+				<div id="menu_bar" >	
+					<div id="left_menu">
+						<div  id="left_menu_nav" class="nav menu_nav">
+							<a href="#" class="nav_link">
+								<div class="nav_icon"></div>
+								<div class="arrow"></div>
+							</a>
+							<div  class="menu new-header-main-menu">
+								<div class="inner">
+									<div class="left_module">
+										<a href="http:www.baidu.com" rel="nofollow" class="main_link bold latest_collect">最新采集</a>
+										<a href="/all/" rel="nofollow" class="main_link bold wedding_style">婚礼风格板</a>
+										<a href="/all/videos/" rel="nofollow" class="main_link bold videos ">视频</a>
+										<a href="/all/videos/" rel="nofollow" class="main_link bold wedding_classify with_line ">婚礼分类</a>
+										<a href="/all/videos/" rel="nofollow" class="main_link bold activities with_line ">活动</a>
+									</div>
+									<div class="right_module">
+										<div class="row_0">
+											<div class="module_group">
+												<a href="" rel="nofollow">新房布置</a>
+											</div>
+											<div class="module_group">
+												<a href="/favorite/culture_china//" rel="nofollow">签到台</a>
+												<a href="/favorite/travel_places/" rel="nofollow">迎宾喷绘</a>
+												<a href="/favorite/food_drink/" rel="nofollow">楼梯扶手</a>
+												<a href="/favorite/diy_crafts/" rel="nofollow">照片展示区</a>
+												<a href="/favorite/wedding_events/" rel="nofollow">迎宾小区</a>
+												<a href="/favorite/apparel/" rel="nofollow">迎宾水牌</a>
+											</div>
+										</div>
+										<div class="row_1">
+											<div class="module_group">
+												<a href="" rel="nofollow">酒店户外</a>
+											</div>
+											<div class="module_group">
+												<a href="/favorite/industrial_design/" rel="nofollow">纱幔背景</a>
+												<a href="/favorite/illustration/" rel="nofollow">喷绘背景</a>
+												<a href="/favorite/design/" rel="nofollow">LED背景</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">镜面T台</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">普通T台</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">拱门</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">桌花</a>	
+											</div>
+										</div>
+										
+										<div class="row_2">
+											<div class="module_group">
+												<a href="" rel="nofollow">大场景照片</a>
+											</div>
+											<div class="module_group">
+												<a href="/favorite/industrial_design/" rel="nofollow">地引</a>
+												<a href="/favorite/illustration/" rel="nofollow">路引</a>
+												<a href="/favorite/design/" rel="nofollow">花房</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">吊装饰品</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">椅背装饰</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">花车装饰</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">手捧花</a>	
+											</div>
+										</div>
+
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="bottom_bar">
+									<a href="" class="tool_icon">贝壳采集工具</a>
+									<div class="menu_tool_links">
+										<a href="" class="about_us">关于贝壳</a>
+										<a href="" class="join_us">加入我们</a>
+										<a href="" class="feedback">用户反馈</a>
+										<a href="" class="friendly_link">友情链接</a>
+									</div>
+								</div>
+								<div class="up_arrow"></div>
+							</div>
+						</div>
+					
+						<form id="search_form" method="get" action="#" class="searching-unit">
+							<input id="query" type="text" size="27" name="search" autocomplete="off" placeholder="搜索你喜欢的" value="">
+							<a href="#" onclick="return false;" class="go"></a>
+						</form>
+					</div>
+					<div id="right_menu">
+						<div id="add_nav" class="nav add_nav">
+							<a href="#" class="nav_link" title="添加">
+								<div class="nav_icon"></div>
+							</a>
+							<div class="menu">
+								<div class="add_group">
+									<a href="#">上传图片采集<i class="upload"></i></a>
+								</div>
+								<div class="add_group">
+									<a href="#">添加风格板<i class="add_board"></i></a>
+								</div>
+								<div class="add_group">
+									<a href="#">安装采集工具<i class="goodies"></i><span>从任何页面采集图片和视频</span></a>
+								</div>
+								<div class="arrow"></div>
+							</div>
+						</div>
+						
+						<div id="message_nav" class="nav">
+							<a href="#" class="nav_link" title="通知">
+								<div class="nav_icon"></div>
+								<div class="num hidden">0</div>
+							</a>
+							<div id="message_popup">
+								<div class="bar">
+									<div id="mentions" boxer=".box_mentions" class="left barTitle click">消息</div>
+									<div id="activities" boxer=".box_activities" class="right barTitle ">动态</div>
+								</div>
+								<div id="boxer">
+									<div class="box box_mentions ">
+										<div class="empty">没有消息</div>
+									</div>
+									<div class="box box_activities hidden">
+										<div class="item">没有动态</div>
+									</div>
+								</div> 
+								<a href="/message/?type=activities" class="show_all">查看所有消息»</a>
+								<div class="triangle"></div>
+							</div>
+						</div>
+						<div id="user_nav" class="nav">
+							<a href="#" class="nav_link">
+								<img width="20" height="20" src="../image/user.png" class="user_photo">
+								<div class="arrow"></div>
+							</a>
+							<div class="menu">
+								<div class="user_group">
+									<a href="#" >我的贝壳<i class="mine"></i></a>							
+								</div>
+								<div class="user_group">
+									<a href="#" >账号设置<i class="settings"></i></a> 
+									<a href="#" >退出登录<i class="exit"></i></a> 	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<div id="user_page" style="padding-top:42px">
+			<div class="banner">
+			   <div class="bg" style="background-color: rgb(40, 24, 14);">
+				<div class="bg-gradient" style="background: linear-gradient(to right, rgb(40, 24, 14) 0%, rgba(40, 24, 14, 0) 0%, rgba(40, 24, 14, 0) 0%, rgb(40, 24, 14) 30%, rgb(40, 24, 14) 100%);"></div>
+				<img src="http://img.hb.aicdn.com/86756327a9be6bc17f61bc161ba692f9366afbdc481fa-TX08mA_/sq/236/gaussblur/10x1" class="bg-img load" style="left: -60px;" />
+			   </div>
+			   <div id="bannerWapper" style="z-index: 2;margin: 0 auto 20px auto;text-align: center;overflow: hidden;">
+				<h1 class="title">爱琴海风</h1>
+				<a data-urlname="aiqinhaifeng" href="#" class="btn rbtn" style="margin-bottom: 15px;"><span class="text"> 关注</span></a>
+				<div class="info">
+					爱情海风格其实和地中海风格差不多，就颜色上，饱和度相对来说，低于地中海风格；整个色调以明亮温馨，华丽浪漫为主，采光自然，总的来说，爱情海风格更偏田园风一点
+				</div>
+				<div class="follow-title">
+				 <i></i>
+				 <span>Ta 们已关注</span>
+				</div>
+				<div class="followersDiv">
+				 <a href="#"  class="follower-item "><img src="http://img.hb.aicdn.com/968076595c143aac61b1284010de7f154fdfbac710dd-RAGFJ8_sq140sf" /></a>
+				 <a href="#"  class="follower-item "><img src="http://img.hb.aicdn.com/a80fc9786c0b3400027529fecebb3eec440a7297589f5-9Kvymr_sq140sf" /></a>
+				 <a href="#"  class="follower-item "><img src="http://img.hb.aicdn.com/21285bdefabe9d2b2e16089e8f25e874cee59a1b5fd16-vpjOlQ_sq140sf" /></a>
+				 <a href="#"  class="follower-item "><img src="http://img.hb.aicdn.com/c31941a1a591ce91f8b9df0d2ca6f8d2d3852e3dbef-RPajOI_sq140sf" /></a>
+				 <a href="#"  class="follower-item "><img src="http://img.hb.aicdn.com/c440160eb603e1a1dc50de02b1c678005cfe7eb9dae-es1lOK_sq140sf" /></a>
+				 <a href="#"  class="follower-item "><img src="http://img.hb.aicdn.com/b37c41612361c12b57374c86ef59b3096d1dc887e911-ZudMa4_sq140sf" /></a>
+				</div>
+			   </div>
+			</div>
+			<div class="more_explore">
+			   <div id="exploreWrapper" >
+				<div class="more_explore_title">
+				 <i></i>
+				 <span style=>更多风格</span>
+				</div>
+				<div class="category-image-box">
+				 <a href="#" target="_self" class="category-image">
+				  <div class="blur">
+				   <img src="http://img.hb.aicdn.com/f21d0a2309760b297346445d2f22b28190d4f9c514591-JiH5D3_sq236bl4" />
+				  </div>
+				  <div class="title">
+				   文化中国
+				  </div></a>
+				 <a href="#" target="_self" class="category-image">
+				  <div class="blur">
+				   <img src="http://img.hb.aicdn.com/7469641a2f2262a6bc9e712c096007252dee6574c8a4-nxPDIY_sq236bl4" />
+				  </div>
+				  <div class="title">
+				   烟雨江南
+				  </div></a>
+				 <a href="#" target="_self" class="category-image">
+				  <div class="blur">
+				   <img src="http://img.hb.aicdn.com/3b8b72f009d3f40f093ac781f602b4ef84ca00611259b-wh9f6v_sq236bl4" />
+				  </div>
+				  <div class="title">
+				   洛可可
+				  </div></a>
+				 <a href="#" target="_self" class="category-image">
+				  <div class="blur">
+				   <img src="http://img.hb.aicdn.com/c245c94a7253c2a7a3aaf085b6d6c17a85d66bd62f729-QvdKvX_sq236bl4" />
+				  </div>
+				  <div class="title">
+				   中国风
+				  </div></a>
+				 <a href="#" target="_self" class="category-image">
+				  <div class="blur">
+				   <img src="http://img.hb.aicdn.com/eed78b360e853f1bb02b77f116aef1d00395227217aaa-utiHGC_sq236bl4" />
+				  </div>
+				  <div class="title">
+				   百老汇
+				  </div></a>
+				 <a href="#" target="_self" class="category-image">
+				  <div class="blur">
+				   <img src="http://img.hb.aicdn.com/75456ddccf3f3422d91e941708f4e07155025e55185d8-arEpB5_sq236bl4" />
+				  </div>
+				  <div class="title">
+				   欧美风
+				  </div></a>
+				</div>
+			   </div>
+			  </div>
+			<div  id="pageWapper" >
+				<div class="tabs">
+					<a href="#" id ="collect_tab" class="tab ">采集</a>
+					<a href="#" id ="styleBoard_tab" class="tab ">风格板</a>
+				</div>
+				<div id="search_filter" class="search_filter">
+				   <div class="color">
+					<ul>
+					 <li><span>颜色：</span></li>
+					 <li class="colorPiece active" id="ncolor"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#cd0400" id="cd0400"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#f38f00" id="f38f00"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#f1e000" id="f1e000"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#5dc800" id="5dc800"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#4898eb" id="4898eb"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#6e37db" id="6e37db"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#d22bd0" id="d22bd0"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#8b531b" id="8b531b"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#000000" id="000000"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#989898" id="989898"><a href="#"></a></li>
+					 <li class="colorPiece" style="background-color:#ffffff" id="ffffff"><a href="#"></a></li>
+					</ul>
+					<div class="clear:both"></div>
+				   </div>
+					<div class="categories">
+						<div id="search_more" class="search-more" style="display: block" state="closed">
+						 <i></i>
+						</div>
+						<ul>
+						 <li class="title"><span class="name" >分类：</span></li>
+						 <li><a id="all" href="#" class="selected">全部<i>14188</i></a></li>
+						 <li><a id="data_presentation" href="#">数据图<i>249</i></a></li>
+						 <li><a id="funny" href="#">搞笑图<i>1197</i></a></li>
+						 <li><a id="pets" href="#">动物<i>231</i></a></li>
+						 <li><a id="home" href="#">家居<i>1042</i></a></li>
+						 <li><a id="design" href="#">平面设计<i>1188</i></a></li>
+						 <li><a id="quotes" href="#">美文美图<i>168</i></a></li>
+						 <li><a id="travel_places" href="#">旅游<i>812</i></a></li>
+						 <li><a id="photography" href="#">摄影<i>959</i></a></li>
+						 <li><a id="illustration" href="#">插画/漫画<i>914</i></a></li>
+						 <li><a id="collocation" href="#">搭配<i>158</i></a></li>
+						 <li><a id="people" href="#">名人/明星<i>487</i></a></li>
+						 <li><a id="tips" href="#">生活百科<i>699</i></a></li>
+						 <li><a id="apparel" href="#">服装<i>585</i></a></li>
+						 <li><a id="modeling_hair" href="#">造型/美妆/纹身<i>563</i></a></li>
+						 <li><a id="desire" href="#">礼物<i>139</i></a></li>
+						 <li><a id="web_app_icon" href="#">UI/UX<i>271</i></a></li>
+						 <li><a id="food_drink" href="#">美食<i>274</i></a></li>
+						 <li><a id="beauty" href="#">美女<i>338</i></a></li>
+						 <li><a id="film_music_books" href="#">音乐/电影/图书<i>412</i></a></li>
+						 <li><a id="anime" href="#">动漫<i>355</i></a></li>
+						 <li><a id="fitness" href="#">健身/美体/舞蹈<i>105</i></a></li>
+						 <li><a id="wedding_events" href="#">婚礼<i>166</i></a></li>
+						 <li><a id="industrial_design" href="#">工业设计<i>184</i></a></li>
+						 <li><a id="diy_crafts" href="#">手工/布艺<i>250</i></a></li>
+						 <li><a id="games" href="#">游戏<i>154</i></a></li>
+						 <li><a id="art" href="#">人文艺术<i>133</i></a></li>
+						 <li><a id="architecture" href="#">建筑设计<i>115</i></a></li>
+						 <li><a id="kids" href="#">儿童<i>92</i></a></li>
+						 <li><a id="men" href="#">男士风尚<i>83</i></a></li>
+						 <li><a id="education" href="#">教育<i>49</i></a></li>
+						 <li><a id="sports" href="#">体育运动<i>41</i></a></li>
+						 <li><a id="cars_motorcycles" href="#">汽车/摩托<i>30</i></a></li>
+						 <li><a id="geek" href="#">极客<i>19</i></a></li>
+						</ul>
+					   </div>
+				</div>
+				   
+				<div id="boardWaterfall" class="waterfall">
+				</div>
+				<div id="collectWaterfall" class="waterfall">
+				</div>
+				<div id="more">
+				</div>
+				<div class="loading">
+					<img src="../image/personal_loading_end.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="elevator_item">
+		<a id="elevator" title="回到顶部"></a>
+	</div>
+	<script type="text/javascript">
+		var boardNum=4;
+		var waterfall="styleBoard";
+		
+		function refreshPage()
+		{
+			if(waterfall=="styleBoard")
+			{
+				$("#boardWaterfall").empty();
+				renderStyleBoard();
+			}			
+			else
+			{
+				$("#collectWaterfall").empty();
+				renderCollect();
+			}
+		}
+		function renderStyleBoard()
+			{
+				var testStyleBoards = [];
+			
+				for (var i = 0; i < 20; i++) {
+					var model = {
+						index:i,
+						styleBoardName: "科比最帅瞬间",
+						imgCount: 4,
+						coverImg:"../image/1.jpg",
+						firstImg:"../image/2.jpg",
+						secondImg:"../image/3.jpg",
+						thirdImg:"../image/4.jpg"
+					}
+					testStyleBoards.push(model);
+				}
+
+				var xwf = XUtil.XWaterfall({
+					src: testStyleBoards,
+					url: '',
+					colNum: boardNum,
+					initialSize: 50,
+					colWidth: 252,
+					contentWidth: 252,
+					fetchSize: 20,
+					marginTop: 16,
+					renderTo: $('#boardWaterfall')[0],
+					renderer: function (model) {
+						var html = "<div class='styleBoard'><a href='#' class='link'>"+
+							"<img id = 'coverImg' src='"+model.coverImg+"' style='position:absolute;width:216px;height:216px;'>"+
+							"<img id = 'firstImg' src='"+model.firstImg+"' style='position:absolute;width:70px;height:70px;left:10px;top:228px;'>"+
+							"<img id = 'secondImg' src='"+model.secondImg+"' style='position:absolute;width:70px;height:70px;left:83px;top:228px;'>"+
+							"<img id = 'thirdImg' src='"+model.thirdImg+"' style='position:absolute;width:70px;height:70px;left:156px;top:228px;'>"+
+							"<div class='shadow' ></div><div href='#' class='btn setbtn'><span class='text'>设置封面</span></div>"+
+							"<div class='over'><h3 id='styleBoardName'>"+model.styleBoardName+"</h3><div id='imgCount' class='pin-count'>"+model.imgCount+"</div></div></a>"+
+							"<div class='editBoard'><a href='./editStyleBoard.html' class='btn'><strong>编辑</strong></a></div></div>";
+						return html;
+					}
+				});
+
+				xwf.init();
+				
+				$('#boardWaterfall').append("<div style='clear:both'></div>");
+			}
+			function renderCollect()
+			{
+				var testCollects = [];
+			    var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
+				var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
+									"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
+									"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
+									"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
+				for (var i = 0; i < 20; i++) {
+					var model = {
+						index:i,
+						imgUrl: imgs[i%4],
+						height: 350,
+						description:descriptions[i%4],
+						repin: Math.floor(Math.random()*10),
+						loved: Math.floor(Math.random()*10),
+						userImage:imgs[i%4],
+						userName:"吃醋小王子",
+						styleBoardName:"科比那些年"
+					}
+					testCollects.push(model);
+				}
+
+				var xwf = XUtil.XWaterfall({
+					src: testCollects,
+					initialSize: 50,
+					colNum: boardNum,
+					colWidth: 252,
+					contentWidth: 252,
+					fetchSize: 20,
+					marginTop: 16,
+					url: '',
+					renderTo: $('#collectWaterfall')[0],
+					renderer: function (model) {
+						var  html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
+						           "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
+			                       "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"' ></a>"+
+						           "<p class='description'>"+model.description+"</p>"+
+						           "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
+								   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+
+								   "<div class='text'><div><div class='line'><a href='#' >"+model.userName+"</a>&nbsp;采集到</div>"+
+								   "<div class='line'><a href='#' >"+model.styleBoardName+"</a></div></div></div></div></div>";
+						return html;
+					}
+				});
+
+				xwf.init();
+			}
+
+		$(document).ready(function(){
+	
+	
+			/*
+			*header����Ϣ������Tab�л�
+			*/
+			$("#mentions").click(function(){
+				$(".box_mentions").removeClass("hidden");
+				$(".box_activities").addClass("hidden");
+				$("#mentions").addClass("click");
+				$("#activities").removeClass("click");
+				$(".show_all").html("�鿴������Ϣ>>");
+		
+			});
+			$("#activities").click(function(){
+				$(".box_activities").removeClass("hidden");
+				$(".box_mentions").addClass("hidden");
+				$("#activities").addClass("click");
+				$("#mentions").removeClass("click");
+				$(".show_all").html("�鿴���ж�̬>>");
+			});
+			//������Ļ�ֱ��ʼ��ز�ͬ��layout��ʽ�����÷������
+			if(screen.width>=1600) 
+			{
+				$("#headWapper").addClass("wrapper1600");
+				$("#pageWapper").addClass("wrapper1600");
+				$("#bannerWapper").addClass("wrapper1600");
+				$("#exploreWrapper").addClass("wrapper1600");
+				boardNum=6;
+			}
+			else if( screen.width>=1360 )
+			{
+				$("#headWapper").addClass("wrapper1360");
+				$("#pageWapper").addClass("wrapper1360");
+				$("#bannerWapper").addClass("wrapper1360");
+				$("#exploreWrapper").addClass("wrapper1360");
+				boardNum=5;
+			}	
+			else 
+			{
+				$("#headWapper").addClass("wrapper1280");
+				$("#pageWapper").addClass("wrapper1280");
+				$("#bannerWapper").addClass("wrapper1280");
+				$("#exploreWrapper").addClass("wrapper1280");
+				boardNum=4;
+			}
+			window.onresize = function()
+			{
+				var flag=false;
+				if(window.innerWidth>=1600)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#bannerWapper").removeClass();
+					$("#exploreWrapper").removeClass();
+					$("#headWapper").addClass("wrapper1600");
+					$("#pageWapper").addClass("wrapper1600");
+					$("#bannerWapper").addClass("wrapper1600");
+					$("#exploreWrapper").addClass("wrapper1600");
+					if(boardNum!=6)
+					{
+						boardNum=6;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+				else if(window.innerWidth>=1360)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#bannerWapper").removeClass();
+					$("#exploreWrapper").removeClass();
+					$("#headWapper").addClass("wrapper1360");
+					$("#pageWapper").addClass("wrapper1360");
+					$("#bannerWapper").addClass("wrapper1360");
+					$("#exploreWrapper").addClass("wrapper1360");
+					if(boardNum!=5)
+					{
+						boardNum=5;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+				else 
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#bannerWapper").removeClass();
+					$("#exploreWrapper").removeClass();
+					$("#headWapper").addClass("wrapper1280");
+					$("#pageWapper").addClass("wrapper1280");
+					$("#bannerWapper").addClass("wrapper1280");
+					$("#exploreWrapper").addClass("wrapper1280");
+					if(boardNum!=4)
+					{
+						boardNum=4;
+						flag=true;
+					}
+					if(flag) refreshPage();
+				}
+			}
+			//header�������
+			headerHover();
+			/*backtotp*/
+			returnToTop();
+			
+			//tabs�л�
+			$("#styleBoard_tab").click(function(){
+				$("#styleBoard_tab").addClass("active");
+				$("#collect_tab").removeClass("active");
+				$("#fond_tab").removeClass("active");
+				$("#desc_bar").hide();
+				$("#collectWaterfall").hide();
+				$("#fondBoard").hide();
+				$("#fondCollect").hide();
+				$("#boardWaterfall").show();
+				renderStyleBoard();
+				waterfall="styleBoard";
+			});
+			$("#collect_tab").click(function(){
+				$("#styleBoard_tab").removeClass("active");
+				$("#collect_tab").addClass("active");
+				$("#fond_tab").removeClass("active");
+				$("#desc_bar").hide();
+				$("#fondBoard").hide();
+				$("#fondCollect").hide();
+				$("#boardWaterfall").hide();
+				$("#collectWaterfall").show();
+				renderCollect();
+				waterfall="collect";
+			});
+			
+			$("#styleBoard_tab").click();
+	
+			$("#search_more").click(function(){
+				var state = $(this).attr("state");
+				if(state=="closed")
+				{
+					$(this).find("i").css("background-position","0 -60px");
+					$(this).css("background-color","#ededed");
+					$(this).parent(".categories").animate({height:'100px'});
+					$(this).attr("state","open");
+				}
+				else 
+				{
+					$(this).find("i").css("background-position","0 0");
+					$(this).css("background-color","#fafafa");
+					$(this).parent(".categories").animate({height:'30px'});
+					$(this).attr("state","closed");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
