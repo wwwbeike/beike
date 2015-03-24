@@ -1096,3 +1096,306 @@
 		#elevator:hover{
 			background: url(../image/personal_top2.png) center center no-repeat;
 		}
+		/*大图CSS*/
+		.banner
+		{
+			position: relative;
+		    overflow: hidden;
+			width: 100%;
+			color: #fff;
+			font-size: 14px;
+		}
+		.bg
+		{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			text-align: left;
+			overflow: hidden;
+		}
+		.bg-gradient
+		{
+		  position: absolute;
+		  overflow: hidden;
+		  z-index: 2;
+		  height: 100%;
+		  width: 100%;
+		  min-width: 900px;
+		  background-color: #999;
+		}
+		.bg-img
+		{
+			  overflow: hidden;
+			  position: absolute;
+			  margin-top: -50px;
+			  width: 38%;
+			  min-width: 600px;
+			  min-height: 369px;
+			  opacity: 0.7;
+			  background-size: cover;
+			  -webkit-transition: opacity .6s ease-in-out;
+			  transition: opacity .6s ease-in-out;
+		}
+		.banner .title
+		{
+		  margin: 25px 0 3px 0;
+		  font-size: 32px;
+		  font-family: "\5FAE\8F6F\96C5\9ED1","helvetica neue",arial,sans-serif;
+		  font-weight: 500;
+		  text-shadow: none;
+		}
+		.banner .info
+		{
+			  display: block;
+			  padding-bottom: 15px;
+			  margin: 0 auto;
+			  width: 35%;
+		}
+		.banner .follow-title
+		{
+			position: relative;
+			  padding-bottom: 15px;
+			  width: 300px;
+			  margin: 0 auto;
+		}
+		.banner .follow-title i
+		{
+			display: inline-block;
+			  margin-right: 6px;
+			  width: 18px;
+			  height: 18px;
+			  vertical-align: middle;
+			  background: url(../image/explore_icon.png) -95px 0 no-repeat;
+			  margin-right: 10px;
+		}
+		.banner .followersDiv
+		{
+			  display: block;
+			  overflow: hidden;
+			  max-width: 30%;
+			  height: 48px;
+			  margin:0 auto;
+		}
+		.banner .followersDiv a
+		{
+		  color: #222;
+		  text-decoration: none;
+		  outline: 0;
+		}
+		.banner .followersDiv .follower-item
+		{
+			  position: relative;
+			  display: inline-block;
+			  margin-right: 10px;
+			  width: 48px;
+			  opacity: 1;
+			  transition: opacity .2s ease-in-out;
+		}
+		.banner .followersDiv .follower-item img
+		{
+			 width: 48px;
+			  height: 48px;
+			  vertical-align: middle;
+			  border: 0;
+			  border-radius: 50%;
+		}
+		.more_explore
+		{
+			padding-bottom: 20px;
+			  margin-bottom: 20px;
+			  width: 100%;
+			  background: #fcfcfc;
+		}
+		.more_explore_title
+		{
+			padding: 16px;
+			text-align: center;
+		}
+		.more_explore_title i
+		{
+			display: inline-block;
+			  margin-right: 6px;
+			  width: 18px;
+			  height: 18px;
+			  vertical-align: middle;
+			  background: url(../image/explore_icon.png) -20px 1px no-repeat;
+		}
+		.category-image-box
+		{
+			 height: 130px;
+			 margin: 0 -16px 0 0;
+			 overflow: hidden;
+		}
+		.category-image
+		{
+			position: relative;
+			  display: block;
+			  float: left;
+			  margin: 0 16px 16px 0;
+			  width: 236px;
+			  height: 126px;
+			  border-radius: 4px;
+			  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+			  overflow: hidden;
+		}
+		.category-image .blur
+		{
+			opacity:0.9;
+		}
+		.category-image .title
+		{
+			position: absolute;
+			  left: 0;
+			  top: 0;
+			  width: 100%;
+			  height: 126px;
+			  line-height: 126px;
+			  font-size: 24px;
+			  font-weight: 900;
+			  color: #fff;
+			  text-align: center;
+			  font-family: "\5FAE\8F6F\96C5\9ED1","helvetica neue",arial,sans-serif;
+			  -webkit-font-smoothing: antialiased;
+			  text-shadow: 0 1px 0 rgba(0,0,0,.3);
+		}
+		.search_filter
+		{
+			display: block;
+			  position: relative;
+			  border-radius: 4px;
+			  box-shadow: inset 0 1px 0 #FFF,0 1px 1px rgba(0,0,0,.1);
+			  -webkit-box-shadow: inset 0 1px 0 #FFF,0 1px 1px rgba(0,0,0,.1);
+			  background-color: #fff;
+		}
+		.search_filter .color
+		{
+			padding: 16px 0 16px 16px;
+			border-bottom: 1px solid #EDEDED;
+			height:19px;
+		}
+		.search_filter .color ul
+		{
+			display: block;
+			list-style-type: none;
+			margin-top: 2px;
+			float:left;
+		}
+		.search_filter .color ul li
+		{
+			line-height: 13px;
+			float: left;
+		  padding: 0 5px;
+		  width: auto;
+		  border: 1px solid transparent;
+		  color: #999;
+		  display: inline-block;
+		  height:14px;
+		  list-style:none;
+		}
+		.search_filter .color ul li.colorPiece {
+		  text-align: center;
+		  cursor: pointer;
+		}
+		.search_filter .color ul li.active {
+		  position: relative;
+		  margin: -2px;
+		  border: 2px solid #fff;
+		  border-radius: 2px;
+		  box-shadow: 0 0 0 1px rgba(0,0,0,.15),inset 0 0 0 1px rgba(0,0,0,.15);
+		 
+		}
+		.search_filter .color ul li:hover a
+		{
+			background: url(../image/search_color_sprite.svg) no-repeat 40px 1px;
+		}
+		.search_filter .color ul li.active  a{
+			background: url(../image/search_color_sprite.svg) no-repeat 40px 1px;
+		}
+		.search_filter .color ul li a
+		{
+			  display: inline-block;
+			  width: 100px;
+			  height: 14px;
+		}
+		.search_filter .color #ncolor
+		{
+			background: url(../image/pic_null108.png) no-repeat;
+		}
+		.search_filter .categories
+		{
+			padding-top: 16px;
+			height: 30px;
+			overflow: hidden;
+			padding: 16px 0 16px 16px;
+			border-bottom: 1px solid #EDEDED;
+		}
+		.categories .search-more
+		{
+			  display:block;
+			  position: absolute;
+			  right: 16px;
+			  height: 26px;
+			  width: 26px;
+			  border: 1px solid #ddd;
+			  cursor: pointer;
+		}
+		.categories .search-more i
+		{
+			position: absolute;
+			  top: 7px;
+			  left: 8px;
+			  display: block;
+			  width: 10px;
+			  height: 10px;
+			 background: url(../image/search_drop_arrow.png) no-repeat 0 0;
+		}
+		.categories ul
+		{
+			display: block;
+			list-style-type: none;
+			margin-top: 2px;
+			float:left;
+		}
+		.categories ul li {
+		  display: inline-block;
+		  margin: 0 25px 10px 0;
+		  width: auto;
+		}
+		.categories ul li.title{
+			margin-right:-10px;
+		}
+		.categories ul li span.name {
+		  display: block;
+		  float: left;
+		  padding: 0 5px;
+		  width: auto;
+		  line-height: 26px;
+		  border: 1px solid transparent;
+		  font-size: 14px;
+		  color: #999;
+		}
+		.categories ul li a {
+		  display: block;
+		  float: left;
+		  padding: 0 5px;
+		  width: auto;
+		  line-height: 26px;
+		  border: 1px solid transparent;
+		  font-size: 14px;
+		  color: #444;
+		}
+		.categories ul li a i {
+		  margin-left: 3px;
+		  font-style: normal;
+		  color: #999;
+		}
+		.categories ul li a.selected {
+		  height: 26px;
+		  color: #C90000;
+		  text-decoration: none;
+		}
+		.categories ul li a:hover {
+		  height: 26px;
+		  color: #C90000;
+		  text-decoration: none;
+		}
