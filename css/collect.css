@@ -77,6 +77,23 @@
 	right:6px;
 	z-index:3;
 }
+.collect .actions .like{
+	border: 1px solid rgba(0,0,0,.2)!important;
+}
+.collect .actions .like i{
+	margin:0;
+}
+.collect .actions .btn{
+	height: 30px;
+	line-height: 30px;
+}
+.btn i.heart{
+	background: url(../image/action_like.svg) 0 0 no-repeat;
+}
+.collect .actions .repin{
+	border: 1px solid rgba(127,0,3,.7)!important;
+	box-shadow: none;	
+}
 .collect .actions .left
 {
 	color:#fff;
@@ -95,6 +112,9 @@
 {
 	cursor:pointer;
 	display: block;
+}
+.collect a.loaded{
+	background: #fff;
 }
 .collect a.link .collect_overlay
 {
