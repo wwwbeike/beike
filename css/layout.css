@@ -1541,3 +1541,133 @@
 		  color: #C90000;
 		  text-decoration: none;
 		}
+		/*登录banner*/
+		#login_banner
+		{
+			  height: 120px;
+			  min-width: 992px;
+			  background: url(../image/login_header_blurbg.jpg) center top repeat;
+			  background-size: cover;
+			  color: #fff;
+		}
+		#login_banner .intro
+		{
+			width: 380px;
+		}
+		#login_banner .intro .title {
+		  font-size: 22px;
+		  font-weight: 700;
+		  margin: 36px 0 8px;
+		}
+		#login_banner .login {
+		  position: absolute;
+		  right: 0;
+		  top: 20px;
+		  height: 263px;
+		}
+		#login_banner .login a {
+		  display: inline-block;
+		  width: 54px;
+		  height: 54px;
+		  background: url(../image/icons_login_big.svg) 0 0 no-repeat;
+		  margin-right: 15px;
+		}
+		#login_banner .login a.qzone {
+		  background-position: -80px 0;
+		}
+		#login_banner .login a.douban {
+		    background-position: -160px 0;
+		}
+		#login_banner .login a:hover
+		{
+			background-position:0 -80px;
+		}
+		#login_banner .login a.qzone:hover
+		{
+			background-position:-80px -80px;;
+		}
+		#login_banner .login a.douban:hover
+		{
+			background-position:-160px -80px;
+		}
+		#login_banner .with-line
+		{
+			text-align: center;
+			  margin-top: 10px;
+			  position: relative;
+		}
+		/*category_nav_bar*/
+		#category_nav_bar
+		{
+			  height: 64px;
+			  background: #fafafa;
+		}
+		#category_nav_bar .title {
+		  float: left;
+		  font-size: 24px;
+		  color: #444;
+		  margin-right: 40px;
+		  height: 64px;
+		  line-height: 64px;
+		}
+		#category_nav_bar .navs {
+		  float: left;
+		  height: 64px;
+		  line-height: 64px;
+		}
+		#category_nav_bar .navs a {
+		  color: #444;
+		  display: inline-block;
+			margin-right: 30px;
+		}
+		#category_nav_bar .navs a.selected {
+		  background: url(../image/subnavi_sel.png) center bottom no-repeat;
+		  font-weight: 700;
+		}
+		#category_nav_bar .right {
+		  position: absolute;
+		  right: 0;
+		  top: 20px;
+		}
+		#category_nav_bar .filter-button {
+		  height: 28px;
+		  line-height: 28px;
+		  padding: 0 20px 0 10px;
+		  background: url(../image/sele_arrow.png) 43px 8px no-repeat #FAFAFA;
+		  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+		  display: inline-block;
+		  margin-right: 10px;
+		  border-radius: 2px;
+		  position: relative;
+		  cursor: pointer;
+		}
+		#category_nav_bar .filter-button .menu {
+		  display: none;
+		  position: absolute;
+		  top: 38px;
+		  left: -122px;
+		  background: #fff;
+		  width: 300px;
+		  padding: 20px 16px 12px;
+		  z-index: 10;
+		  box-shadow: 0 0 4px rgba(0,0,0,.2);
+		  cursor: default;
+		}
+		#category_nav_bar .filter-button .menu a {
+		  display: inline-block;
+		  height: 28px;
+		  line-height: 28px;
+		  padding: 0 10px;
+		  background: #FAFAFA;
+		  margin-right: 10px;
+		  margin-bottom: 8px;
+		  border: 1px solid #EDEDED;
+		  border-radius: 2px;
+		  text-decoration: none;
+		  color: #444;
+		}
+		#category_nav_bar .searching-unit
+		{
+			float:right;
+			margin-top:0;
+		}

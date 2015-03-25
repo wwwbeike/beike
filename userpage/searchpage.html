@@ -312,10 +312,15 @@
 				$("#boardWaterfall").empty();
 				renderStyleBoard();
 			}			
-			else
+			else if(waterfall=="collect")
 			{
 				$("#collectWaterfall").empty();
 				renderCollect();
+			}
+			else 
+			{
+				$("#userWaterfall").empty();
+				renderUSer();
 			}
 		}
 		function renderStyleBoard()
@@ -464,7 +469,6 @@
 			{
 				$("#headWapper").addClass("wrapper1600");
 				$("#pageWapper").addClass("wrapper1600");
-				$("#bannerWapper").addClass("wrapper1600");
 				$("#exploreWrapper").addClass("wrapper1600");
 				boardNum=6;
 			}
@@ -472,7 +476,6 @@
 			{
 				$("#headWapper").addClass("wrapper1360");
 				$("#pageWapper").addClass("wrapper1360");
-				$("#bannerWapper").addClass("wrapper1360");
 				$("#exploreWrapper").addClass("wrapper1360");
 				boardNum=5;
 			}	
@@ -480,7 +483,6 @@
 			{
 				$("#headWapper").addClass("wrapper1280");
 				$("#pageWapper").addClass("wrapper1280");
-				$("#bannerWapper").addClass("wrapper1280");
 				$("#exploreWrapper").addClass("wrapper1280");
 				boardNum=4;
 			}
@@ -491,11 +493,9 @@
 				{
 					$("#headWapper").removeClass();
 					$("#pageWapper").removeClass();
-					$("#bannerWapper").removeClass();
 					$("#exploreWrapper").removeClass();
 					$("#headWapper").addClass("wrapper1600");
 					$("#pageWapper").addClass("wrapper1600");
-					$("#bannerWapper").addClass("wrapper1600");
 					$("#exploreWrapper").addClass("wrapper1600");
 					if(boardNum!=6)
 					{
@@ -508,11 +508,9 @@
 				{
 					$("#headWapper").removeClass();
 					$("#pageWapper").removeClass();
-					$("#bannerWapper").removeClass();
 					$("#exploreWrapper").removeClass();
 					$("#headWapper").addClass("wrapper1360");
 					$("#pageWapper").addClass("wrapper1360");
-					$("#bannerWapper").addClass("wrapper1360");
 					$("#exploreWrapper").addClass("wrapper1360");
 					if(boardNum!=5)
 					{
@@ -525,11 +523,9 @@
 				{
 					$("#headWapper").removeClass();
 					$("#pageWapper").removeClass();
-					$("#bannerWapper").removeClass();
 					$("#exploreWrapper").removeClass();
 					$("#headWapper").addClass("wrapper1280");
 					$("#pageWapper").addClass("wrapper1280");
-					$("#bannerWapper").addClass("wrapper1280");
 					$("#exploreWrapper").addClass("wrapper1280");
 					if(boardNum!=4)
 					{
