@@ -60,4 +60,25 @@ function aLinkHover(){
 	function(){
 		$(this).css("border","1px solid #EDEDED");
 	});
+	
+	$(".pin_view .siblings_piece .inner").hover(function(){
+		$(".pin_view .siblings_piece .inner .site").css("color","#e47f7f");
+		$(".pin_view .siblings_piece .inner .arrow").css("background","url(../image/icon_arrow.png) 0 -30px no-repeat")
+	},
+	
+	function(){
+		$(".pin_view .siblings_piece .inner .site").css("color","#444");
+		$(".pin_view .siblings_piece .inner .arrow").css("background","url(../image/icon_arrow.png) 0 0 no-repeat")
+	})
+}
+
+$(function(){
+	$(".clear_input").focus(function(){
+		$("#pin_view_add_comment a").css("display","block"); 
+		
+	});
+});
+
+function commentTrue(){
+	$("#pin_view_add_comment a").removeClass("disabled");
 }
