@@ -8,7 +8,7 @@
 	<script type="text/javascript" src='../js/XUtil/base.js'></script>
 	<script type="text/javascript" src='../js/XUtil/waterfall.js'></script>
 	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
-	<script type="text/javascript" src='../js/Native/returnToTop.js'></script>
+	<script type="text/javascript" charset="UTF-8" src='../js/Native/returnToTop.js'></script>
 	<script type="text/javascript" charset="utf-8" src="../js/Native/singleImage.js"></script>
 	<link rel='stylesheet' type="text/css" href='../js/XUtil/XUtil.min.css'/>
 	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
@@ -164,8 +164,10 @@
 				</div>
 			</div>
 		</div>
-		<div id="pin_view_layer">
-		
+ 		<div id="pin_view_layer">
+			<div class="close_layer">
+				<i></i>
+			</div>
 			<div class="pin_view">
 				<div class="pin_view_wrapper">
 					<div class="main_part">
@@ -219,17 +221,190 @@
 							<div class="comments"></div>
 							<div id="pin_view_add_comment"  class="clearfix">
 								<a href="/y7alhdskjs/" title="stwcloudy" class="img x"><img src="http://img.hb.aicdn.com/23a58517fb73f86bca85937f069724486b3e00a44caa-GMc99I_sq75sf" class="avatar"></a>
-								<textarea name="caption" placeholder="添加评论或把采集@给好友" class="clear_input"></textarea>
+								<textarea name="caption" placeholder="添加评论或把采集@给好友" class="clear_input" onchange="commentTrue()" autocomplete="off"></textarea>
+								<ul class="ac_choices" style="display: none; z-index: 42; opacity: 0;"></ul>
 								<a href="#"  class="post disabled btn btn14"><span class="text"> 添加评论</span></a>
+							</div>
+						</div> 
+						
+						<div class="repin_info_piece two clearfix">
+							<div class="board unit">
+								<a href="/boards/19225017/" rel="nofollow" class="pins x">
+									<img width="24" height="24" src="http://img.hb.aicdn.com/0bac427c83be079c049a4cbe901f67d7e4294e876254-fLe46t_sq75">
+									<img width="24" height="24" src="http://img.hb.aicdn.com/4fd5253cb38668a79e7967381be7233fe005adbf185dc-xdz2aF_sq75">
+									<img width="24" height="24" src="http://img.hb.aicdn.com/5ede63978dcca4b6c0342d0693b9824a9cefd5171ac65b-KqHHh6_sq75">
+									<img width="24" height="24" src="http://img.hb.aicdn.com/fe8657dd84a56ebd2c5b450e621d77bba000a73edbbc-smjQou_sq75">
+								</a>
+								<div class="info"><span>采集到风格板</span><a href="/boards/19225017/" rel="nofollow" class="x">basketball</a>
+								</div>
+							</div>
+							<div class="repins_from unit">
+								<a href="/ad518" title="AD518" class="img x">
+									<img width="50" height="50" src="http://img.hb.aicdn.com/fdefcc7ac74447a1d15c6a3025812712eb2db0ab2501-w7OhXq_sq75sf">
+								</a>
+								<div class="info"><span>采集自用户</span><a href="/ad518/" class="x">AD518</a></div>
+							</div>
+						</div>
+						
+						<div class="category_info_piece">该采集属于<a href="/all/sports/" class="brown_link x">瓯网图片</a>分类</div>
+					</div> 
+					<div class="side_part">
+						<div class="board_piece piece">
+							<div class="board_info">
+								<a href="/y7alhdskjs/" title="stwcloudy" class="img x"><img src="http://img.hb.aicdn.com/23a58517fb73f86bca85937f069724486b3e00a44caa-GMc99I_sq75sf" class="avt"></a>
+								<a href="/boards/19225017/" class="name x">basketball</a>
+								<div class="sub">stwcloudy</div>
+							</div>
+							<div class="board_pins cst_scrollbar">
+								<div id="board_pins_waterfall" class="waterfall" ></div>
+								<div class="loading">
+									<img src="../image/loading.gif">
+									<span>正在加载...</span>
+								</div>
+							</div>	
+						</div>
+						<div class="siblings_piece piece">
+							<a href="#" class="inner x">
+								<div>同采自</div>
+								<div class="site">ad518.com</div>
+								<div class="pins clearfix">
+									<img src="http://img.hb.aicdn.com/4347de72e863d25d94edf0d772f64856b6cc7f5c8cca-rhEt7S_sq120" class="space">
+									<img src="http://img.hb.aicdn.com/8dfaf0582c058e1fd8a0acebd9e72a3c2d8987de10fcd-GjJQu7_sq120" class="space">
+									<img src="http://img.hb.aicdn.com/0b223260669770f3b9e1507f2dc8388f08ad23cc24784-D1roVf_sq120" class="">
+								</div>
+								<div class="arrow"></div>
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="bottom_part">
+					<div class="pin_view_wrapper">
+						<div class="related_boards clearfix">
+							<div class="title_el">该采集也在以下风格板</div>
+							<div class="board_box clearfix">
+							</div>
+							<a href="#" class="load_more_board btn btn18"><span class="text">加载更多</span></a>	 
+						</div>
+						<div class="recommend_pins">
+							<div class="title_el">推荐给你的采集</div>
+							<div id="recommeded_pins" class="waterfall"></div>
+							<div class="loading" style="display:none;">
+								<img src="../image/loading.gif">
+								<span>正在加载...</span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="pin_view_arrows">
+				<a  class="prev x layer-view" href="/pins/318670096/" id="prev_pin"></a>
+				<a  class="next x layer-view" href="/pins/318668954/" id="next_pin"></a>
+			</div>
 		</div>
+		
+	</div>
+	<div class="clear"></div>
+	<div id="elevator_item">
+		<a id="elevator" title="回到顶部"></a>
 	</div>
 <script type="text/javascript">
+	var sidePinsNum = 3;
+	var recommeded_pinsNum= 4 ;
+	function renderRecommendPins(){
+		var testCollects = [];
+		var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
+		var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
+							"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
+							"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
+							"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
+		for (var i = 0; i < 20; i++) {
+			var model = {
+				index:i,
+				imgUrl: imgs[i%4],
+				height: 350,
+				description:descriptions[i%4],
+				repin: Math.floor(Math.random()*10),
+				loved: Math.floor(Math.random()*10),
+				userImage:imgs[i%4],
+				userName:"吃醋小王子",
+				styleBoardName:"科比那些年"
+			}
+			testCollects.push(model);
+		}
+
+		var xwf = XUtil.XWaterfall({
+			src: testCollects,
+			initialSize: 50,
+			colNum: recommeded_pinsNum,
+			colWidth: 252,
+			contentWidth: 252,
+			fetchSize: 20,
+			marginTop: 16,
+			url: '',
+			renderTo: $('#recommeded_pins')[0],
+			renderer: function (model) {
+				var html;
+				html = "<div class='collect' ><div class='actions'><a title='喜欢' href='#' class='like btn_with_icon btn btn14 right'>"+
+					   "<i class='heart'></i><span class='text'</span></a><a href='#' class='left repin rbtn'>"+
+					   "<span class='text'>采集</span></a></div>"+
+					   "<a href='#' class='link loaded'><img src='"+model.imgUrl+"' height='"+model.height+"'></a>"+
+					   "<p class='description'>"+model.description+"</p>"+
+					   "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
+					   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+
+					   "<div class='text'><div><div class='line'><a href='#' >"+model.userName+"</a>&nbsp;采集到</div>"+
+					   "<div class='line'><a href='#' >"+model.styleBoardName+"</a></div></div></div></div></div>";
+					   return html;
+			}
+		});
+				
+		xwf.init();
+	}
+	function renderSidePins(){
+		var testCollects = [];
+		var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
+		for (var i = 0; i < 20; i++) {
+			var model = {
+				index:i,
+				imgUrl: imgs[i%4],
+				userImage:imgs[i%4],
+				width:78,
+				height:100,
+			}
+			testCollects.push(model);
+		}
+				
+		var xwf = XUtil.XWaterfall({
+			src: testCollects,
+			initialSize: 50,
+			colNum: sidePinsNum,
+			colWidth: 78,
+			contentWidth: 78,
+			fetchSize: 20,
+			marginTop: 5,
+			url: '',
+			renderTo: $('#board_pins_waterfall')[0],
+			renderer: function (model) {
+				var html;
+				html="<a href='#' class='cell x layer_view'><img src='"+model.userImage+"'width='"+model.width+"'height='"+model.height+"'><div class='cover'></div></a>";
+				return html;
+			}
+		});
+
+		xwf.init();
+	}
 	$(document).ready(function(){
+		/*
+		*waterfall
+		*/
+		renderSidePins();
+		renderRecommendPins();
+		//header风格设置
+		headerHover();
+		/*单图页面中某些标签的hover事件*/
+		aLinkHover();
+		/*backtotop*/
+		returnToTop();
 		/*
 		*header栏消息接收里Tab切换
 		*/
@@ -253,35 +428,25 @@
 		{
 			$("#headWapper").addClass("wrapper1600");
 			$("#pageWapper").addClass("wrapper1600");
-			boardNum=6;
 		}
 		else if( screen.width>=1360 )
 		{
 			$("#headWapper").addClass("wrapper1360");
 			$("#pageWapper").addClass("wrapper1360");
-			boardNum=5;
 		}	
 		else 
 		{
 			$("#headWapper").addClass("wrapper1280");
 			$("#pageWapper").addClass("wrapper1280");
-			boardNum=4;
 		}
 		window.onresize = function()
 		{
-			var flag=false;
 			if(window.innerWidth>=1600)
 			{
 				$("#headWapper").removeClass();
 				$("#pageWapper").removeClass();
 				$("#headWapper").addClass("wrapper1600");
 				$("#pageWapper").addClass("wrapper1600");
-				if(boardNum!=6)
-				{
-					boardNum=6;
-					flag=true;
-				}
-				if(flag) refreshPage();
 			}
 			else if(window.innerWidth>=1360)
 			{
@@ -289,12 +454,6 @@
 				$("#pageWapper").removeClass();
 				$("#headWapper").addClass("wrapper1360");
 				$("#pageWapper").addClass("wrapper1360");
-				if(boardNum!=5)
-				{
-					boardNum=5;
-					flag=true;
-				}
-				if(flag) refreshPage();
 			}
 			else 
 			{
@@ -302,21 +461,9 @@
 				$("#pageWapper").removeClass();
 				$("#headWapper").addClass("wrapper1280");
 				$("#pageWapper").addClass("wrapper1280");
-				if(boardNum!=4)
-				{
-					boardNum=4;
-					flag=true;
-				}
-				if(flag) refreshPage();
 			}
 		}
-		//header风格设置
-		headerHover();
-		/*单图页面中某些标签的hover事件*/
-		aLinkHover();
-		
-		/*backtotp*/
-		returnToTop();
+
 	});
 </script
 </body>

@@ -23,7 +23,7 @@
 		/* Layout Style */
 		
 		#header{
-			z-index:100;
+			z-index:9999;
 			position:fixed;
 			background-color:white;
 			height:42px;
@@ -296,7 +296,7 @@
 			margin-bottom:20px;
 			font-size:14px;
 		}
-		.clearfix{
+		.clear{
 			clear:both;
 		}
 		#left_menu_nav .menu .bottom_bar{
