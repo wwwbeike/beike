@@ -1399,3 +1399,145 @@
 		  color: #C90000;
 		  text-decoration: none;
 		}
+		.search-group {
+		  border: 1px solid #EDEDED;
+		  box-shadow: inset 0 1px 0 #FFF,0 1px 1px rgba(0,0,0,.1);
+		  -webkit-box-shadow: inset 0 1px 0 #FFF,0 1px 1px rgba(0,0,0,.1);
+		  background-color: #fafafa;
+		  border-radius: 4px;
+		  margin-bottom: 20px;
+		  position: relative;
+		}
+		.search-item {
+		  position: relative;
+		  display: inline-block;
+		  margin: 10px 10px 10px 10px;
+		  width:476px;
+		}
+		.search-item input
+		{
+			box-sizing: border-box;
+			  font-size: 18px;
+			  height: 38px;
+			  padding: 0 33px 0 11px;
+			  width: 100%;
+		}
+		#search_result_form .go {
+		  width: 38px;
+		  height: 38px;
+		  right: -10px;
+		  background: url(../image/menu_sprite.svg) 0 -95px no-repeat;
+		}
+		.search-group .recommend-word {
+		  display: block;
+		  vertical-align: middle;
+		  right: 10px;
+		  width:984px;
+		  margin-top: 20px;
+		  margin-bottom:20px;
+		  left: 330px;
+		  line-height: 20px;
+		  height: 20px;
+		  white-space: nowrap;
+		  overflow: hidden;
+		}
+		.search-group .recommend-word li {
+		  display:inline-block;
+		  margin-left: 20px;
+		  font-size: 14px;
+		  float: left;
+		  list-style: none;
+		}
+		.search-group .recommend-word li a {
+		  color: #9E7E6B;
+		}
+		.search-group .recommend-word li:first-child {
+		  color: #777;
+		}
+		.search-group .search-hint {
+		  margin-top: -10px;
+		  position: absolute;
+		  box-sizing: border-box;
+		  font-size: 16px;
+		  background: #fff;
+		  box-shadow: 0 0 2px rgba(0,0,0,.2);
+		  z-index: 999999999999;
+		}
+		.search_filter .style-categories
+		{
+			padding-top: 16px;
+			height: 30px;
+			overflow: hidden;
+			padding: 16px 0 16px 16px;
+			border-bottom: 1px solid #EDEDED;
+		}
+		.style-categories .search-more
+		{
+			  display:block;
+			  position: absolute;
+			  right: 16px;
+			  height: 26px;
+			  width: 26px;
+			  border: 1px solid #ddd;
+			  cursor: pointer;
+		}
+		.style-categories .search-more i
+		{
+			position: absolute;
+			  top: 7px;
+			  left: 8px;
+			  display: block;
+			  width: 10px;
+			  height: 10px;
+			 background: url(../image/search_drop_arrow.png) no-repeat 0 0;
+		}
+		.style-categories ul
+		{
+			display: block;
+			list-style-type: none;
+			margin-top: 2px;
+			float:left;
+		}
+		.style-categories ul li {
+		  display: inline-block;
+		  margin: 0 25px 10px 0;
+		  width: auto;
+		}
+		.style-categories ul li.title{
+			margin-right:-10px;
+		}
+		.style-categories ul li span.name {
+		  display: block;
+		  float: left;
+		  padding: 0 5px;
+		  width: auto;
+		  line-height: 26px;
+		  border: 1px solid transparent;
+		  font-size: 14px;
+		  color: #999;
+		}
+		.style-categories ul li a {
+		  display: block;
+		  float: left;
+		  padding: 0 5px;
+		  width: auto;
+		  line-height: 26px;
+		  border: 1px solid transparent;
+		  font-size: 14px;
+		  color: #444;
+		}
+		.style-categories ul li a i {
+		  margin-left: 3px;
+		  font-style: normal;
+		  color: #999;
+		}
+		.categories ul li a.selected {
+		  height: 26px;
+		  color: #C90000;
+		  text-decoration: none;
+		}
+		.style-categories ul li a:hover {
+		  height: 26px;
+		  color: #C90000;
+		  text-decoration: none;
+		}
