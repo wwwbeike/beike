@@ -93,3 +93,40 @@
 	display:block;
 	margin:0 10px;
 }
+.singleUser
+{
+	width: 236px;
+    font-size: 12px;
+    background-color: #fff;
+}
+.singleUser  .singleImg
+{
+	background: #fff;
+	display: block;
+}
+.singleUser .singleImg img
+{
+	display: block;
+	  width: 206px;
+	  height: 206px;
+	  margin: 0 auto;
+}
+.singleUser .location
+{
+	height: 17px;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 15px 8px;
+}
+.singleUser h2
+{
+	display: block;
+  height: 18px;
+  font-size: 18px;
+  line-height: 1em;
+  font-weight: 300;
+  padding: 10px 15px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
