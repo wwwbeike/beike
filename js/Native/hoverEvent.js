@@ -96,11 +96,18 @@ function styleBoardPageHover()
 	});
 }
 
-/*
-*header栏消息接收里Tab切换
-*/
-$(document).ready(function(){
-
-});
+function categoryFilterHover(){
+	$("#category_nav_bar .filter-button").hoverDelay({
+		hoverDuring:0,
+		hoverEvent:function(){
+			$("#category_nav_bar .filter-button").addClass("active");
+			$("#category_nav_bar .filter-button .menu").show();
+		},
+		outEvent:function(){
+			$("#category_nav_bar .filter-button").removeClass("active");
+			$("#category_nav_bar .filter-button .menu").hide();	
+		}
+	});
+}
 	
 			

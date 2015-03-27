@@ -202,25 +202,25 @@
 				<div class="right">
 				 <div class="filter-button ">
 				  筛选
-				  <div class="menu" style="display: none;">
-				   <a href="/favorite/wedding_events?q=婚纱" class="x ">婚纱</a>
-				   <a href="/favorite/wedding_events?q=抹胸" class="x ">抹胸</a>
-				   <a href="/favorite/wedding_events?q=礼服" class="x ">礼服</a>
-				   <a href="/favorite/wedding_events?q=鱼尾" class="x ">鱼尾</a>
-				   <a href="/favorite/wedding_events?q=束腰" class="x ">束腰</a>
-				   <a href="/favorite/wedding_events?q=中国风" class="x ">中国风</a>
-				   <a href="/favorite/wedding_events?q=头纱" class="x ">头纱</a>
-				   <a href="/favorite/wedding_events?q=森系" class="x ">森系</a>
-				   <a href="/favorite/wedding_events?q=布置" class="x ">布置</a>
-				   <a href="/favorite/wedding_events?q=请柬" class="x ">请柬</a>
-				   <a href="/favorite/wedding_events?q=捧花" class="x ">捧花</a>
-				   <a href="/favorite/wedding_events?q=蛋糕" class="x ">蛋糕</a>
-				   <a href="/favorite/wedding_events?q=场地" class="x ">场地</a>
-				   <a href="/favorite/wedding_events?q=发型" class="x ">发型</a>
-				   <a href="/favorite/wedding_events?q=婚鞋" class="x ">婚鞋</a>
-				   <a href="/favorite/wedding_events?q=婚戒" class="x ">婚戒</a>
-				   <a href="/favorite/wedding_events?q=花童" class="x ">花童</a>
-				   <a href="/favorite/wedding_events?q=伴娘团" class="x ">伴娘团</a>
+				  <div class="menu">
+					<a href="/favorite/wedding_events?q=婚纱" class="x ">婚纱</a>
+					<a href="/favorite/wedding_events?q=抹胸" class="x ">抹胸</a>
+					<a href="/favorite/wedding_events?q=礼服" class="x ">礼服</a>
+					<a href="/favorite/wedding_events?q=鱼尾" class="x ">鱼尾</a>
+					<a href="/favorite/wedding_events?q=束腰" class="x ">束腰</a>
+					<a href="/favorite/wedding_events?q=中国风" class="x ">中国风</a>
+					<a href="/favorite/wedding_events?q=头纱" class="x ">头纱</a>
+					<a href="/favorite/wedding_events?q=森系" class="x ">森系</a>
+					<a href="/favorite/wedding_events?q=布置" class="x ">布置</a>
+					<a href="/favorite/wedding_events?q=请柬" class="x ">请柬</a>
+					<a href="/favorite/wedding_events?q=捧花" class="x ">捧花</a>
+					<a href="/favorite/wedding_events?q=蛋糕" class="x ">蛋糕</a>
+					<a href="/favorite/wedding_events?q=场地" class="x ">场地</a>
+					<a href="/favorite/wedding_events?q=发型" class="x ">发型</a>
+					<a href="/favorite/wedding_events?q=婚鞋" class="x ">婚鞋</a>
+					<a href="/favorite/wedding_events?q=婚戒" class="x ">婚戒</a>
+					<a href="/favorite/wedding_events?q=花童" class="x ">花童</a>
+					<a href="/favorite/wedding_events?q=伴娘团" class="x ">伴娘团</a>
 				  </div>
 				 </div>
 				 <form id="search_from_category" action="/favorite/wedding_events/" class="searching-unit">
@@ -246,184 +246,186 @@
 	<div id="elevator_item">
 		<a id="elevator" title="回到顶部"></a>
 	</div>
-	<script type="text/javascript">
-		var boardNum=4;
-		
-		function refreshPage()
-		{
-			$("#waterfall").empty();
-			renderCollect();
-		}
-		function renderCollect()
-		{
-			var testCollects = [];
-			var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
-			var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
-								"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
-								"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
-								"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
-			for (var i = 0; i < 20; i++) {
-				var model = {
-					index:i,
-					imgUrl: imgs[i%4],
-					height: 350,
-					description:descriptions[i%4],
-					repin: Math.floor(Math.random()*10),
-					loved: Math.floor(Math.random()*10),
-					userImage:imgs[i%4],
-					userName:"吃醋小王子",
-					styleBoardName:"科比那些年"
-				}
-				testCollects.push(model);
-			}
-
-			var xwf = XUtil.XWaterfall({
-				src: testCollects,
-				initialSize: 50,
-				colNum: boardNum,
-				colWidth: 252,
-				contentWidth: 252,
-				fetchSize: 20,
-				marginTop: 16,
-				url: '',
-				renderTo: $('#waterfall')[0],
-				renderer: function (model) {
-					var  html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
-							   "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
-							   "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"' ></a>"+
-							   "<p class='description'>"+model.description+"</p>"+
-							   "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
-							   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+
-							   "<div class='text'><div><div class='line'><a href='#' >"+model.userName+"</a>&nbsp;采集到</div>"+
-							   "<div class='line'><a href='#' >"+model.styleBoardName+"</a></div></div></div></div></div>";
-					return html;
-				}
-			});
-
-			xwf.init();
-		}
-		$(document).ready(function(){
+<script type="text/javascript">
+	var boardNum=4;
 	
-			$("#mentions").click(function(){
-				$(".box_mentions").removeClass("hidden");
-				$(".box_activities").addClass("hidden");
-				$("#mentions").addClass("click");
-				$("#activities").removeClass("click");
-				$(".show_all").html("查看所有消息>>");
-		
-			});
-			$("#activities").click(function(){
-				$(".box_activities").removeClass("hidden");
-				$(".box_mentions").addClass("hidden");
-				$("#activities").addClass("click");
-				$("#mentions").removeClass("click");
-				$(".show_all").html("查看所有动态>>");
-			});
-			if(screen.width>=1600) 
+	function refreshPage()
+	{
+		$("#waterfall").empty();
+		renderCollect();
+	}
+	function renderCollect()
+	{
+		var testCollects = [];
+		var imgs=["../image/1.jpg","../image/2.jpg","../image/3.jpg","../image/4.jpg",];
+		var descriptions = ["科比总得分超越乔丹 : 北京时间12月15日，科比其生涯总得分正式超越乔丹，上升到历史第三位。",
+							"乔丹科比经典老照片 : 一起来看看乔丹与科比相遇那些年的老照片。",
+							"艾弗森的一个持球，四个人成为了背影；一个假动作，过邓肯，科比，麦迪，飞卡特，虽然你远离我们的视线，但是我们永远不会忘记~ http://t.cn/8kMXKTK ",
+							"科比完成肩袖修复手术，缺阵9个月每当你们这些媒体说他完了，他就会回来证明给你们看。我想这是他最大的特点。这个赛季他已经证明了自己还能打球，他还是联盟里面最好的球员之一。"];
+		for (var i = 0; i < 20; i++) {
+			var model = {
+				index:i,
+				imgUrl: imgs[i%4],
+				height: 350,
+				description:descriptions[i%4],
+				repin: Math.floor(Math.random()*10),
+				loved: Math.floor(Math.random()*10),
+				userImage:imgs[i%4],
+				userName:"吃醋小王子",
+				styleBoardName:"科比那些年"
+			}
+			testCollects.push(model);
+		}
+
+		var xwf = XUtil.XWaterfall({
+			src: testCollects,
+			initialSize: 50,
+			colNum: boardNum,
+			colWidth: 252,
+			contentWidth: 252,
+			fetchSize: 20,
+			marginTop: 16,
+			url: '',
+			renderTo: $('#waterfall')[0],
+			renderer: function (model) {
+				var  html ="<div class='collect' ><div class='actions'><a href='#' class='btn left'><span class='text'>采集</span></a>"+
+						   "<a href='#' class='btn right'><span class='text'>编辑</span></a></div>"+
+						   "<a href='#' class='link'><img src='"+model.imgUrl+"' height='"+model.height+"' ></a>"+
+						   "<p class='description'>"+model.description+"</p>"+
+						   "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
+						   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+
+						   "<div class='text'><div><div class='line'><a href='#' >"+model.userName+"</a>&nbsp;采集到</div>"+
+						   "<div class='line'><a href='#' >"+model.styleBoardName+"</a></div></div></div></div></div>";
+				return html;
+			}
+		});
+
+		xwf.init();
+	}
+	$(document).ready(function(){
+
+		$("#mentions").click(function(){
+			$(".box_mentions").removeClass("hidden");
+			$(".box_activities").addClass("hidden");
+			$("#mentions").addClass("click");
+			$("#activities").removeClass("click");
+			$(".show_all").html("查看所有消息>>");
+	
+		});
+		$("#activities").click(function(){
+			$(".box_activities").removeClass("hidden");
+			$(".box_mentions").addClass("hidden");
+			$("#activities").addClass("click");
+			$("#mentions").removeClass("click");
+			$(".show_all").html("查看所有动态>>");
+		});
+		if(screen.width>=1600) 
+		{
+			$("#headWapper").addClass("wrapper1600");
+			$("#pageWapper").addClass("wrapper1600");
+			$("#loginWrapper").addClass("wrapper1600");
+			$("#categoryWrapper").addClass("wrapper1600");
+			boardNum=6;
+		}
+		else if( screen.width>=1360 )
+		{
+			$("#headWapper").addClass("wrapper1360");
+			$("#pageWapper").addClass("wrapper1360");
+			$("#loginWrapper").addClass("wrapper1360");
+			$("#categoryWrapper").addClass("wrapper1360");
+			boardNum=5;
+		}	
+		else 
+		{
+			$("#headWapper").addClass("wrapper1280");
+			$("#pageWapper").addClass("wrapper1280");
+			$("#loginWrapper").addClass("wrapper1280");
+			$("#categoryWrapper").addClass("wrapper1280");
+			boardNum=4;
+		}
+		window.onresize = function()
+		{
+			var flag=false;
+			if(window.innerWidth>=1600)
 			{
+				$("#headWapper").removeClass();
+				$("#pageWapper").removeClass();
+				$("#loginWrapper").removeClass();
+				$("#categoryWrapper").removeClass();
 				$("#headWapper").addClass("wrapper1600");
 				$("#pageWapper").addClass("wrapper1600");
 				$("#loginWrapper").addClass("wrapper1600");
 				$("#categoryWrapper").addClass("wrapper1600");
-				boardNum=6;
+				if(boardNum!=6)
+				{
+					boardNum=6;
+					flag=true;
+				}
+				if(flag) refreshPage();
 			}
-			else if( screen.width>=1360 )
+			else if(window.innerWidth>=1360)
 			{
+				$("#headWapper").removeClass();
+				$("#pageWapper").removeClass();
+				$("#loginWrapper").removeClass();
+				$("#categoryWrapper").removeClass();
 				$("#headWapper").addClass("wrapper1360");
 				$("#pageWapper").addClass("wrapper1360");
 				$("#loginWrapper").addClass("wrapper1360");
 				$("#categoryWrapper").addClass("wrapper1360");
-				boardNum=5;
-			}	
+				if(boardNum!=5)
+				{
+					boardNum=5;
+					flag=true;
+				}
+				if(flag) refreshPage();
+			}
 			else 
 			{
+				$("#headWapper").removeClass();
+				$("#pageWapper").removeClass();
+				$("#loginWrapper").removeClass();
+				$("#categoryWrapper").removeClass();
 				$("#headWapper").addClass("wrapper1280");
 				$("#pageWapper").addClass("wrapper1280");
 				$("#loginWrapper").addClass("wrapper1280");
 				$("#categoryWrapper").addClass("wrapper1280");
-				boardNum=4;
+				if(boardNum!=4)
+				{
+					boardNum=4;
+					flag=true;
+				}
+				if(flag) refreshPage();
 			}
-			window.onresize = function()
+		}
+		//headerاٱʨ׃
+		headerHover();
+		/*backtotp*/
+		returnToTop();
+		
+		<!-- 筛选 -->
+		categoryFilterHover();
+		//tabsȐۻ
+		
+		renderCollect();
+		$("#style_search_more").click(function(){
+			var state = $(this).attr("state");
+			if(state=="closed")
 			{
-				var flag=false;
-				if(window.innerWidth>=1600)
-				{
-					$("#headWapper").removeClass();
-					$("#pageWapper").removeClass();
-					$("#loginWrapper").removeClass();
-					$("#categoryWrapper").removeClass();
-					$("#headWapper").addClass("wrapper1600");
-					$("#pageWapper").addClass("wrapper1600");
-					$("#loginWrapper").addClass("wrapper1600");
-					$("#categoryWrapper").addClass("wrapper1600");
-					if(boardNum!=6)
-					{
-						boardNum=6;
-						flag=true;
-					}
-					if(flag) refreshPage();
-				}
-				else if(window.innerWidth>=1360)
-				{
-					$("#headWapper").removeClass();
-					$("#pageWapper").removeClass();
-					$("#loginWrapper").removeClass();
-					$("#categoryWrapper").removeClass();
-					$("#headWapper").addClass("wrapper1360");
-					$("#pageWapper").addClass("wrapper1360");
-					$("#loginWrapper").addClass("wrapper1360");
-					$("#categoryWrapper").addClass("wrapper1360");
-					if(boardNum!=5)
-					{
-						boardNum=5;
-						flag=true;
-					}
-					if(flag) refreshPage();
-				}
-				else 
-				{
-					$("#headWapper").removeClass();
-					$("#pageWapper").removeClass();
-					$("#loginWrapper").removeClass();
-					$("#categoryWrapper").removeClass();
-					$("#headWapper").addClass("wrapper1280");
-					$("#pageWapper").addClass("wrapper1280");
-					$("#loginWrapper").addClass("wrapper1280");
-					$("#categoryWrapper").addClass("wrapper1280");
-					if(boardNum!=4)
-					{
-						boardNum=4;
-						flag=true;
-					}
-					if(flag) refreshPage();
-				}
+				$(this).find("i").css("background-position","0 -60px");
+				$(this).css("background-color","#ededed");
+				$(this).parent(".style-categories").animate({height:'100px'});
+				$(this).attr("state","open");
 			}
-			//headerاٱʨ׃
-			headerHover();
-			/*backtotp*/
-			returnToTop();
-			
-			//tabsȐۻ
-			
-			renderCollect();
-			$("#style_search_more").click(function(){
-				var state = $(this).attr("state");
-				if(state=="closed")
-				{
-					$(this).find("i").css("background-position","0 -60px");
-					$(this).css("background-color","#ededed");
-					$(this).parent(".style-categories").animate({height:'100px'});
-					$(this).attr("state","open");
-				}
-				else 
-				{
-					$(this).find("i").css("background-position","0 0");
-					$(this).css("background-color","#fafafa");
-					$(this).parent(".style-categories").animate({height:'30px'});
-					$(this).attr("state","closed");
-				}
-			});
+			else 
+			{
+				$(this).find("i").css("background-position","0 0");
+				$(this).css("background-color","#fafafa");
+				$(this).parent(".style-categories").animate({height:'30px'});
+				$(this).attr("state","closed");
+			}
 		});
-	</script>
+	});
+</script>
 </body>
 </html>

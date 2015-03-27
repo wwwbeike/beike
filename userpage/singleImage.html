@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>singleImage</title>
-	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
 	<script type="text/javascript" src='../js/XUtil/XUtil.js'></script>
 	<script type="text/javascript" src='../js/XUtil/base.js'></script>
 	<script type="text/javascript" src='../js/XUtil/waterfall.js'></script>
 	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
-	<script type="text/javascript" charset="UTF-8" src='../js/Native/returnToTop.js'></script>
+	<script type="text/javascript" charset="UTF-8" src='../js/Native/gotoTop.js'></script>
 	<script type="text/javascript" charset="utf-8" src="../js/Native/singleImage.js"></script>
 	<link rel='stylesheet' type="text/css" href='../js/XUtil/XUtil.min.css'/>
 	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
@@ -84,7 +84,7 @@
 										</div>
 
 									</div>
-									<div class="clearfix"></div>
+									<div class="clear"></div>
 								</div>
 								<div class="bottom_bar">
 									<a href="" class="tool_icon">贝壳采集工具</a>
@@ -164,7 +164,7 @@
 				</div>
 			</div>
 		</div>
- 		<div id="pin_view_layer">
+ 		<div id="pin_view_layer" >
 			<div class="close_layer">
 				<i></i>
 			</div>
@@ -305,9 +305,7 @@
 		
 	</div>
 	<div class="clear"></div>
-	<div id="elevator_item">
-		<a id="elevator" title="回到顶部"></a>
-	</div>
+
 <script type="text/javascript">
 	var sidePinsNum = 3;
 	var recommeded_pinsNum= 4 ;
@@ -393,6 +391,12 @@
 
 		xwf.init();
 	}
+	$(function(){ 
+		$(".backToTop").goToTop(); 
+		$(window).bind('scroll resize',function(){ 
+			$(".backToTop").goToTop(); 
+		}); 
+	});
 	$(document).ready(function(){
 		/*
 		*waterfall
@@ -404,7 +408,7 @@
 		/*单图页面中某些标签的hover事件*/
 		aLinkHover();
 		/*backtotop*/
-		returnToTop();
+		//returnToTop();
 		/*
 		*header栏消息接收里Tab切换
 		*/

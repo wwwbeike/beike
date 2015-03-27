@@ -1070,7 +1070,7 @@
 
 		/*回到顶部css*/
 		
-		#elevator_item{
+		#elevator{
 			position: fixed;
 			right: 15px;
 			bottom: 5px;
@@ -1653,6 +1653,10 @@
 		  box-shadow: 0 0 4px rgba(0,0,0,.2);
 		  cursor: default;
 		}
+		#category_nav_bar .filter-button.active{
+			background-position:43px -22px;
+			box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+		}
 		#category_nav_bar .filter-button .menu a {
 		  display: inline-block;
 		  height: 28px;
@@ -1666,8 +1670,12 @@
 		  text-decoration: none;
 		  color: #444;
 		}
+		#category_nav_bar .filter-button .menu a:hover{
+			color:#a21d89;
+		}
 		#category_nav_bar .searching-unit
 		{
 			float:right;
 			margin-top:0;
 		}
+		
