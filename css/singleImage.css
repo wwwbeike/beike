@@ -6,9 +6,9 @@
 	left: 0;
 	background: rgba(229,229,229,.95);
 	z-index: 100;
-	overflow:auto;
+	overflow:auto ; 
 	padding-top: 40px;
-}  
+}    
 /* close图标 */
 #pin_view_layer .close_layer {
 	width: 56px;
@@ -38,7 +38,7 @@
   width: 60px;
   height: 150px;
   position: fixed;
-  
+  margin-top:-75px;
   top: 50%;
   
 }
