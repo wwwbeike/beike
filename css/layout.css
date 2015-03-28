@@ -30,7 +30,11 @@
 			width:100%;
 			box-shadow: 0 0 4px rgba(0,0,0,.2);
 		}
-		
+		#header.nologin_index{
+			background: 0;
+			box-shadow: none;
+			border: 0;
+		}
 		#collectHeader{
 			height: 50px;
 			background: white;
