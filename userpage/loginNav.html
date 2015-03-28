@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	
+	<script type="text/javascript" src='../js/XUtil/XUtil.js'></script>
+	<script type="text/javascript" src='../js/XUtil/base.js'></script>
+	<script type="text/javascript" src='../js/XUtil/waterfall.js'></script>
+	<link rel='stylesheet' type="text/css" href='../js/XUtil/XUtil.min.css'/>
+	
+	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
+	<script type="text/javascript" src='../js/Native/returnToTop.js'></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+	
+	<link rel="stylesheet" type="text/css" href="../css/styleBoard.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/collect.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/dialog.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/loginNav.css"/>
+</head>
+<body>
+	<div id="header" class="nologin_index hts">
+		<div id="headWapper" >
+			<a id="logo" href="#"></a>
+			<div id="menu_bar" >	
+				<div id="left_menu">
+					<div  id="left_menu_nav" class="nav menu_nav">
+						<a href="#" class="nav_link">
+							<div class="nav_icon"></div>
+							<div class="arrow"></div>
+						</a>
+						<div  class="menu new-header-main-menu">
+							<div class="inner">
+								<div class="left_module">
+									<a href="http:www.baidu.com" rel="nofollow" class="main_link bold latest_collect">最新采集</a>
+									<a href="/all/" rel="nofollow" class="main_link bold wedding_style">婚礼风格板</a>
+									<a href="/all/videos/" rel="nofollow" class="main_link bold videos ">视频</a>
+									<a href="/all/videos/" rel="nofollow" class="main_link bold wedding_classify with_line ">婚礼分类</a>
+									<a href="/all/videos/" rel="nofollow" class="main_link bold activities with_line ">活动</a>
+								</div>
+								<div class="right_module">
+									<div class="row_0">
+										<div class="module_group">
+											<a href="" rel="nofollow">新房布置</a>
+										</div>
+										<div class="module_group">
+											<a href="/favorite/culture_china//" rel="nofollow">签到台</a>
+											<a href="/favorite/travel_places/" rel="nofollow">迎宾喷绘</a>
+											<a href="/favorite/food_drink/" rel="nofollow">楼梯扶手</a>
+											<a href="/favorite/diy_crafts/" rel="nofollow">照片展示区</a>
+											<a href="/favorite/wedding_events/" rel="nofollow">迎宾小区</a>
+											<a href="/favorite/apparel/" rel="nofollow">迎宾水牌</a>
+										</div>
+									</div>
+									<div class="row_1">
+										<div class="module_group">
+											<a href="" rel="nofollow">酒店户外</a>
+										</div>
+										<div class="module_group">
+											<a href="/favorite/industrial_design/" rel="nofollow">纱幔背景</a>
+											<a href="/favorite/illustration/" rel="nofollow">喷绘背景</a>
+											<a href="/favorite/design/" rel="nofollow">LED背景</a>
+											<a href="/favorite/web_app_icon/" rel="nofollow">镜面T台</a>
+											<a href="/favorite/web_app_icon/" rel="nofollow">普通T台</a>
+											<a href="/favorite/web_app_icon/" rel="nofollow">拱门</a>
+											<a href="/favorite/web_app_icon/" rel="nofollow">桌花</a>	
+										</div>
+									</div>
+									
+									<div class="row_2">
+										<div class="module_group">
+											<a href="" rel="nofollow">大场景照片</a>
+										</div>
+										<div class="module_group">
+											<a href="/favorite/industrial_design/" rel="nofollow">地引</a>
+											<a href="/favorite/illustration/" rel="nofollow">路引</a>
+											<a href="/favorite/design/" rel="nofollow">花房</a>
+											<a href="/favorite/web_app_icon/" rel="nofollow">吊装饰品</a>
+											<a href="/favorite/web_app_icon/" rel="nofollow">椅背装饰</a>
+											<a href="/favorite/web_app_icon/" rel="nofollow">花车装饰</a>
+											<a href="/favorite/web_app_icon/" rel="nofollow">手捧花</a>	
+										</div>
+									</div>
+
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="bottom_bar">
+								<a href="" class="tool_icon">贝壳采集工具</a>
+								<div class="menu_tool_links">
+									<a href="" class="about_us">关于贝壳</a>
+									<a href="" class="join_us">加入我们</a>
+									<a href="" class="feedback">用户反馈</a>
+									<a href="" class="friendly_link">友情链接</a>
+								</div>
+							</div>
+							<div class="up_arrow"></div>
+						</div>
+					</div>
+				
+					<form id="search_form" method="get" action="#" class="searching-unit">
+						<input id="query" type="text" size="27" name="search" autocomplete="off" placeholder="搜索你喜欢的" value="">
+						<a href="#" onclick="return false;" class="go"></a>
+					</form>
+				</div>
+				<div id="right_menu">
+					<div class="login_nav">
+						<a href="#" rel="nofollow" class="register btn rbtn"><span class="text">注册</span></a>
+						<a href="#" rel="nofollow" class="login btn rbtn"><span class="text">登录</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="black_overlay">
+		<div id="login_frame" >
+			<img src="../image/logo.png" class="logo">
+			<div class="login">
+				<div class="holder">
+					<div class="with_line">使用第三方账号登录</div>
+					<div class="buttons">
+						<a href="" title="微博账号登录" rel="nofollow" class="weibo"></a>
+						<a href="" title="QQ账号登录" rel="nofollow" class="qzone"></a>
+						<a href="" title="豆瓣账号登录" rel="nofollow" class="douban"></a>
+					</div>
+					<div class="with_line">使用邮箱登录</div>
+					<form action="" method="post" class="mail_login">
+						<input type="text" name="email" placeholder="贝壳注册邮箱" class="clear_input">
+						<input type="password" name="password" placeholder="密码" class="clear_input">
+						<a href="#" class="btn btn18 rbtn"><span class="text">登录</span></a>
+					</form>
+					<a class="reset_password red_link">忘记密码»</a>
+					<div class="switch_back">还没有贝壳帐号？<a class="red_link">点击注册»</a></div>
+ 				</div>
+				<div class="close"><i></i></div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		if(screen.width>=1600) 
+		{
+			$("#headWapper").addClass("wrapper1600");
+			$("#pageWapper").addClass("wrapper1600");
+			boardNum=6;
+		}
+		else if( screen.width>=1360 )
+		{
+			$("#headWapper").addClass("wrapper1360");
+			$("#pageWapper").addClass("wrapper1360");
+			boardNum=5;
+		}	
+		else 
+		{
+			$("#headWapper").addClass("wrapper1280");
+			$("#pageWapper").addClass("wrapper1280");
+			boardNum=4;
+		}
+		window.onresize = function(){
+			if(window.innerWidth>=1600)
+			{
+				$("#headWapper").removeClass();
+				$("#pageWapper").removeClass();
+				$("#headWapper").addClass("wrapper1600");
+				$("#pageWapper").addClass("wrapper1600");
+			}
+			else if(window.innerWidth>=1360)
+			{
+				$("#headWapper").removeClass();
+				$("#pageWapper").removeClass();
+				$("#headWapper").addClass("wrapper1360");
+				$("#pageWapper").addClass("wrapper1360");
+			}
+			else 
+			{
+				$("#headWapper").removeClass();
+				$("#pageWapper").removeClass();
+				$("#headWapper").addClass("wrapper1280");
+				$("#pageWapper").addClass("wrapper1280");
+			}
+		}
+		//header风格设置
+		headerHover();
+		/*backtotp*/
+		returnToTop();
+		$("div.login_nav").delegate("a.login","click",function(){
+			$(".black_overlay").css("display","block");
+			$("#login_frame .close").click(function(){
+				$(".black_overlay").css("display","none");
+			})
+		});
+	});
+</script>
+</body>
+</html>
