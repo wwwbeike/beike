@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>settings</title>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	
+	<script type="text/javascript" src='../js/XUtil/XUtil.js'></script>
+	<script type="text/javascript" src='../js/XUtil/base.js'></script>
+	<script type="text/javascript" src='../js/XUtil/waterfall.js'></script>
+	<link rel='stylesheet' type="text/css" href='../js/XUtil/XUtil.min.css'/>
+	
+	<script type="text/javascript"  charset="UTF-8" src='../js/Native/hoverEvent.js'></script>
+	<script type="text/javascript" src='../js/Native/returnToTop.js'></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/settings.css"/>
+	
+</head>
+<body>
+	<div id="page" >
+		<div id="header">
+			<div id="headWapper" >
+				<a id="logo" href="#"></a>
+				<div id="menu_bar" >	
+					<div id="left_menu">
+						<div  id="left_menu_nav" class="nav menu_nav">
+							<a href="#" class="nav_link">
+								<div class="nav_icon"></div>
+								<div class="arrow"></div>
+							</a>
+							<div  class="menu new-header-main-menu">
+								<div class="inner">
+									<div class="left_module">
+										<a href="http:www.baidu.com" rel="nofollow" class="main_link bold latest_collect">最新采集</a>
+										<a href="/all/" rel="nofollow" class="main_link bold wedding_style">婚礼风格板</a>
+										<a href="/all/videos/" rel="nofollow" class="main_link bold videos ">视频</a>
+										<a href="/all/videos/" rel="nofollow" class="main_link bold wedding_classify with_line ">婚礼分类</a>
+										<a href="/all/videos/" rel="nofollow" class="main_link bold activities with_line ">活动</a>
+									</div>
+									<div class="right_module">
+										<div class="row_0">
+											<div class="module_group">
+												<a href="" rel="nofollow">新房布置</a>
+											</div>
+											<div class="module_group">
+												<a href="/favorite/culture_china//" rel="nofollow">签到台</a>
+												<a href="/favorite/travel_places/" rel="nofollow">迎宾喷绘</a>
+												<a href="/favorite/food_drink/" rel="nofollow">楼梯扶手</a>
+												<a href="/favorite/diy_crafts/" rel="nofollow">照片展示区</a>
+												<a href="/favorite/wedding_events/" rel="nofollow">迎宾小区</a>
+												<a href="/favorite/apparel/" rel="nofollow">迎宾水牌</a>
+											</div>
+										</div>
+										<div class="row_1">
+											<div class="module_group">
+												<a href="" rel="nofollow">酒店户外</a>
+											</div>
+											<div class="module_group">
+												<a href="/favorite/industrial_design/" rel="nofollow">纱幔背景</a>
+												<a href="/favorite/illustration/" rel="nofollow">喷绘背景</a>
+												<a href="/favorite/design/" rel="nofollow">LED背景</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">镜面T台</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">普通T台</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">拱门</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">桌花</a>	
+											</div>
+										</div>
+										
+										<div class="row_2">
+											<div class="module_group">
+												<a href="" rel="nofollow">大场景照片</a>
+											</div>
+											<div class="module_group">
+												<a href="/favorite/industrial_design/" rel="nofollow">地引</a>
+												<a href="/favorite/illustration/" rel="nofollow">路引</a>
+												<a href="/favorite/design/" rel="nofollow">花房</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">吊装饰品</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">椅背装饰</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">花车装饰</a>
+												<a href="/favorite/web_app_icon/" rel="nofollow">手捧花</a>	
+											</div>
+										</div>
+
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="bottom_bar">
+									<a href="" class="tool_icon">贝壳采集工具</a>
+									<div class="menu_tool_links">
+										<a href="" class="about_us">关于贝壳</a>
+										<a href="" class="join_us">加入我们</a>
+										<a href="" class="feedback">用户反馈</a>
+										<a href="" class="friendly_link">友情链接</a>
+									</div>
+								</div>
+								<div class="up_arrow"></div>
+							</div>
+						</div>
+					
+						<form id="search_form" method="get" action="#" class="searching-unit">
+							<input id="query" type="text" size="27" name="search" autocomplete="off" placeholder="搜索你喜欢的" value="">
+							<a href="#" onclick="return false;" class="go"></a>
+						</form>
+					</div>
+					<div id="right_menu">
+						<div id="add_nav" class="nav add_nav">
+							<a href="#" class="nav_link" title="添加">
+								<div class="nav_icon"></div>
+							</a>
+							<div class="menu">
+								<div class="add_group">
+									<a href="#">上传图片采集<i class="upload"></i></a>
+								</div>
+								<div class="add_group">
+									<a href="#">添加风格板<i class="add_board"></i></a>
+								</div>
+								<div class="add_group">
+									<a href="#">安装采集工具<i class="goodies"></i><span>从任何页面采集图片和视频</span></a>
+								</div>
+								<div class="arrow"></div>
+							</div>
+						</div>
+						
+						<div id="message_nav" class="nav">
+							<a href="#" class="nav_link" title="通知">
+								<div class="nav_icon"></div>
+								<div class="num hidden">0</div>
+							</a>
+							<div id="message_popup">
+								<div class="bar">
+									<div id="mentions" boxer=".box_mentions" class="left barTitle click">消息</div>
+									<div id="activities" boxer=".box_activities" class="right barTitle ">动态</div>
+								</div>
+								<div id="boxer">
+									<div class="box box_mentions ">
+										<div class="empty">没有消息</div>
+									</div>
+									<div class="box box_activities hidden">
+										<div class="item">没有动态</div>
+									</div>
+								</div> 
+								<a href="/message/?type=activities" class="show_all">查看所有消息»</a>
+								<div class="triangle"></div>
+							</div>
+						</div>
+						<div id="user_nav" class="nav">
+							<a href="#" class="nav_link">
+								<img width="20" height="20" src="../image/user.png" class="user_photo">
+								<div class="arrow"></div>
+							</a>
+							<div class="menu">
+								<div class="user_group">
+									<a href="#" >我的贝壳<i class="mine"></i></a>							
+								</div>
+								<div class="user_group">
+									<a href="#" >账号设置<i class="settings"></i></a> 
+									<a href="#" >退出登录<i class="exit"></i></a> 	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="user_page">
+			<div  id="pageWapper" >
+				<div id="user_settings">
+				<h1>账号设置</h1>
+				<div class="setting-units">
+					<div id="_set_profile" class="setting-unit" state="closed" holderHeight="600px">
+					   <div class="title">
+						个人资料
+						<div class="preview">
+						名门冰夜
+						</div>
+					   </div>
+					   <a class="edit-label">编辑</a>
+					   <div style="height: 0" class="holder">
+						<div class="inner">
+						 <form action="/settings/" method="post">
+						  <table class="list">
+						   <tbody>
+							<tr>
+							 <td class="name">登录名：</td>
+							 <td>2483381035@qq.com</td>
+							</tr>
+							<tr>
+							 <td class="name">昵称：</td>
+							 <td><input value="名门冰夜" name="user[username]" class="clear-input" /></td>
+							</tr>
+							<tr>
+							 <td class="name">所在城市：</td>
+							 <td><input name="profile[location]" class="clear-input" /></td>
+							</tr>
+							<tr>
+							 <td class="name">性别：</td>
+							 <td class="sex"><label><input type="radio" name="profile[sex]" value="1" />男</label><label><input type="radio" name="profile[sex]" value="2" />女</label><label><input type="radio" name="profile[sex]" value="0" checked="checked" />保密</label></td>
+							</tr>
+							<tr>
+							 <td class="name">生日：</td>
+							 <td class="birthday"><input id="byear" maxlength="4" placeholder="年" title="年" value="" class="clear-input" /><input id="bmonth" maxlength="2" placeholder="月" title="月" value="" class="clear-input" /><input id="bday" maxlength="2" placeholder="日" title="日" value="" class="clear-input" /><input type="hidden" name="profile[birthday]" value="" /><span>（该信息其他人不可见）</span></td>
+							</tr>
+							<tr>
+							 <td class="name">星座：</td>
+							 <td class="horoscope"><input id="horoscope" placeholder="填写生日以自动显示星座" title="填写生日以自动显示星座" readonly="readonly" class="clear-input" /></td>
+							</tr>
+							<tr>
+							 <td class="name">职业：</td>
+							 <td><input name="profile[job]" class="clear-input" /></td>
+							</tr>
+							<tr>
+							 <td class="name">个人主页：</td>
+							 <td><input value="http://" name="profile[url]" class="clear-input" /></td>
+							</tr>
+							<tr>
+							 <td class="name">关于自己：</td>
+							 <td style="height: 110px; position: relative; display: block;"><textarea name="profile[about]" style="position: absolute; width: 580px; height: 86px; left: 0; top: 10px;" class="clear-input"></textarea></td>
+							</tr>
+							<tr>
+							 <td></td>
+							 <td><a href="#" onclick="return false;" class="btn rbtn"><strong> 保存</strong><span></span></a></td>
+							</tr>
+						   </tbody>
+						  </table>
+						 </form>
+						</div>
+					   </div>
+					  </div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="elevator_item">
+		<a id="elevator" title="回到顶部"></a>
+	</div>
+	
+	<script type="text/javascript">
+		
+		function getAstro(month,day){    
+			var s="魔羯水瓶双鱼牡羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯";
+			var arr=[20,19,21,21,21,22,23,23,23,23,22,22];
+			return s.substr(month*2-(day<arr[month-1]?2:0),2);
+		}
+		
+		function bindHoroscope()
+		{
+			var byear=document.getElementById("byear");
+			var bmonth=document.getElementById("bmonth");
+			var bday=document.getElementById("bday");
+			var horoscope=document.getElementById("horoscope");
+			byear.oninput = function()
+			{
+				var year = byear.value;
+				var month = bmonth.value;
+				var day = bday.value;
+				if( year && month && day ) 
+					horoscope.value=getAstro(month,day);
+			}
+			bmonth.oninput = function()
+			{
+				var year = byear.value;
+				var month = bmonth.value;
+				var day = bday.value;
+				if( year && month && day ) 
+					horoscope.value=getAstro(month,day);
+			}
+			bday.oninput = function()
+			{
+				var year = byear.value;
+				var month = bmonth.value;
+				var day = bday.value;
+				if( year && month && day ) 
+					horoscope.value=getAstro(month,day);
+			}
+		}
+		
+		$(document).ready(function(){
+			/*
+			*header栏消息接收里Tab切换
+			*/
+			$("#mentions").click(function(){
+				$(".box_mentions").removeClass("hidden");
+				$(".box_activities").addClass("hidden");
+				$("#mentions").addClass("click");
+				$("#activities").removeClass("click");
+				$(".show_all").html("查看所有消息>>");
+		
+			});
+			$("#activities").click(function(){
+				$(".box_activities").removeClass("hidden");
+				$(".box_mentions").addClass("hidden");
+				$("#activities").addClass("click");
+				$("#mentions").removeClass("click");
+				$(".show_all").html("查看所有动态>>");
+			});
+			//根据屏幕分辨率加载不同的layout样式，设置风格板个数
+			if(screen.width>=1600) 
+			{
+				$("#headWapper").addClass("wrapper1600");
+				$("#pageWapper").addClass("wrapper1600");
+			}
+			else if( screen.width>=1360 )
+			{
+				$("#headWapper").addClass("wrapper1360");
+				$("#pageWapper").addClass("wrapper1360");
+			}	
+			else 
+			{
+				$("#headWapper").addClass("wrapper1280");
+				$("#pageWapper").addClass("wrapper1280");
+			}
+			window.onresize = function()
+			{
+				if(window.innerWidth>=1600)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1600");
+					$("#pageWapper").addClass("wrapper1600");
+				}
+				else if(window.innerWidth>=1360)
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1360");
+					$("#pageWapper").addClass("wrapper1360");
+				}
+				else 
+				{
+					$("#headWapper").removeClass();
+					$("#pageWapper").removeClass();
+					$("#headWapper").addClass("wrapper1280");
+					$("#pageWapper").addClass("wrapper1280");
+				}
+			}
+			//header风格设置
+			headerHover();
+			/*backtotp*/
+			returnToTop();
+			/*星座计算*/
+			bindHoroscope();
+			$("a.edit-label").click(function(){
+				var state=$(this).parent().attr("state");
+				var height=$(this).parent().attr("holderHeight");
+				if(state=="closed")
+				{
+					$(this).css("background-position","right -36px");
+					$(this).parent().find("div.preview").css("opacity","0");
+					$(this).parent().find("div.holder").animate({height:height});
+					$(this).parent().find("div.holder").css("border-top","1px dashed rgba(34,25,25,.1)");
+					$(this).parent().attr("state","open");
+				}
+				else 
+				{
+					$(this).css("background-position","right 25px");
+					$(this).parent().find("div.preview").css("opacity","1");
+					$(this).parent().find("div.holder").animate({height:"0"});
+					$(this).parent().find("div.holder").css("border-top","none");
+					$(this).parent().attr("state","closed");
+				}
+			});
+			
+			
+		});
+	</script>
+</body>
+</html>
