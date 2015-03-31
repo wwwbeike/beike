@@ -70,6 +70,10 @@ strong{
 	background:#d3d7d4;
 	box-shadow:none;
 }
+.btn:hover
+{
+	background:#fff;
+}
 
 .btn {
 	display: inline-block;

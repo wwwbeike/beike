@@ -102,6 +102,103 @@
   border: 0;
   box-shadow: none;
 }
+#preview_avatar {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-top: 10px;
+}
+#current_avatar {
+  max-width: 250px;
+  max-height: 250px;
+  border: 12px solid #fff;
+  box-shadow: 0 1px 1px rgba(34,25,25,.4);
+  -moz-box-shadow: 0 1px 1px rgba(34,25,25,.4);
+  -webkit-box-shadow: 0 1px 1px rgba(34,25,25,.4);
+}
+#user_settings .setting-units .user-avatar .list td.buttons {
+  vertical-align: top;
+  padding-left: 30px;
+}
+#user_settings .setting-units .user-avatar .list td.buttons .btn {
+  display: block;
+  margin-bottom: 15px;
+}
+#user_settings .setting-units .user-avatar .list td.buttons .btn strong{
+ font-weight:400;
+}
+#user_settings .bindings .info {
+  padding: 0 90px 0 170px;
+  font-size: 12px;
+  line-height: 20px;
+}
+#user_settings .bindings ul {
+  padding: 0 90px;
+  font-size: 14px;
+}
+#user_settings .bindings ul li {
+  border-bottom: 1px dashed rgba(34,25,25,.1);
+  line-height: 70px;
+  height: 70px;
+  padding-left: 80px;
+  background: url(../image/bindings_logo.png) 0 10px no-repeat;
+  list-style-type:none;
+}
+#user_settings .bindings ul li strong{
+font-weight:400;
+}
+#user_settings .bindings ul li .url {
+  padding-right: 20px;
+}
+#binding_previews {
+  padding-top: 22px;
+}
+#binding_previews .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  float: left;
+  background: url(../image/icons_in_btn.png) 0 0 no-repeat;
+}
+#binding_previews .wb.disabled {
+  background-position: 0 -30px;
+}
+#binding_previews .qz.disabled {
+  background-position: 0 -150px;
+}
+#binding_previews .qz {
+  background-position: 0 -120px;
+}
+#binding_previews .tq {
+  background-position: 0 -60px;
+}
+#binding_previews .tq.disabled {
+  background-position: 0 -90px;
+}
+#binding_previews .db.disabled {
+  background-position: 0 -270px;
+}
+#binding_previews .rr.disabled {
+  background-position: 0 -210px;
+}
+#binding_previews .rr {
+  background-position: 0 -180px;
+}
+#binding_previews .db {
+  background-position: 0 -240px;
+}
+#user_settings .bindings ul li.douban {
+  background-position: 0 -70px;
+}
+#user_settings .bindings ul li.renren {
+  background-position: 0 -150px;
+}
+#user_settings .bindings ul li.qzone {
+  background-position: 0 -230px;
+}
+#user_settings .bindings ul li.tqq {
+  background-position: 0 -310px;
+}
 #user_settings .clear-input {
   display: inline-block;
   padding: 0 10px;
