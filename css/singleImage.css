@@ -1,13 +1,8 @@
 #pin_view_layer{
-	position:fixed;
-	top: 20px;
-	right: 0;
-	bottom: 0;
-	left: 0;
+    position:relative;
 	background: rgba(229,229,229,.95);
-	z-index: 100;
-	overflow:auto ; 
-	padding-top: 40px;
+	//overflow:auto ; 
+	padding-top: 50px;
 }    
 /* close图标 */
 #pin_view_layer .close_layer {
