@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>singleImage</title>
+	<title>singleVideo</title>
 	<script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
 	<script type="text/javascript" src='../js/XUtil/XUtil.js'></script>
 	<script type="text/javascript" src='../js/XUtil/base.js'></script>
@@ -190,8 +190,13 @@
 							</div>
 							<div class="main_image">
 								<div class="image_holder">
-									<a href="/go/?pin_id=318669725" target="_blank" rel="nofollow"><img alt="耐克：耐克科比战火T恤插画 - 插画 -..." src="http://img.hb.aicdn.com/4fd5253cb38668a79e7967381be7233fe005adbf185dc-xdz2aF_fw658">
-									</a>
+									<object id="Swiff_i7wpczv2" height="410" width="658" type="application/x-shockwave-flash" data="http://player.56.com/v_MTEwODE0NjU1.swf">
+										<param name="quality" value="high">
+										<param name="allowScriptAccess" value="always">
+										<param name="wMode" value="opaque">
+										<param name="swLiveConnect" value="true">
+										<param name="allowfullscreen" value="true">
+									</object>
 								</div>
 							</div>
 							<div class="tool_bar_bottom">
@@ -320,7 +325,7 @@
 			var model = {
 				index:i,
 				imgUrl: imgs[i%4],
-				height: 350,
+				height: 142,
 				width:236,
 				description:descriptions[i%4],
 				repin: Math.floor(Math.random()*10),
@@ -347,7 +352,8 @@
 				html = "<div class='collect' ><div class='actions'><a href='#' class='left repin btn'>"+
 					   "<span class='text'>采集</span></a><a title='喜欢' href='#' class='like btn_with_icon btn btn14 right'>"+
 					   "<i class='heart'></i><span class='text'</span></a></div>"+
-					   "<a href='#' class='link loaded'><img src='"+model.imgUrl+"' height='"+model.height+"'  width='"+model.width+"'></a>"+
+					   "<a href='#' class='link loaded'><img src='"+model.imgUrl+"' height='"+model.height+"' width='"+model.width+"'>"+
+					   "<img src='../image/media_video.png' class='video_icon'><div class='cover'></div></a>"+
 					   "<p class='description'>"+model.description+"</p>"+
 					   "<p class='extra'><span class='repin'><i></i>"+model.repin+"</span><span ><i></i>"+model.loved+"</span></p>"+
 					   "<div class='attribution'><a href='#' class='img'><img src='"+model.userImage+"' class='user_image'></a>"+

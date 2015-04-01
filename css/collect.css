@@ -105,7 +105,7 @@
 }
 .collect .actions .right
 {
-	margin-left:110px;
+	margin-left:135px;
 }
 
 .collect a.link
@@ -138,7 +138,22 @@
 }
 .collect a.link img
 {
-	width:236px;
+	position:relative;
+	display:block;
+	margin:0 auto;
+}
+.collect a.link .cover{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 236px;
+	height: 100%;
+}
+.collect a.link .video_icon{
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	margin: -42px auto auto -36px;
 }
 /*
 .collect a.link img:hover
