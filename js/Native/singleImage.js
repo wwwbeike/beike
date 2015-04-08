@@ -82,3 +82,9 @@ $(function(){
 function commentTrue(){
 	$("#pin_view_add_comment a").removeClass("disabled");
 }
+
+function followBoard(){
+	var $strong = $(this).children("strong");
+	$strong.text("取消关注");
+
+}
