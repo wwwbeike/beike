@@ -496,6 +496,116 @@ textarea.clear_input{
 	margin-top: 16px;
 	margin-right: -20px;
 }
+.pin_view .bottom_part .related_boards  .board_box .Board{
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0 16px 16px 0;
+	float: left;
+	width:236px;
+	padding:0;
+	font-size:12px;
+	background-color:#fff;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.pin_view .bottom_part .related_boards  .board_box .Board :hover{
+	opacity:0.8;
+}
+.pin_view .bottom_part .related_boards  .board_box .Board .link{
+	display: block;
+	height: 299px;
+	padding: 10px 0 0 10px;
+	overflow: hidden;
+	position: relative;	
+}
+.Board .link img {
+	float: left;
+	width: 70px;
+	height: 70px;
+	margin: 0 3px 3px 0;
+}
+.Board .link img.large {
+	width: 216px;
+	height: 216px;
+}
+.Board .link .over {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 216px;
+	height: 289px;
+	background: url(../image/board_info_cover.png) 0 0 repeat-x;
+}
+.Board .over h3 {
+	padding: 8px 0 0 8px;
+	font-size: 14px;
+	font-weight: 700;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+.Board .over h4 {
+	font-size: 12px;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+	margin-top: 5px;
+	padding: 0 8px;
+	height: 38px;
+	overflow: hidden;
+	line-height: 1.5;
+	-webkit-transition: opacity .2s linear;
+	transition: opacity .2s linear;
+	opacity: 0;
+}
+.Board .pin_count {
+	position: absolute;
+	top: 188px;
+	left: 8px;
+	font-size: 12px;
+	color: #fff;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 5px;
+	background: rgba(0,0,0,.4);
+	border-radius: 2px;
+}
+.Board .FollowBoard2 {
+	padding: 0 10px 16px;
+	position: relative;
+	zoom: 1;
+}
+.Board a.img{
+	position:relative;
+}
+.BoardAvatar {
+	position: absolute;
+	top: 3px;
+	width: 24px;
+	height: 24px;
+}
+.BoardUserUrl {
+	line-height: 24px;
+	position: relative;
+	left: 34px;
+	top: 3px;
+}
+.FollowBoard2 a.follow{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	text-decoration: none;
+}
+.FollowBoard2 a.unfollow{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	text-decoration: none;
+}
+.btn strong{
+	font-weight:400;
+}
 .pin_view .bottom_part .related_boards .load_more_board{
 	display:block;
 }

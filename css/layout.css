@@ -195,6 +195,7 @@
 			border-radius: 3px;
 			cursor: default;
 			display:none;
+			height:405px;
 		}
 		.new-header-main-menu{
 			top:48px;
