@@ -231,6 +231,38 @@ i {
   padding: 20px 0;
   text-align: center;
 }
+
+.recommend-line:before, .recommend-line:after, .get-more-line:before, .get-more-line:after {
+  display: block;
+  position: absolute;
+  top: 28px;
+  width: 44%;
+  content: "";
+  border-top: 1px solid #ededed;
+}
+
+.devide_line{
+	position: relative;
+    text-align: center;
+}
+
+.devide_line:before, .devide_line:after {
+  display: block;
+  position: absolute;
+  top: 7px;
+  width: 45%;
+  content: "";
+  border-top: 1px solid #DAD0D0;
+}
+
+.devide_line:before {
+  left: 0;
+}
+
+.devide_line:after {
+  right: 0;
+}
+
 .get-more-line
 {
   position: relative;
